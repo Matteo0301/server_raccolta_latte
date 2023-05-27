@@ -7,6 +7,7 @@ import { getUser } from './database'
 let secret = ""
 
 function generateAccessToken(username: String, admin: boolean) {
+    Logger.debug('Secret: ' + secret)
     return sign({ username: username, admin: admin }, secret, { expiresIn: '24h' })
 }
 

@@ -11,8 +11,6 @@ async function authenticateUser(req: Request, res: Response, next: NextFunction)
 
     let user = await db.collection('utenti').findOne({ username: request_user })
     if (user) {
-
-        //if (request_password == user.password) {
         if (compareSync(request_password, user.password)) {
             Logger.debug('Login successful for ' + request_user)
             req.user = request_user

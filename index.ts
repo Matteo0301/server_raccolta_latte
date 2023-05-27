@@ -23,13 +23,25 @@ const port = process.env.PORT
 
 
 const CONNECTION_STRING = process.env.CONNECTION_STRING || "mongodb://user:password@127.0.0.1:27017/raccolta_latte?authSource=raccolta_latte"
-const DATABASE = 'raccolta_latte'
+const DATABASE = process.env.DATABASE || 'raccolta_latte'
 
 app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(Helmet())
 app.use(morganMiddleware)
+
+async function startServer() {
+
+    Logger.info(`⚡️[server]: Server is running at http://localhost:${port}`)
+    if (process.env.NODE_ENV === 'production')
+        await connect(CONNECTION_STRING, DATABASE)
+    const random_secret = randomBytes(64).toString('hex');
+    let secret = process.env.TOKEN_SECRET as string || random_secret
+    setSecret(secret)
+    Logger.info("MongoDB connection successful")
+
+}
 
 
 app.get('/auth/:username/:password', authenticateUser, (req: Request, res: Response) => {
@@ -94,20 +106,17 @@ app.delete('/api/user/:username', [authenticateToken, checkAdmin], async (req: R
     res.status(204).send()
 })
 
-https.createServer(
-    {
-        key: fs.readFileSync('key.pem'),
-        cert: fs.readFileSync('cert.pem')
-    },
-    app
-).listen(port, async () => {
 
-    await connect(CONNECTION_STRING, DATABASE)
-    const random_secret = randomBytes(64).toString('hex');
-    let secret = process.env.TOKEN_SECRET as string || random_secret
-    setSecret(secret)
+if (process.env.NODE_ENV === 'production') {
+    https.createServer(
+        {
+            key: fs.readFileSync('key.pem'),
+            cert: fs.readFileSync('cert.pem')
+        },
+        app
+    ).listen(port, async () => {
+        startServer()
+    });
+}
 
-
-    Logger.info("MongoDB connection successful")
-    Logger.info(`⚡️[server]: Server is running at http://localhost:${port}`)
-});
+export { app, startServer }

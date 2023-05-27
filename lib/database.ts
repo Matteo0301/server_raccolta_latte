@@ -3,16 +3,21 @@ import Logger from "./logger"
 import bcrypt from 'bcrypt'
 
 let db: Db
+let client: MongoClient
 
-async function connect(CONNECTION_STRING: string, DATABASE: string): Promise<void> {
+async function connect(CONNECTION_STRING: string, DATABASE: string) {
     try {
-        const client = new MongoClient(CONNECTION_STRING)
+        client = new MongoClient(CONNECTION_STRING)
         await client.connect()
         db = client.db(DATABASE)
     } catch (error) {
         Logger.error("Error connecting to MongoDB: " + error)
         process.exit(1)
     }
+}
+
+async function close() {
+    await client.close()
 }
 
 function generateHash(password: string): string {
@@ -46,4 +51,4 @@ async function deleteUser(username: string) {
 }
 
 
-export { connect, db, addUser, getUser, getUsers, updateUser, deleteUser }
+export { connect, close, db, addUser, getUser, getUsers, updateUser, deleteUser }
