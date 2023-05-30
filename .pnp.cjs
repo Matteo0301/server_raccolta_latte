@@ -45,7 +45,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["helmet", "npm:7.0.0"],\
             ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.5.0"],\
             ["jsonwebtoken", "npm:9.0.0"],\
-            ["mongodb", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:5.5.0"],\
+            ["mongodb", "virtual:8adac71575a8da6fa2a85d6972d6db9fbb8692ba538e0a6ea1041d13d614b63331c74b3c05abc13b597ee65aa28ca67ea1d5be95a25b29350fb52647654013e2#npm:5.5.0"],\
+            ["mongoose", "npm:7.2.2"],\
             ["morgan", "npm:1.10.0"],\
             ["supertest", "npm:6.3.3"],\
             ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.1.0"],\
@@ -4254,6 +4255,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["kareem", [\
+        ["npm:2.5.1", {\
+          "packageLocation": "./.yarn/cache/kareem-npm-2.5.1-79134fb43e-b019a960a7.zip/node_modules/kareem/",\
+          "packageDependencies": [\
+            ["kareem", "npm:2.5.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["kleur", [\
         ["npm:3.0.3", {\
           "packageLocation": "./.yarn/cache/kleur-npm-3.0.3-f6f53649a4-df82cd1e17.zip/node_modules/kleur/",\
@@ -4628,10 +4638,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:5.5.0", {\
-          "packageLocation": "./.yarn/__virtual__/mongodb-virtual-7abad775d1/0/cache/mongodb-npm-5.5.0-17930a6d4b-fafb75195d.zip/node_modules/mongodb/",\
+        ["virtual:8adac71575a8da6fa2a85d6972d6db9fbb8692ba538e0a6ea1041d13d614b63331c74b3c05abc13b597ee65aa28ca67ea1d5be95a25b29350fb52647654013e2#npm:5.5.0", {\
+          "packageLocation": "./.yarn/__virtual__/mongodb-virtual-6614141e1d/0/cache/mongodb-npm-5.5.0-17930a6d4b-fafb75195d.zip/node_modules/mongodb/",\
           "packageDependencies": [\
-            ["mongodb", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:5.5.0"],\
+            ["mongodb", "virtual:8adac71575a8da6fa2a85d6972d6db9fbb8692ba538e0a6ea1041d13d614b63331c74b3c05abc13b597ee65aa28ca67ea1d5be95a25b29350fb52647654013e2#npm:5.5.0"],\
             ["@aws-sdk/credential-providers", null],\
             ["@types/aws-sdk__credential-providers", null],\
             ["@types/mongodb-client-encryption", null],\
@@ -4665,6 +4675,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["mongoose", [\
+        ["npm:7.2.2", {\
+          "packageLocation": "./.yarn/cache/mongoose-npm-7.2.2-8adac71575-8111a126f4.zip/node_modules/mongoose/",\
+          "packageDependencies": [\
+            ["mongoose", "npm:7.2.2"],\
+            ["bson", "npm:5.3.0"],\
+            ["kareem", "npm:2.5.1"],\
+            ["mongodb", "virtual:8adac71575a8da6fa2a85d6972d6db9fbb8692ba538e0a6ea1041d13d614b63331c74b3c05abc13b597ee65aa28ca67ea1d5be95a25b29350fb52647654013e2#npm:5.5.0"],\
+            ["mpath", "npm:0.9.0"],\
+            ["mquery", "npm:5.0.0"],\
+            ["ms", "npm:2.1.3"],\
+            ["sift", "npm:16.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["morgan", [\
         ["npm:1.10.0", {\
           "packageLocation": "./.yarn/cache/morgan-npm-1.10.0-a0da109b6b-fb41e226ab.zip/node_modules/morgan/",\
@@ -4675,6 +4701,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["depd", "npm:2.0.0"],\
             ["on-finished", "npm:2.3.0"],\
             ["on-headers", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["mpath", [\
+        ["npm:0.9.0", {\
+          "packageLocation": "./.yarn/cache/mpath-npm-0.9.0-e79cc94aea-1052f1f926.zip/node_modules/mpath/",\
+          "packageDependencies": [\
+            ["mpath", "npm:0.9.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["mquery", [\
+        ["npm:5.0.0", {\
+          "packageLocation": "./.yarn/cache/mquery-npm-5.0.0-e714f098ee-0617ead71e.zip/node_modules/mquery/",\
+          "packageDependencies": [\
+            ["mquery", "npm:5.0.0"],\
+            ["debug", "virtual:428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3#npm:4.3.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5420,7 +5465,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["helmet", "npm:7.0.0"],\
             ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.5.0"],\
             ["jsonwebtoken", "npm:9.0.0"],\
-            ["mongodb", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:5.5.0"],\
+            ["mongodb", "virtual:8adac71575a8da6fa2a85d6972d6db9fbb8692ba538e0a6ea1041d13d614b63331c74b3c05abc13b597ee65aa28ca67ea1d5be95a25b29350fb52647654013e2#npm:5.5.0"],\
+            ["mongoose", "npm:7.2.2"],\
             ["morgan", "npm:1.10.0"],\
             ["supertest", "npm:6.3.3"],\
             ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.1.0"],\
@@ -5476,6 +5522,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["call-bind", "npm:1.0.2"],\
             ["get-intrinsic", "npm:1.2.1"],\
             ["object-inspect", "npm:1.12.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["sift", [\
+        ["npm:16.0.1", {\
+          "packageLocation": "./.yarn/cache/sift-npm-16.0.1-ad548f4923-5fe18a517a.zip/node_modules/sift/",\
+          "packageDependencies": [\
+            ["sift", "npm:16.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\

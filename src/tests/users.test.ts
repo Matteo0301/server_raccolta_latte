@@ -1,9 +1,6 @@
-import { after } from "node:test";
-import express, { Express, Request, Response } from 'express'
-import { Server, IncomingMessage, ServerResponse } from "http";
+import { Server } from "http";
 import { app, startServer } from "../app";
-import { Db, MongoClient } from "mongodb";
-import { connect, close } from "../lib/database"
+import { connect, close } from "../lib/mongoose"
 
 const request = require("supertest")
 let server: Server
@@ -11,11 +8,7 @@ let server: Server
 require("dotenv").config()
 
 const CONNECTION_STRING = process.env.CONNECTION_STRING || "mongodb://user:password@127.0.0.1:27017/raccolta_latte?authSource=raccolta_latte"
-const DATABASE = process.env.DATABASE || 'raccolta_latte'
 const port = process.env.PORT
-
-let client: MongoClient
-let db: Db
 
 
 
@@ -23,7 +16,7 @@ let db: Db
 describe("GET /auth/admin/admin", () => {
 
     beforeAll(async () => {
-        await connect(CONNECTION_STRING, DATABASE);
+        await connect(CONNECTION_STRING);
         server = app.listen(port, async () => {
             startServer()
         })

@@ -2,7 +2,7 @@ import { sign, verify } from 'jsonwebtoken'
 import { randomBytes } from 'crypto'
 import { Request, Response, NextFunction } from 'express'
 import Logger from './logger'
-import { getUser } from './database'
+import { getUser } from './mongoose'
 
 let secret = ""
 

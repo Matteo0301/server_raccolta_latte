@@ -32,7 +32,7 @@ dotenv_1.default.config();
 const app = (0, express_1.default)();
 exports.app = app;
 const port = process.env.PORT;
-const CONNECTION_STRING = process.env.CONNECTION_STRING || "mongodb://user:password@127.0.0.1:27017/raccolta_latte?authSource=raccolta_latte";
+const CONNECTION_STRING = process.env.CONNECTION_STRING || "mongodb://user:password@127.0.0.1:27017/raccolta_latte?authSource=raccolta_latte/";
 const DATABASE = process.env.DATABASE || 'raccolta_latte';
 app.use((0, cors_1.default)());
 app.use(body_parser_1.default.json());

@@ -8,30 +8,27 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const app_1 = require("../app");
 const database_1 = require("../lib/database");
-const request = require("supertest");
-let server;
+const moongoose_1 = require("../lib/moongoose");
+const logger_1 = __importDefault(require("../lib/logger"));
 require("dotenv").config();
-const CONNECTION_STRING = process.env.CONNECTION_STRING || "mongodb://user:password@127.0.0.1:27017/raccolta_latte?authSource=raccolta_latte";
+const CONNECTION_STRING = process.env.CONNECTION_STRING || "mongodb://user:password@127.0.0.1:27017/raccolta_latte?authSource=raccolta_latte/";
 const DATABASE = process.env.DATABASE || 'raccolta_latte';
 const port = process.env.PORT;
-let client;
-let db;
-describe("GET /auth/admin/admin", () => {
+describe("Database", () => {
     beforeAll(() => __awaiter(void 0, void 0, void 0, function* () {
         yield (0, database_1.connect)(CONNECTION_STRING, DATABASE);
-        server = app_1.app.listen(port, () => __awaiter(void 0, void 0, void 0, function* () {
-            (0, app_1.startServer)();
-        }));
     }));
     afterAll(() => __awaiter(void 0, void 0, void 0, function* () {
-        server.close(() => __awaiter(void 0, void 0, void 0, function* () {
-            yield (0, database_1.close)();
-        }));
+        yield (0, database_1.close)();
     }));
-    /* it("Authentication", async () => {
-        await request(server).get("/auth/admin/admin").expect(200)
-    }) */
+    it("Database", () => __awaiter(void 0, void 0, void 0, function* () {
+        let users = yield (0, moongoose_1.getUsers)();
+        logger_1.default.debug(users);
+        expect(users).not.toBeNull();
+    }));
 });

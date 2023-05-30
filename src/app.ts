@@ -9,9 +9,9 @@ import morganMiddleware from './lib/morganMiddleware'
 import Logger from './lib/logger'
 import './lib/token'
 import { authenticateToken, generateAccessToken, setSecret } from './lib/token'
-import { connect, deleteUser } from './lib/database'
+import { connect, deleteUser } from './lib/mongoose'
 import { authenticateUser, checkAdmin } from './lib/auth'
-import { addUser, getUser, getUsers, updateUser } from './lib/database'
+import { addUser, getUser, getUsers, updateUser } from './lib/mongoose'
 import { randomBytes } from 'crypto'
 
 
@@ -22,8 +22,7 @@ const app: Express = express()
 const port = process.env.PORT
 
 
-const CONNECTION_STRING = process.env.CONNECTION_STRING || "mongodb://user:password@127.0.0.1:27017/raccolta_latte?authSource=raccolta_latte"
-const DATABASE = process.env.DATABASE || 'raccolta_latte'
+const CONNECTION_STRING = process.env.CONNECTION_STRING || "mongodb://user:password@mongodb:27017/raccolta_latte?authSource=raccolta_latte/"
 
 app.use(cors())
 app.use(bodyParser.json())
@@ -35,7 +34,7 @@ async function startServer() {
 
     Logger.info(`⚡️[server]: Server is running at http://localhost:${port}`)
     if (process.env.NODE_ENV === 'production')
-        await connect(CONNECTION_STRING, DATABASE)
+        await connect(CONNECTION_STRING)
     const random_secret = randomBytes(64).toString('hex');
     let secret = process.env.TOKEN_SECRET as string || random_secret
     setSecret(secret)

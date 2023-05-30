@@ -1,7 +1,8 @@
 import { Request, Response, NextFunction } from 'express'
-import { db } from './database'
+import { db, getUser } from './mongoose'
 import { compareSync } from 'bcrypt'
 import Logger from './logger'
+import { get } from 'http'
 
 
 
@@ -9,8 +10,8 @@ async function authenticateUser(req: Request, res: Response, next: NextFunction)
     const request_user = req.params.username
     const request_password = req.params.password
 
-    let user = await db.collection('utenti').findOne({ username: request_user })
-    if (user) {
+    let user = await getUser(request_user)
+    if (user && user.password !== undefined && user.admin !== undefined) {
         if (compareSync(request_password, user.password)) {
             Logger.debug('Login successful for ' + request_user)
             req.user = request_user
