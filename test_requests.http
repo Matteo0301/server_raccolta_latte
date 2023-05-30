@@ -3,7 +3,7 @@ GET https://localhost:8000/auth/admin/admin HTTP/1.1
 ###
 
 GET https://localhost:8000/api HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiYWRtaW4iOnRydWUsImlhdCI6MTY4NDc0Nzk5NCwiZXhwIjoxNjg0ODM0Mzk0fQ.qq3cXEk_GfSSVEJjRssdG6nGz-5X2OVzGM95Qdb_Lr4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiYWRtaW4iOnRydWUsImlhdCI6MTY4NTM1MjY2NSwiZXhwIjoxNjg1NDM5MDY1fQ.UPWDAkYVjZ6HJIa-LW4owPp7JWFYHngNMekEVNCztUM
 
 
 ###
