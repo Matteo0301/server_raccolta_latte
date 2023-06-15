@@ -4,5 +4,10 @@ module.exports = {
   testEnvironment: 'node',
   testPathIgnorePatterns: [
     "bin/"
+  ],
+  "globalSetup": "./src/tests/globalSetup.ts",
+  "globalTeardown": "./src/tests/globalTeardown.ts",
+  "setupFilesAfterEnv": [
+    "./src/tests/setupFile.ts"
   ]
 };
