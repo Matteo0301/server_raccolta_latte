@@ -27,3 +27,11 @@ jobs:
       run: yarn
     - name: Run tests
       run: yarn test
+    - name: Report test coverage
+      uses: phoenix-actions/test-reporting@v8
+      id: test-report
+      if: always()
+      with:
+        name: 'Test Coverage'
+        path: junit.xml
+        reporter: jest-junit

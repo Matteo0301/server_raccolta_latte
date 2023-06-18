@@ -44,6 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express", "npm:4.18.2"],\
             ["helmet", "npm:7.0.0"],\
             ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.5.0"],\
+            ["jest-junit", "npm:16.0.0"],\
             ["jsonwebtoken", "npm:9.0.0"],\
             ["mongodb", "virtual:8adac71575a8da6fa2a85d6972d6db9fbb8692ba538e0a6ea1041d13d614b63331c74b3c05abc13b597ee65aa28ca67ea1d5be95a25b29350fb52647654013e2#npm:5.5.0"],\
             ["mongodb-memory-server", "npm:8.13.0"],\
@@ -5040,6 +5041,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["jest-junit", [\
+        ["npm:16.0.0", {\
+          "packageLocation": "./.yarn/cache/jest-junit-npm-16.0.0-39a50dfe1a-412aa4bfee.zip/node_modules/jest-junit/",\
+          "packageDependencies": [\
+            ["jest-junit", "npm:16.0.0"],\
+            ["mkdirp", "npm:1.0.4"],\
+            ["strip-ansi", "npm:6.0.1"],\
+            ["uuid", "npm:8.3.2"],\
+            ["xml", "npm:1.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["jest-leak-detector", [\
         ["npm:29.5.0", {\
           "packageLocation": "./.yarn/cache/jest-leak-detector-npm-29.5.0-5ce1db8235-0fb845da7a.zip/node_modules/jest-leak-detector/",\
@@ -6673,6 +6687,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express", "npm:4.18.2"],\
             ["helmet", "npm:7.0.0"],\
             ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.5.0"],\
+            ["jest-junit", "npm:16.0.0"],\
             ["jsonwebtoken", "npm:9.0.0"],\
             ["mongodb", "virtual:8adac71575a8da6fa2a85d6972d6db9fbb8692ba538e0a6ea1041d13d614b63331c74b3c05abc13b597ee65aa28ca67ea1d5be95a25b29350fb52647654013e2#npm:5.5.0"],\
             ["mongodb-memory-server", "npm:8.13.0"],\
@@ -7540,6 +7555,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["write-file-atomic", "npm:4.0.2"],\
             ["imurmurhash", "npm:0.1.4"],\
             ["signal-exit", "npm:3.0.7"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["xml", [\
+        ["npm:1.0.1", {\
+          "packageLocation": "./.yarn/cache/xml-npm-1.0.1-f50a7aeb8e-11b5545ef3.zip/node_modules/xml/",\
+          "packageDependencies": [\
+            ["xml", "npm:1.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\

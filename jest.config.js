@@ -1,5 +1,7 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
+
 module.exports = {
+  reporters: [['github-actions', { silent: false }], 'summary', 'jest-junit'],
   preset: 'ts-jest',
   testEnvironment: 'node',
   testPathIgnorePatterns: [
