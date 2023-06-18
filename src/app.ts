@@ -12,6 +12,7 @@ import { setSecret } from './lib/util/token'
 import { connect } from './lib/mongoose'
 import { randomBytes } from 'crypto'
 import usersRouter from './lib/users'
+import mongoose, { mongo } from 'mongoose'
 
 
 dotenv.config()
@@ -19,6 +20,8 @@ dotenv.config()
 
 const app: Express = express()
 const port = process.env.PORT || 3000
+
+let server: https.Server | null = null
 
 
 const CONNECTION_STRING = process.env.CONNECTION_STRING || "mongodb://user:password@mongodb:27017/raccolta_latte?authSource=raccolta_latte"
@@ -32,8 +35,29 @@ async function initServer() {
     let secret = process.env.TOKEN_SECRET as string || random_secret
     setSecret(secret)
     Logger.info("MongoDB connection successful")
-
 }
+
+async function closeServer() {
+    if (server) {
+        server.close(() => {
+            Logger.info('Process terminated successfully')
+        })
+    }
+}
+
+async function restartServer() {
+    await closeServer()
+    await initServer()
+}
+
+process.on('SIGTERM', closeServer)
+process.on('SIGINT', closeServer)
+process.on('uncaughtException', closeServer)
+process.on('SIGUSR1', restartServer)
+process.on('SIGUSR2', restartServer)
+
+mongoose.connection.on('disconnected', restartServer)
+mongoose.connection.on('error', closeServer)
 
 app.use(cors())
 app.use(bodyParser.json())
@@ -46,7 +70,7 @@ app.use('/users', usersRouter)
 
 
 if (process.env.NODE_ENV === 'production') {
-    https.createServer(
+    server = https.createServer(
         {
             key: fs.readFileSync('key.pem'),
             cert: fs.readFileSync('cert.pem')
