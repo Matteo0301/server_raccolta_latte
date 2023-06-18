@@ -1,4 +1,4 @@
-import { addUser, close, connect, getUser, getUsers, updateUser } from "../lib/mongoose";
+import { addUser, clear, close, connect, getUser, getUsers, updateUser } from "../lib/mongoose";
 import { User } from "../lib/schemas";
 
 
@@ -6,9 +6,12 @@ require("dotenv").config()
 
 describe("Users", () => {
 
+    beforeAll(async () => {
+        await clear()
+    })
+
     test("Get users", async () => {
         let users = await getUsers()
-        console.log('users :>> ', users);
         expect(users.toString()).toBe("")
     })
 

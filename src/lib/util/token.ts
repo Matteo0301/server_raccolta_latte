@@ -1,8 +1,7 @@
 import { sign, verify } from 'jsonwebtoken'
-import { randomBytes } from 'crypto'
 import { Request, Response, NextFunction } from 'express'
 import Logger from './logger'
-import { getUser } from './mongoose'
+import { getUser } from '../mongoose'
 
 let secret = ""
 
@@ -20,7 +19,13 @@ async function authenticateToken(req: Request, res: Response, next: NextFunction
     const header = req.headers['authorization']
     Logger.debug(header)
     if (header && typeof header === 'string') {
-        token = header.split(' ')[1]
+        if (header.startsWith('Bearer ')) {
+            token = header.split(' ')[1]
+        } else {
+            res.sendStatus(401)
+            return;
+        }
+
     } else {
         res.sendStatus(401)
         return;

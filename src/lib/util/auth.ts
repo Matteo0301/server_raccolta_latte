@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { db, getUser } from './mongoose'
+import { db, getUser } from '../mongoose'
 import { compareSync } from 'bcrypt'
 import Logger from './logger'
 import { get } from 'http'
