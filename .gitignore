@@ -1,6 +1,7 @@
 .yarn/*
 coverage/*
 logs/*
+bin/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
