@@ -11,7 +11,6 @@ import './lib/util/token'
 import { setSecret } from './lib/util/token'
 import { connect } from './lib/mongoose'
 import { randomBytes } from 'crypto'
-
 import usersRouter from './lib/users'
 
 
@@ -19,14 +18,14 @@ dotenv.config()
 
 
 const app: Express = express()
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 
 
-const CONNECTION_STRING = process.env.CONNECTION_STRING || "mongodb://user:password@mongodb:27017/raccolta_latte?authSource=raccolta_latte/"
+const CONNECTION_STRING = process.env.CONNECTION_STRING || "mongodb://user:password@mongodb:27017/raccolta_latte?authSource=raccolta_latte"
 
 async function initServer() {
 
-    Logger.info(`⚡️[server]: Server is running at http://localhost:${port}`)
+    Logger.info(`⚡️[server]: Server is running at https://localhost:${port}`)
     if (process.env.NODE_ENV === 'production')
         await connect(CONNECTION_STRING)
     const random_secret = randomBytes(64).toString('hex');
