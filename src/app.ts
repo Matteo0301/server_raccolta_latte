@@ -9,10 +9,10 @@ import morganMiddleware from './lib/util/morganMiddleware'
 import Logger from './lib/util/logger'
 import './lib/util/token'
 import { setSecret } from './lib/util/token'
-import { connect } from './lib/mongoose'
+import { close, connect } from './lib/mongoose'
 import { randomBytes } from 'crypto'
 import usersRouter from './lib/users'
-import mongoose, { mongo } from 'mongoose'
+import mongoose from 'mongoose'
 
 
 dotenv.config()
@@ -23,6 +23,7 @@ const port = process.env.PORT || 3000
 
 let server: https.Server | null = null
 
+let errorCounter = 0
 
 const CONNECTION_STRING = process.env.CONNECTION_STRING || "mongodb://user:password@mongodb:27017/raccolta_latte?authSource=raccolta_latte"
 
@@ -39,25 +40,22 @@ async function initServer() {
 
 async function closeServer() {
     if (server) {
-        server.close(() => {
-            Logger.info('Process terminated successfully')
-        })
+        server.close()
+        await close()
+        Logger.info('Process terminated successfully')
+        process.exit(1)
     }
-}
-
-async function restartServer() {
-    await closeServer()
-    await initServer()
 }
 
 process.on('SIGTERM', closeServer)
 process.on('SIGINT', closeServer)
 process.on('uncaughtException', closeServer)
-process.on('SIGUSR1', restartServer)
-process.on('SIGUSR2', restartServer)
 
-mongoose.connection.on('disconnected', restartServer)
-mongoose.connection.on('error', closeServer)
+mongoose.connection.on('error', async () => {
+    Logger.error('MongoDB connection error')
+    await closeServer()
+}
+)
 
 app.use(cors())
 app.use(bodyParser.json())
