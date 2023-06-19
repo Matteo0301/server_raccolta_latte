@@ -12,6 +12,7 @@ import { setSecret } from './lib/util/token'
 import { close, connect } from './lib/mongoose'
 import { randomBytes } from 'crypto'
 import usersRouter from './lib/users'
+import raccolteRouter from './lib/collections'
 import mongoose from 'mongoose'
 
 
@@ -22,8 +23,6 @@ const app: Express = express()
 const port = process.env.PORT || 3000
 
 let server: https.Server | null = null
-
-let errorCounter = 0
 
 const CONNECTION_STRING = process.env.CONNECTION_STRING || "mongodb://user:password@mongodb:27017/raccolta_latte?authSource=raccolta_latte"
 
@@ -64,7 +63,7 @@ app.use(Helmet())
 app.use(morganMiddleware)
 
 app.use('/users', usersRouter)
-
+app.use('/collections', raccolteRouter)
 
 
 if (process.env.NODE_ENV === 'production') {

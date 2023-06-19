@@ -6,6 +6,13 @@ const UserSchema = new Schema({
     admin: Boolean
 })
 
-const User = model('User', UserSchema, 'utenti')
+const RaccoltaSchema = new Schema({
+    date: Date,
+    quantity: Number,
+    user: String
+})
 
-export { User }
+const User = model('User', UserSchema, 'utenti')
+const Raccolta = model('Raccolta', RaccoltaSchema, 'raccolta')
+
+export { User, Raccolta }

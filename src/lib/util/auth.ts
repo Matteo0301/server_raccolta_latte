@@ -35,4 +35,13 @@ async function checkAdmin(req: Request, res: Response, next: NextFunction) {
     }
 }
 
-export { authenticateUser, checkAdmin }
+async function checkTokenMatchesUser(req: Request, res: Response, next: NextFunction) {
+    if (!req.admin && req.user !== req.params.username) {
+        res.sendStatus(403)
+    }
+    else {
+        next()
+    }
+}
+
+export { authenticateUser, checkAdmin, checkTokenMatchesUser }

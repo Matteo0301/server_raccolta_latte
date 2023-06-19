@@ -4,7 +4,7 @@ import Logger from "./util/logger";
 import { authenticateToken, generateAccessToken } from "./util/token";
 import { addUser, deleteUser, getUser, getUsers, updateUser } from "./mongoose";
 
-const router = Router();
+const router = Router()
 
 router.get('/auth/:username/:password', authenticateUser, (req: Request, res: Response) => {
     Logger.debug('Authentication')
@@ -13,7 +13,7 @@ router.get('/auth/:username/:password', authenticateUser, (req: Request, res: Re
     res.json(token)
 })
 
-router.post('/', [authenticateToken, checkAdmin], async (req: Request, res: Response) => {
+router.put('/', [authenticateToken, checkAdmin], async (req: Request, res: Response) => {
     if (req.body.username === null || req.body.password === null || req.body.admin === null) {
         res.sendStatus(400)
         return

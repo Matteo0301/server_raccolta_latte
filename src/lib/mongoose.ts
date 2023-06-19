@@ -1,7 +1,7 @@
 import { set, connect as db_connect } from "mongoose"
 import Logger from "./util/logger"
 import bcrypt from 'bcrypt'
-import { User } from "./schemas"
+import { User, Raccolta } from "./schemas"
 
 let db: any
 
@@ -66,5 +66,34 @@ async function deleteUser(username: string) {
     await User.deleteOne({ username: username })
 }
 
+async function addCollection(date: Date, quantity: number, user: string) {
+    if (date == null) {
+        date = new Date()
+    }
+    await Raccolta.create({ date: date, quantity: quantity, user: user })
+}
 
-export { connect, close, db, addUser, getUser, getUsers, updateUser, deleteUser, clear, User, generateHash }
+async function getCollections() {
+    const raccolta = await Raccolta.find().exec()
+    return raccolta
+}
+
+async function getCollectionByUser(user: string) {
+    const raccolta = await Raccolta.find({ user: user }).exec()
+    return raccolta
+}
+
+async function checkCollection(id: String) {
+    const r = await Raccolta.find({ _id: id }).exec()
+    if (r.length > 0) {
+        return true
+    }
+    return false
+}
+
+async function deleteCollection(id: string) {
+    await Raccolta.deleteOne({ _id: id }).exec()
+}
+
+
+export { connect, close, db, addUser, getUser, getUsers, updateUser, deleteUser, clear, User, generateHash, addCollection, getCollections, getCollectionByUser, deleteCollection, checkCollection }

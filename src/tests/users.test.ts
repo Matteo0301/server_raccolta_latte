@@ -1,4 +1,4 @@
-import { Server, get } from "http";
+import { Server } from "http";
 import { app, startServer } from "../app";
 import { addUser, clear, getUser, getUsers, generateHash } from "../lib/mongoose";
 import { compareSync } from "bcrypt";
@@ -8,7 +8,7 @@ let server: Server
 
 require("dotenv").config()
 
-const port = process.env.PORT
+const port = 3001
 let token = ""
 
 beforeAll(async () => {
@@ -56,7 +56,7 @@ describe("Authentication", () => {
 
 describe("Add user", () => {
     test.concurrent("should add user", async () => {
-        const res = await request(server).post("/users").set('Authorization', token).send({ username: "newUser", password: "pass", admin: false })
+        const res = await request(server).put("/users").set('Authorization', token).send({ username: "newUser", password: "pass", admin: false })
         expect(res.status).toBe(201)
         expect(res.text).toBe("/users/newUser")
         const u = await getUser("newUser")
