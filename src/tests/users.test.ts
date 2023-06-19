@@ -51,7 +51,10 @@ describe("Authentication", () => {
         expect(res.body).toHaveProperty("token")
         expect(res.body.token).not.toBeNull()
     })
+})
 
+
+describe("Add user", () => {
     test.concurrent("should add user", async () => {
         const res = await request(server).post("/users").set('Authorization', token).send({ username: "newUser", password: "pass", admin: false })
         expect(res.status).toBe(201)
@@ -64,7 +67,9 @@ describe("Authentication", () => {
             expect(u.admin).toBeFalsy()
         }
     })
+})
 
+describe("Update user", () => {
     test.concurrent.each([
         ["fromAdmin", "pass", true, "pass", false],
         ["toAdmin", "pass", false, "pass", true],
@@ -92,7 +97,9 @@ describe("Authentication", () => {
         const res = await request(server).patch("/users/inexistent").set('Authorization', token).send({ password: "pass", admin: true })
         expect(res.status).toBe(404)
     })
+})
 
+describe("Delete user", () => {
     test.concurrent("should delete user", async () => {
         addUser("toBeDeleted", "pass", false)
         const res = await request(server).delete("/users/toBeDeleted").set('Authorization', token)
@@ -105,7 +112,9 @@ describe("Authentication", () => {
         const res = await request(server).delete("/users/inexistent").set('Authorization', token)
         expect(res.status).toBe(404)
     })
+})
 
+describe("Get users", () => {
     test("should get all users", async () => {
         const res = await request(server).get("/users").set('Authorization', token)
         expect(res.status).toBe(200)
@@ -114,5 +123,4 @@ describe("Authentication", () => {
         const users = (await getUsers())
         expect(res.body.users).toEqual(users)
     })
-
 })
