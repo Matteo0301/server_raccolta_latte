@@ -42,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cors", "npm:2.8.5"],\
             ["dotenv", "npm:16.0.3"],\
             ["express", "npm:4.18.2"],\
+            ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:6.7.0"],\
             ["helmet", "npm:7.0.0"],\
             ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.5.0"],\
             ["jest-junit", "npm:16.0.0"],\
@@ -4049,6 +4050,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["express-rate-limit", [\
+        ["npm:6.7.0", {\
+          "packageLocation": "./.yarn/cache/express-rate-limit-npm-6.7.0-e847771089-7bd3f298b2.zip/node_modules/express-rate-limit/",\
+          "packageDependencies": [\
+            ["express-rate-limit", "npm:6.7.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:6.7.0", {\
+          "packageLocation": "./.yarn/__virtual__/express-rate-limit-virtual-5ef9a1e1b0/0/cache/express-rate-limit-npm-6.7.0-e847771089-7bd3f298b2.zip/node_modules/express-rate-limit/",\
+          "packageDependencies": [\
+            ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:6.7.0"],\
+            ["@types/express", "npm:4.17.17"],\
+            ["express", "npm:4.18.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/express",\
+            "express"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["fast-json-stable-stringify", [\
         ["npm:2.1.0", {\
           "packageLocation": "./.yarn/cache/fast-json-stable-stringify-npm-2.1.0-02e8905fda-b191531e36.zip/node_modules/fast-json-stable-stringify/",\
@@ -6685,6 +6708,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cors", "npm:2.8.5"],\
             ["dotenv", "npm:16.0.3"],\
             ["express", "npm:4.18.2"],\
+            ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:6.7.0"],\
             ["helmet", "npm:7.0.0"],\
             ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.5.0"],\
             ["jest-junit", "npm:16.0.0"],\

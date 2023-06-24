@@ -14,8 +14,14 @@ import { randomBytes } from 'crypto'
 import usersRouter from './lib/users'
 import raccolteRouter from './lib/collections'
 import mongoose from 'mongoose'
+import rateLimit from 'express-rate-limit'
 
-
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
+    standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+    legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+})
 dotenv.config()
 
 
@@ -61,6 +67,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(Helmet())
 app.use(morganMiddleware)
+// Apply the rate limiting middleware to all requests
+app.use(limiter)
 
 app.use('/users', usersRouter)
 app.use('/collections', raccolteRouter)

@@ -41,7 +41,7 @@ async function addUser(username: string, password: string, admin: boolean) {
 }
 
 async function getUser(username: string) {
-    const user = await User.find({ username: username }).exec()
+    const user = await User.find({ username: { $eq: username } }).exec()
     if (user.length > 0) {
         return user[0]
     }
@@ -59,11 +59,11 @@ async function getUsers() {
 
 async function updateUser(username: string, password: string, admin: boolean) {
     const hashedPassword = generateHash(password)
-    await User.updateOne({ username: username }, { password: hashedPassword, admin: admin })
+    await User.updateOne({ username: { $eq: username } }, { password: hashedPassword, admin: admin })
 }
 
 async function deleteUser(username: string) {
-    await User.deleteOne({ username: username })
+    await User.deleteOne({ username: { $eq: username } })
 }
 
 async function addCollection(date: Date, quantity: number, user: string) {
