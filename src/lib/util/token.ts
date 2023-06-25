@@ -30,8 +30,7 @@ async function authenticateToken(req: Request, res: Response, next: NextFunction
         res.sendStatus(401)
         return;
     }
-    //const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjg0NjYyMDYxLCJleHAiOjE2ODQ3NDg0NjF9.jvQLv78byAd_JDJJIciqdpdQVTnW4z0dtHbhPJy8u3s"
-
+    
     if (token == null) {
         Logger.info('Token is null')
         return res.sendStatus(401)
