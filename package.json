@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Matteo0301/server_raccolta_latte#readme",
   "dependencies": {
-    "@types/node": "^20.2.5",
+    "@types/node": "^20.3.1",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
