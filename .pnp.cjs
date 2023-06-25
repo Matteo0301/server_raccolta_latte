@@ -40,7 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["bcrypt", "npm:5.1.0"],\
             ["body-parser", "npm:1.20.2"],\
             ["cors", "npm:2.8.5"],\
-            ["dotenv", "npm:16.0.3"],\
+            ["dotenv", "npm:16.3.1"],\
             ["express", "npm:4.18.2"],\
             ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:6.7.0"],\
             ["helmet", "npm:7.0.0"],\
@@ -3797,10 +3797,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["dotenv", [\
-        ["npm:16.0.3", {\
-          "packageLocation": "./.yarn/cache/dotenv-npm-16.0.3-4cc29121dc-afcf03f373.zip/node_modules/dotenv/",\
+        ["npm:16.3.1", {\
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.3.1-e6d380a398-15d75e7279.zip/node_modules/dotenv/",\
           "packageDependencies": [\
-            ["dotenv", "npm:16.0.3"]\
+            ["dotenv", "npm:16.3.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6706,7 +6706,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["bcrypt", "npm:5.1.0"],\
             ["body-parser", "npm:1.20.2"],\
             ["cors", "npm:2.8.5"],\
-            ["dotenv", "npm:16.0.3"],\
+            ["dotenv", "npm:16.3.1"],\
             ["express", "npm:4.18.2"],\
             ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:6.7.0"],\
             ["helmet", "npm:7.0.0"],\
