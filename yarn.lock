@@ -4767,7 +4767,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongodb@npm:5.6.0":
+"mongodb@npm:5.6.0, mongodb@npm:^5.6.0":
   version: 5.6.0
   resolution: "mongodb@npm:5.6.0"
   dependencies:
@@ -4808,32 +4808,6 @@ __metadata:
     saslprep:
       optional: true
   checksum: f0b1347739cc362b82b3aabc7e7d4d74bc7a344ed1bbafd6f92681bcab440f6cc618ffa0438d41d2789cb34818f3b09d4c78f517b42160ebae55bf2c96f13953
-  languageName: node
-  linkType: hard
-
-"mongodb@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "mongodb@npm:5.5.0"
-  dependencies:
-    bson: ^5.3.0
-    mongodb-connection-string-url: ^2.6.0
-    saslprep: ^1.0.3
-    socks: ^2.7.1
-  peerDependencies:
-    "@aws-sdk/credential-providers": ^3.201.0
-    mongodb-client-encryption: ">=2.3.0 <3"
-    snappy: ^7.2.2
-  dependenciesMeta:
-    saslprep:
-      optional: true
-  peerDependenciesMeta:
-    "@aws-sdk/credential-providers":
-      optional: true
-    mongodb-client-encryption:
-      optional: true
-    snappy:
-      optional: true
-  checksum: fafb75195d605767cf7269aa82a1f4704c3357240d0fef7296d55e83eab592158844988af3b94165769459ff1b2a0af2fc49bc44c9bbabd10d6ddc319668a0e0
   languageName: node
   linkType: hard
 
@@ -5560,7 +5534,7 @@ __metadata:
     jest: ^29.5.0
     jest-junit: ^16.0.0
     jsonwebtoken: ^9.0.0
-    mongodb: ^5.5.0
+    mongodb: ^5.6.0
     mongodb-memory-server: ^8.13.0
     mongoose: ^7.3.1
     morgan: ^1.10.0
