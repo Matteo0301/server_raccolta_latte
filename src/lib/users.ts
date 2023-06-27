@@ -1,19 +1,33 @@
 import { Request, Response, Router } from "express";
-import { authenticateUser, checkAdmin } from "./util/auth";
+import { authenticateUser, checkAdmin, checkValidationErrors } from "./util/auth";
 import Logger from "./util/logger";
 import { authenticateToken, generateAccessToken } from "./util/token";
 import { addUser, deleteUser, getUser, getUsers, updateUser } from "./mongoose";
+import { check, param, body, header } from "express-validator"
 
 const router = Router()
 
-router.get('/auth/:username/:password', authenticateUser, (req: Request, res: Response) => {
+router.get('/auth/:username/:password', [
+    param('username').notEmpty().isString().isAlpha().escape(),
+    param('password').notEmpty().isString().isStrongPassword(),
+    checkValidationErrors,
+    authenticateUser
+], (req: Request, res: Response) => {
     Logger.debug('Authentication')
     Logger.debug("username " + req.user + ', admin: ' + req.admin)
     const token = { token: generateAccessToken(req.user, req.admin) }
     res.json(token)
 })
 
-router.put('/', [authenticateToken, checkAdmin], async (req: Request, res: Response) => {
+router.put('/', [
+    body('username').notEmpty().isString().isAlpha().escape(),
+    body('password').notEmpty().isString().isStrongPassword(),
+    body('admin').notEmpty().isBoolean(),
+    header('authorization').notEmpty().isString(),
+    checkValidationErrors,
+    authenticateToken,
+    checkAdmin
+], async (req: Request, res: Response) => {
     if (req.body.username === null || req.body.password === null || req.body.admin === null) {
         res.sendStatus(400)
         return
@@ -26,13 +40,22 @@ router.put('/', [authenticateToken, checkAdmin], async (req: Request, res: Respo
     res.status(201).send('/users/' + username)
 })
 
-router.get('/', [authenticateToken, checkAdmin], async (req: Request, res: Response) => {
+router.get('/', [
+    authenticateToken,
+    checkAdmin
+], async (req: Request, res: Response) => {
     const users = await getUsers()
     const r = { users: users }
     res.json(r)
 })
 
-router.patch('/:username', [authenticateToken, checkAdmin], async (req: Request, res: Response) => {
+router.patch('/:username', [
+    param('username').notEmpty().isString().isAlpha().escape(),
+    header('authorization').notEmpty().isString(),
+    checkValidationErrors,
+    authenticateToken,
+    checkAdmin
+], async (req: Request, res: Response) => {
     if (!req.body.password && !req.body.admin) {
         res.sendStatus(400)
         return
@@ -52,7 +75,13 @@ router.patch('/:username', [authenticateToken, checkAdmin], async (req: Request,
     res.status(204).send()
 })
 
-router.delete('/:username', [authenticateToken, checkAdmin], async (req: Request, res: Response) => {
+router.delete('/:username', [
+    param('username').notEmpty().isString().isAlpha().escape(),
+    header('authorization').notEmpty().isString(),
+    checkValidationErrors,
+    authenticateToken,
+    checkAdmin
+], async (req: Request, res: Response) => {
     const user = await getUser(req.params.username)
 
     if (!user) {

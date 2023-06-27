@@ -1,71 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="31" failures="0" errors="0" time="8.344">
-  <testsuite name="Add collection" errors="0" failures="0" skipped="0" timestamp="2023-06-24T13:37:08" time="4.057" tests="12">
-    <testcase classname="Add collection should add collection" name="Add collection should add collection" time="0.071">
+<testsuites name="jest tests" tests="4" failures="0" errors="0" time="2.064">
+  <testsuite name="Users" errors="0" failures="0" skipped="0" timestamp="2023-06-27T15:34:02" time="0.952" tests="4">
+    <testcase classname="Users Get users" name="Users Get users" time="0.013">
     </testcase>
-    <testcase classname="Add collection should add collection to other user if admin" name="Add collection should add collection to other user if admin" time="0.002">
+    <testcase classname="Users Add users" name="Users Add users" time="0.083">
     </testcase>
-    <testcase classname="Add collection should not add collection to other user if not admin" name="Add collection should not add collection to other user if not admin" time="0.001">
+    <testcase classname="Users Update users" name="Users Update users" time="0.069">
     </testcase>
-    <testcase classname="Get collection should get collection" name="Get collection should get collection" time="0.022">
-    </testcase>
-    <testcase classname="Get collection should get collection of other user if admin" name="Get collection should get collection of other user if admin" time="0.026">
-    </testcase>
-    <testcase classname="Get collection should not get collection of other user if not admin" name="Get collection should not get collection of other user if not admin" time="0.012">
-    </testcase>
-    <testcase classname="Get collection should get all collections if admin" name="Get collection should get all collections if admin" time="0.023">
-    </testcase>
-    <testcase classname="Get collection should not get all collections if not admin" name="Get collection should not get all collections if not admin" time="0.013">
-    </testcase>
-    <testcase classname="Delete collection should delete collection" name="Delete collection should delete collection" time="0.038">
-    </testcase>
-    <testcase classname="Delete collection should delete collection of other user if admin" name="Delete collection should delete collection of other user if admin" time="0.037">
-    </testcase>
-    <testcase classname="Delete collection should not delete collection of other user if not admin" name="Delete collection should not delete collection of other user if not admin" time="0.016">
-    </testcase>
-    <testcase classname="Delete collection should not delete non existent collection" name="Delete collection should not delete non existent collection" time="0.016">
-    </testcase>
-  </testsuite>
-  <testsuite name="Authentication" errors="0" failures="0" skipped="0" timestamp="2023-06-24T13:37:12" time="2.849" tests="15">
-    <testcase classname="Authentication should login as admin" name="Authentication should login as admin" time="0.163">
-    </testcase>
-    <testcase classname="Authentication should not login with wrong credentials: admin a" name="Authentication should not login with wrong credentials: admin a" time="0.058">
-    </testcase>
-    <testcase classname="Authentication should not login with wrong credentials: a admin" name="Authentication should not login with wrong credentials: a admin" time="0.07">
-    </testcase>
-    <testcase classname="Authentication should not login with wrong credentials: a a" name="Authentication should not login with wrong credentials: a a" time="0.133">
-    </testcase>
-    <testcase classname="Authentication should login as user" name="Authentication should login as user" time="0.058">
-    </testcase>
-    <testcase classname="Add user should add user" name="Add user should add user" time="0.485">
-    </testcase>
-    <testcase classname="Update user should change user: fromAdmin pass true to pass false" name="Update user should change user: fromAdmin pass true to pass false" time="0.057">
-    </testcase>
-    <testcase classname="Update user should change user: toAdmin pass false to pass true" name="Update user should change user: toAdmin pass false to pass true" time="0.228">
-    </testcase>
-    <testcase classname="Update user should change user: changePass pass true to newpass true" name="Update user should change user: changePass pass true to newpass true" time="0">
-    </testcase>
-    <testcase classname="Update user should change user: changeAll pass true to newpass false" name="Update user should change user: changeAll pass true to newpass false" time="0">
-    </testcase>
-    <testcase classname="Update user should not update user with no password or admin" name="Update user should not update user with no password or admin" time="0.026">
-    </testcase>
-    <testcase classname="Update user should not update inexistent user" name="Update user should not update inexistent user" time="0.012">
-    </testcase>
-    <testcase classname="Delete user should delete user" name="Delete user should delete user" time="0.012">
-    </testcase>
-    <testcase classname="Delete user should not delete inexistent user" name="Delete user should not delete inexistent user" time="0.015">
-    </testcase>
-    <testcase classname="Get users should get all users" name="Get users should get all users" time="0.021">
-    </testcase>
-  </testsuite>
-  <testsuite name="Users" errors="0" failures="0" skipped="0" timestamp="2023-06-24T13:37:15" time="1.361" tests="4">
-    <testcase classname="Users Get users" name="Users Get users" time="0.008">
-    </testcase>
-    <testcase classname="Users Add users" name="Users Add users" time="0.072">
-    </testcase>
-    <testcase classname="Users Update users" name="Users Update users" time="0.061">
-    </testcase>
-    <testcase classname="Users Delete users" name="Users Delete users" time="0.008">
+    <testcase classname="Users Delete users" name="Users Delete users" time="0.019">
     </testcase>
   </testsuite>
 </testsuites>

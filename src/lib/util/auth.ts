@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import { db, getUser } from '../mongoose'
 import { compareSync } from 'bcrypt'
 import Logger from './logger'
-import { get } from 'http'
+import { validationResult } from 'express-validator'
 
 
 
@@ -44,4 +44,15 @@ async function checkTokenMatchesUser(req: Request, res: Response, next: NextFunc
     }
 }
 
-export { authenticateUser, checkAdmin, checkTokenMatchesUser }
+async function checkValidationErrors(req: Request, res: Response, next: NextFunction) {
+    const result = validationResult(req)
+    if (!result.isEmpty()) {
+        res.status(400).json({ errors: result.array() })
+    }
+    else {
+        next()
+    }
+
+}
+
+export { authenticateUser, checkAdmin, checkTokenMatchesUser, checkValidationErrors }

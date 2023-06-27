@@ -3173,6 +3173,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"express-validator@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "express-validator@npm:7.0.1"
+  dependencies:
+    lodash: ^4.17.21
+    validator: ^13.9.0
+  checksum: 34431c106533e761c7875fea023940fb35b426509c5f3b21e30a4bd2f82833494ad047d4c0cc2626788964a720dd049b38156b13a1a9906243c66c68d32819a2
+  languageName: node
+  linkType: hard
+
 "express@npm:^4.18.2":
   version: 4.18.2
   resolution: "express@npm:4.18.2"
@@ -5530,6 +5540,7 @@ __metadata:
     dotenv: ^16.3.1
     express: ^4.18.2
     express-rate-limit: ^6.7.0
+    express-validator: ^7.0.1
     helmet: ^7.0.0
     jest: ^29.5.0
     jest-junit: ^16.0.0
@@ -6065,11 +6076,11 @@ __metadata:
 
 "typescript@patch:typescript@^5.1.3#~builtin<compat/typescript>":
   version: 5.1.3
-  resolution: "typescript@patch:typescript@npm%3A5.1.3#~builtin<compat/typescript>::version=5.1.3&hash=5da071"
+  resolution: "typescript@patch:typescript@npm%3A5.1.3#~builtin<compat/typescript>::version=5.1.3&hash=77c9e2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 6f0a9dca6bf4ce9dcaf4e282aade55ef4c56ecb5fb98d0a4a5c0113398815aea66d871b5611e83353e5953a19ed9ef103cf5a76ac0f276d550d1e7cd5344f61e
+  checksum: 32a25b2e128a4616f999d4ee502aabb1525d5647bc8955e6edf05d7fbc53af8aa98252e2f6ba80bcedfc0260c982b885f3c09cfac8bb65d2924f3133ad1e1e62
   languageName: node
   linkType: hard
 
@@ -6159,6 +6170,13 @@ __metadata:
     "@types/istanbul-lib-coverage": ^2.0.1
     convert-source-map: ^1.6.0
   checksum: 2069d59ee46cf8d83b4adfd8a5c1a90834caffa9f675e4360f1157ffc8578ef0f763c8f32d128334424159bb6b01f3876acd39cd13297b2769405a9da241f8d1
+  languageName: node
+  linkType: hard
+
+"validator@npm:^13.9.0":
+  version: 13.9.0
+  resolution: "validator@npm:13.9.0"
+  checksum: e2c936f041f61faa42bafd17c6faddf939498666cd82e88d733621c286893730b008959f4cb12ab3e236148a4f3805c30b85e3dcf5e0efd8b0cbcd36c02bfc0c
   languageName: node
   linkType: hard
 
