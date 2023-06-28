@@ -6,8 +6,6 @@ COPY . .
 EXPOSE 3000
 RUN chown -R node /usr/src/app
 USER node
-RUN yarn set version stable
-RUN yarn install
 RUN yarn build
 CMD ["yarn", "start"]
 

@@ -20,7 +20,6 @@ services:
     restart: unless-stopped
     volumes:
       - mongodb-data:/data/db
-      - ./.devcontainer/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
 
     hostname: mongodb
 
