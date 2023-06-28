@@ -1,7 +1,8 @@
 import { Server } from "http";
 import { app, startServer } from "../app";
-import { addUser, clear, getUser, getUsers, generateHash } from "../lib/mongoose";
+import { addUser, clear, getUser, getUsers } from "../lib/mongoose";
 import { compareSync } from "bcrypt";
+import { generateAccessToken } from "../lib/util/token";
 
 const request = require("supertest")
 let server: Server
@@ -18,8 +19,7 @@ beforeAll(async () => {
     })
     await clear()
     addUser("admin", "admin", true)
-    const res = await request(server).get("/users/auth/admin/admin")
-    token = "Bearer " + res.body.token
+    token = "Bearer " + generateAccessToken("admin", true)
 })
 afterAll(() => {
     server.close()
@@ -33,7 +33,6 @@ describe("Authentication", () => {
         expect(res.status).toBe(200)
         expect(res.body).toHaveProperty("token")
         expect(res.body.token).not.toBeNull()
-        token = "Bearer " + res.body.token
     })
 
     test.concurrent.each([

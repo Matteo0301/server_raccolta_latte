@@ -9,7 +9,7 @@ const router = Router()
 
 router.get('/auth/:username/:password', [
     param('username').notEmpty().isString().isAlpha().escape(),
-    param('password').notEmpty().isString().isStrongPassword(),
+    param('password').notEmpty().isString(),
     checkValidationErrors,
     authenticateUser
 ], (req: Request, res: Response) => {
@@ -21,7 +21,7 @@ router.get('/auth/:username/:password', [
 
 router.put('/', [
     body('username').notEmpty().isString().isAlpha().escape(),
-    body('password').notEmpty().isString().isStrongPassword(),
+    body('password').notEmpty().isString(),
     body('admin').notEmpty().isBoolean(),
     header('authorization').notEmpty().isString(),
     checkValidationErrors,
