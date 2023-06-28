@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express'
 import { db, getUser } from '../mongoose'
-import { compareSync } from 'bcrypt'
+import { compareSync } from 'bcryptjs'
 import Logger from './logger'
 import { validationResult } from 'express-validator'
 

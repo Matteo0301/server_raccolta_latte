@@ -1,7 +1,7 @@
 import { Server } from "http";
 import { app, startServer } from "../app";
 import { addUser, clear, getUser, getUsers } from "../lib/mongoose";
-import { compareSync } from "bcrypt";
+import { compareSync } from "bcryptjs";
 import { generateAccessToken } from "../lib/util/token";
 
 const request = require("supertest")

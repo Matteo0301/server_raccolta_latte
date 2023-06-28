@@ -1,6 +1,6 @@
 import { set, connect as db_connect } from "mongoose"
 import Logger from "./util/logger"
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import { User, Raccolta } from "./schemas"
 
 let db: any
