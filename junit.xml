@@ -1,306 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="31" failures="23" errors="0" time="8.299">
-  <testsuite name="Add collection" errors="0" failures="8" skipped="0" timestamp="2023-06-28T07:17:14" time="4.196" tests="12">
-    <testcase classname="Add collection should add collection" name="Add collection should add collection" time="0.058">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 201
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:34:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
+<testsuites name="jest tests" tests="31" failures="0" errors="0" time="4.809">
+  <testsuite name="Authentication" errors="0" failures="0" skipped="0" timestamp="2023-06-28T07:43:45" time="2.866" tests="15">
+    <testcase classname="Authentication should login as admin" name="Authentication should login as admin" time="0.271">
     </testcase>
-    <testcase classname="Add collection should add collection to other user if admin" name="Add collection should add collection to other user if admin" time="0.002">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 201
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:44:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
+    <testcase classname="Authentication should not login with wrong credentials: admin a" name="Authentication should not login with wrong credentials: admin a" time="0.001">
     </testcase>
-    <testcase classname="Add collection should not add collection to other user if not admin" name="Add collection should not add collection to other user if not admin" time="0.003">
+    <testcase classname="Authentication should not login with wrong credentials: a admin" name="Authentication should not login with wrong credentials: a admin" time="0.064">
     </testcase>
-    <testcase classname="Get collection should get collection" name="Get collection should get collection" time="0.028">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 200
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:65:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
+    <testcase classname="Authentication should not login with wrong credentials: a a" name="Authentication should not login with wrong credentials: a a" time="0.142">
+    </testcase>
+    <testcase classname="Authentication should login as user" name="Authentication should login as user" time="0.062">
+    </testcase>
+    <testcase classname="Add user should add user" name="Add user should add user" time="0.516">
+    </testcase>
+    <testcase classname="Update user should change user: fromAdmin pass true to pass false" name="Update user should change user: fromAdmin pass true to pass false" time="0.065">
+    </testcase>
+    <testcase classname="Update user should change user: toAdmin pass false to pass true" name="Update user should change user: toAdmin pass false to pass true" time="0.236">
+    </testcase>
+    <testcase classname="Update user should change user: changePass pass true to newpass true" name="Update user should change user: changePass pass true to newpass true" time="0">
+    </testcase>
+    <testcase classname="Update user should change user: changeAll pass true to newpass false" name="Update user should change user: changeAll pass true to newpass false" time="0.001">
+    </testcase>
+    <testcase classname="Update user should not update user with no password or admin" name="Update user should not update user with no password or admin" time="0.041">
+    </testcase>
+    <testcase classname="Update user should not update inexistent user" name="Update user should not update inexistent user" time="0.019">
+    </testcase>
+    <testcase classname="Delete user should delete user" name="Delete user should delete user" time="0.018">
+    </testcase>
+    <testcase classname="Delete user should not delete inexistent user" name="Delete user should not delete inexistent user" time="0.031">
+    </testcase>
+    <testcase classname="Get users should get all users" name="Get users should get all users" time="0.039">
+    </testcase>
+  </testsuite>
+  <testsuite name="Add collection" errors="0" failures="0" skipped="0" timestamp="2023-06-28T07:43:48" time="1.14" tests="12">
+    <testcase classname="Add collection should add collection" name="Add collection should add collection" time="0.108">
+    </testcase>
+    <testcase classname="Add collection should add collection to other user if admin" name="Add collection should add collection to other user if admin" time="0.001">
+    </testcase>
+    <testcase classname="Add collection should not add collection to other user if not admin" name="Add collection should not add collection to other user if not admin" time="0.001">
+    </testcase>
+    <testcase classname="Get collection should get collection" name="Get collection should get collection" time="0.029">
     </testcase>
     <testcase classname="Get collection should get collection of other user if admin" name="Get collection should get collection of other user if admin" time="0.024">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 200
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:71:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
     </testcase>
-    <testcase classname="Get collection should not get collection of other user if not admin" name="Get collection should not get collection of other user if not admin" time="0.02">
+    <testcase classname="Get collection should not get collection of other user if not admin" name="Get collection should not get collection of other user if not admin" time="0.012">
     </testcase>
-    <testcase classname="Get collection should get all collections if admin" name="Get collection should get all collections if admin" time="0.024">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 200
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:82:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
+    <testcase classname="Get collection should get all collections if admin" name="Get collection should get all collections if admin" time="0.025">
     </testcase>
-    <testcase classname="Get collection should not get all collections if not admin" name="Get collection should not get all collections if not admin" time="0.017">
+    <testcase classname="Get collection should not get all collections if not admin" name="Get collection should not get all collections if not admin" time="0.014">
     </testcase>
-    <testcase classname="Delete collection should delete collection" name="Delete collection should delete collection" time="0.038">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 204
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:99:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
+    <testcase classname="Delete collection should delete collection" name="Delete collection should delete collection" time="0.041">
     </testcase>
-    <testcase classname="Delete collection should delete collection of other user if admin" name="Delete collection should delete collection of other user if admin" time="0.035">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 204
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:109:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
+    <testcase classname="Delete collection should delete collection of other user if admin" name="Delete collection should delete collection of other user if admin" time="0.044">
     </testcase>
-    <testcase classname="Delete collection should not delete collection of other user if not admin" name="Delete collection should not delete collection of other user if not admin" time="0.024">
+    <testcase classname="Delete collection should not delete collection of other user if not admin" name="Delete collection should not delete collection of other user if not admin" time="0.021">
     </testcase>
-    <testcase classname="Delete collection should not delete non existent collection" name="Delete collection should not delete non existent collection" time="0.022">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 404
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:121:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/collections.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
+    <testcase classname="Delete collection should not delete non existent collection" name="Delete collection should not delete non existent collection" time="0.021">
     </testcase>
   </testsuite>
-  <testsuite name="Authentication" errors="0" failures="15" skipped="0" timestamp="2023-06-28T07:17:18" time="2.24" tests="15">
-    <testcase classname="Authentication should login as admin" name="Authentication should login as admin" time="0.032">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 200
-Received: 400
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:33:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
-    </testcase>
-    <testcase classname="Authentication should not login with wrong credentials: admin a" name="Authentication should not login with wrong credentials: admin a" time="0.084">
-      <failure>Error: expected 401 &quot;Unauthorized&quot;, got 400 &quot;Bad Request&quot;
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:44:79
-    at Generator.next (&lt;anonymous&gt;)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:8:71
-    at new Promise (&lt;anonymous&gt;)
-    at Object.&lt;anonymous&gt;.__awaiter (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:4:12)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:43:95
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/jest-each-npm-29.5.0-a032ec515b-b8b297534d.zip/node_modules/jest-each/build/bind.js:79:13
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/p-limit-npm-3.1.0-05d2ede37f-7c3690c4db.zip/node_modules/p-limit/index.js:23:31
-    at run (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/p-limit-npm-3.1.0-05d2ede37f-7c3690c4db.zip/node_modules/p-limit/index.js:23:43)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/p-limit-npm-3.1.0-05d2ede37f-7c3690c4db.zip/node_modules/p-limit/index.js:45:20
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-----
-    at Test._assertStatus (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:252:14)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:308:13
-    at Test._assertFunction (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:285:13)
-    at Test.assert (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:164:23)
-    at localAssert (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:120:14)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:125:7
-    at Test.fn [as callback] (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/superagent-npm-8.0.9-da05128b97-5d00cdc7ce.zip/node_modules/superagent/src/node/index.js:925:3)
-    at callback (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/superagent-npm-8.0.9-da05128b97-5d00cdc7ce.zip/node_modules/superagent/src/node/index.js:1166:18)
-    at IncomingMessage.fn (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/superagent-npm-8.0.9-da05128b97-5d00cdc7ce.zip/node_modules/superagent/src/node/parsers/json.js:19:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21)</failure>
-    </testcase>
-    <testcase classname="Authentication should not login with wrong credentials: a admin" name="Authentication should not login with wrong credentials: a admin" time="0.065">
-      <failure>Error: expected 401 &quot;Unauthorized&quot;, got 400 &quot;Bad Request&quot;
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:44:79
-    at Generator.next (&lt;anonymous&gt;)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:8:71
-    at new Promise (&lt;anonymous&gt;)
-    at Object.&lt;anonymous&gt;.__awaiter (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:4:12)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:43:95
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/jest-each-npm-29.5.0-a032ec515b-b8b297534d.zip/node_modules/jest-each/build/bind.js:79:13
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/p-limit-npm-3.1.0-05d2ede37f-7c3690c4db.zip/node_modules/p-limit/index.js:23:31
-    at run (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/p-limit-npm-3.1.0-05d2ede37f-7c3690c4db.zip/node_modules/p-limit/index.js:23:43)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/p-limit-npm-3.1.0-05d2ede37f-7c3690c4db.zip/node_modules/p-limit/index.js:45:20
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-----
-    at Test._assertStatus (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:252:14)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:308:13
-    at Test._assertFunction (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:285:13)
-    at Test.assert (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:164:23)
-    at localAssert (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:120:14)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:125:7
-    at Test.fn [as callback] (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/superagent-npm-8.0.9-da05128b97-5d00cdc7ce.zip/node_modules/superagent/src/node/index.js:925:3)
-    at callback (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/superagent-npm-8.0.9-da05128b97-5d00cdc7ce.zip/node_modules/superagent/src/node/index.js:1166:18)
-    at IncomingMessage.fn (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/superagent-npm-8.0.9-da05128b97-5d00cdc7ce.zip/node_modules/superagent/src/node/parsers/json.js:19:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21)</failure>
-    </testcase>
-    <testcase classname="Authentication should not login with wrong credentials: a a" name="Authentication should not login with wrong credentials: a a" time="0.061">
-      <failure>Error: expected 401 &quot;Unauthorized&quot;, got 400 &quot;Bad Request&quot;
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:44:79
-    at Generator.next (&lt;anonymous&gt;)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:8:71
-    at new Promise (&lt;anonymous&gt;)
-    at Object.&lt;anonymous&gt;.__awaiter (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:4:12)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:43:95
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/jest-each-npm-29.5.0-a032ec515b-b8b297534d.zip/node_modules/jest-each/build/bind.js:79:13
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/p-limit-npm-3.1.0-05d2ede37f-7c3690c4db.zip/node_modules/p-limit/index.js:23:31
-    at run (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/p-limit-npm-3.1.0-05d2ede37f-7c3690c4db.zip/node_modules/p-limit/index.js:23:43)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/p-limit-npm-3.1.0-05d2ede37f-7c3690c4db.zip/node_modules/p-limit/index.js:45:20
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-----
-    at Test._assertStatus (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:252:14)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:308:13
-    at Test._assertFunction (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:285:13)
-    at Test.assert (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:164:23)
-    at localAssert (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:120:14)
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/lib/test.js:125:7
-    at Test.fn [as callback] (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/superagent-npm-8.0.9-da05128b97-5d00cdc7ce.zip/node_modules/superagent/src/node/index.js:925:3)
-    at callback (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/superagent-npm-8.0.9-da05128b97-5d00cdc7ce.zip/node_modules/superagent/src/node/index.js:1166:18)
-    at IncomingMessage.fn (/home/matteo2001/Desktop/Projects/server_raccolta_latte/.yarn/cache/superagent-npm-8.0.9-da05128b97-5d00cdc7ce.zip/node_modules/superagent/src/node/parsers/json.js:19:7)
-    at IncomingMessage.emit (node:events:525:35)
-    at endReadableNT (node:internal/streams/readable:1358:12)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21)</failure>
-    </testcase>
-    <testcase classname="Authentication should login as user" name="Authentication should login as user" time="0.092">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 200
-Received: 400
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:50:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
-    </testcase>
-    <testcase classname="Add user should add user" name="Add user should add user" time="0.116">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 201
-Received: 400
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:60:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
-    </testcase>
-    <testcase classname="Update user should change user: fromAdmin pass true to pass false" name="Update user should change user: fromAdmin pass true to pass false" time="0.009">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 204
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:81:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
-    </testcase>
-    <testcase classname="Update user should change user: toAdmin pass false to pass true" name="Update user should change user: toAdmin pass false to pass true" time="0.06">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 204
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:81:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
-    </testcase>
-    <testcase classname="Update user should change user: changePass pass true to newpass true" name="Update user should change user: changePass pass true to newpass true" time="0.006">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 204
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:81:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
-    </testcase>
-    <testcase classname="Update user should change user: changeAll pass true to newpass false" name="Update user should change user: changeAll pass true to newpass false" time="0.034">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 204
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:81:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
-    </testcase>
-    <testcase classname="Update user should not update user with no password or admin" name="Update user should not update user with no password or admin" time="0.036">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 400
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:93:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
-    </testcase>
-    <testcase classname="Update user should not update inexistent user" name="Update user should not update inexistent user" time="0.003">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 404
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:98:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
-    </testcase>
-    <testcase classname="Delete user should delete user" name="Delete user should delete user" time="0.004">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 204
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:106:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
-    </testcase>
-    <testcase classname="Delete user should not delete inexistent user" name="Delete user should not delete inexistent user" time="0.02">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 404
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:113:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
-    </testcase>
-    <testcase classname="Get users should get all users" name="Get users should get all users" time="0.019">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 200
-Received: 403
-    at /home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:120:28
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/home/matteo2001/Desktop/Projects/server_raccolta_latte/src/tests/users.test.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
-    </testcase>
-  </testsuite>
-  <testsuite name="Users" errors="0" failures="0" skipped="0" timestamp="2023-06-28T07:17:20" time="1.744" tests="4">
+  <testsuite name="Users" errors="0" failures="0" skipped="0" timestamp="2023-06-28T07:43:49" time="0.704" tests="4">
     <testcase classname="Users Get users" name="Users Get users" time="0.008">
     </testcase>
-    <testcase classname="Users Add users" name="Users Add users" time="0.082">
+    <testcase classname="Users Add users" name="Users Add users" time="0.078">
     </testcase>
-    <testcase classname="Users Update users" name="Users Update users" time="0.075">
+    <testcase classname="Users Update users" name="Users Update users" time="0.069">
     </testcase>
-    <testcase classname="Users Delete users" name="Users Delete users" time="0.008">
+    <testcase classname="Users Delete users" name="Users Delete users" time="0.013">
     </testcase>
   </testsuite>
 </testsuites>

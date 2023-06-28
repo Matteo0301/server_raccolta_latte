@@ -59,7 +59,7 @@ async function getUsers() {
 
 async function updateUser(username: string, password: string, admin: boolean) {
     const hashedPassword = generateHash(password)
-    await User.updateOne({ username: { $eq: username } }, { password: hashedPassword, admin: admin })
+    await User.updateOne({ username: { $eq: username } }, { $set: { password: hashedPassword, admin: admin } })
 }
 
 async function deleteUser(username: string) {
