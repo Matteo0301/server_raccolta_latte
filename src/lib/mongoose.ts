@@ -1,7 +1,7 @@
 import { set, connect as db_connect } from "mongoose"
 import Logger from "./util/logger"
 import bcrypt from 'bcryptjs'
-import { User, Raccolta } from "./schemas"
+import { User, Raccolta, Origins } from "./schemas"
 
 let db: any
 
@@ -35,9 +35,10 @@ async function addUser(username: string, password: string, admin: boolean) {
     const hashedPassword = generateHash(password)
     const user = await getUser(username)
     if (user) {
-        await deleteUser(username)
+        return false
     }
     await User.create({ username: username, password: hashedPassword, admin: admin })
+    return true
 }
 
 async function getUser(username: string) {
@@ -66,11 +67,11 @@ async function deleteUser(username: string) {
     await User.deleteOne({ username: { $eq: username } })
 }
 
-async function addCollection(date: Date, quantity: number, user: string) {
+async function addCollection(date: Date, quantity: number, user: string, origin: string) {
     if (date == null) {
         date = new Date()
     }
-    await Raccolta.create({ date: date, quantity: quantity, user: user })
+    await Raccolta.create({ date: date, quantity: quantity, user: user, origin: origin })
 }
 
 async function getCollections() {
@@ -95,5 +96,34 @@ async function deleteCollection(id: string) {
     await Raccolta.deleteOne({ _id: id }).exec()
 }
 
+async function getOrigins() {
+    const origins = await Origins.find().exec()
+    return origins
+}
 
-export { connect, close, db, addUser, getUser, getUsers, updateUser, deleteUser, clear, User, generateHash, addCollection, getCollections, getCollectionByUser, deleteCollection, checkCollection }
+async function checkOrigin(name: string) {
+    const origin = await Origins.find({ name: { $eq: name } }).exec()
+    if (origin.length > 0) {
+        return true
+    }
+    return false
+}
+
+async function deleteOrigin(name: string) {
+    if (await checkOrigin(name)) {
+        await Origins.deleteOne({ name: { $eq: name } }).exec()
+        return true
+    }
+    return false
+}
+
+async function addOrigin(name: string) {
+    if (!await checkOrigin(name)) {
+        await Origins.create({ name: name })
+        return true
+    }
+    return false
+}
+
+
+export { connect, close, db, addUser, getUser, getUsers, updateUser, deleteUser, clear, User, generateHash, addCollection, getCollections, getCollectionByUser, deleteCollection, checkCollection, getOrigins, addOrigin, deleteOrigin }

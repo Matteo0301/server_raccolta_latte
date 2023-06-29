@@ -36,8 +36,10 @@ router.put('/', [
     const password = req.body.password
     const admin = req.body.admin
     Logger.debug('Adding user ' + username + ' with password ' + password + ' and admin ' + admin)
-    await addUser(username, password, admin)
-    res.status(201).send('/users/' + username)
+    if (await addUser(username, password, admin))
+        res.status(201).send('/users/' + username)
+    else
+        res.status(409).send()
 })
 
 router.get('/', [

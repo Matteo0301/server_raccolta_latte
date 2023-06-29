@@ -12,7 +12,8 @@ import { setSecret } from './lib/util/token'
 import { close, connect } from './lib/mongoose'
 import { randomBytes } from 'crypto'
 import usersRouter from './lib/users'
-import raccolteRouter from './lib/collections'
+import collectionsRouter from './lib/collections'
+import originsRouter from './lib/origins'
 import mongoose from 'mongoose'
 import rateLimit from 'express-rate-limit'
 
@@ -71,7 +72,8 @@ app.use(morganMiddleware)
 app.use(limiter)
 
 app.use('/users', usersRouter)
-app.use('/collections', raccolteRouter)
+app.use('/collections', collectionsRouter)
+app.use('/origins', originsRouter)
 
 
 if (process.env.NODE_ENV === 'production') {

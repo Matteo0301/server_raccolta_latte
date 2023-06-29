@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { db, getUser } from '../mongoose'
+import { db, getOrigins, getUser } from '../mongoose'
 import { compareSync } from 'bcryptjs'
 import Logger from './logger'
 import { validationResult } from 'express-validator'
@@ -52,7 +52,17 @@ async function checkValidationErrors(req: Request, res: Response, next: NextFunc
     else {
         next()
     }
+}
 
+async function checkOrigin(req: Request, res: Response, next: NextFunction) {
+    const origin = req.params.origin
+    const origins = await getOrigins()
+    origins.forEach((o) => {
+        if (o.name == origin) {
+            next()
+        }
+    })
+    res.sendStatus(400)
 }
 
 export { authenticateUser, checkAdmin, checkTokenMatchesUser, checkValidationErrors }

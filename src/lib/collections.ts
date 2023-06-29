@@ -38,20 +38,22 @@ router.delete('/:id', [
     res.status(204).send()
 })
 
-router.post('/:username', [
+router.post('/:username/:origin', [
     param('username').notEmpty().isString().isAlpha().escape(),
+    param('origin').notEmpty().isString().isAlpha().escape(),
     authenticateToken,
     checkTokenMatchesUser,
     checkValidationErrors
 ], async (req: Request, res: Response) => {
     const user = req.params.username
     const quantity = req.body.quantity
+    const origin = req.params.origin
     if (quantity == null || quantity <= 0) {
         res.status(400).send()
         return
     }
     const date = new Date()
-    await addCollection(date, quantity, user)
+    await addCollection(date, quantity, user, origin)
     res.status(201).send()
 })
 

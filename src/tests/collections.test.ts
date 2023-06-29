@@ -1,6 +1,6 @@
 import { Server, get } from "http";
 import { app, startServer } from "../app";
-import { addCollection, addUser, clear, getCollectionByUser, getCollections } from "../lib/mongoose";
+import { addCollection, addOrigin, addUser, clear, getCollectionByUser, getCollections } from "../lib/mongoose";
 import { generateAccessToken } from "../lib/util/token";
 
 const request = require("supertest")
@@ -13,6 +13,8 @@ let adminToken = ""
 let nonAdminToken = ""
 const nonAdminName = "notadmin"
 const adminName = "admin"
+const origin1 = "first"
+const origin2 = "second"
 
 beforeAll(async () => {
     server = app.listen(port, async () => {
@@ -22,6 +24,8 @@ beforeAll(async () => {
     await clear()
     addUser(adminName, "admin", true)
     addUser(nonAdminName, "psw", false)
+    addOrigin(origin1)
+    addOrigin(origin2)
     adminToken = "Bearer " + generateAccessToken(adminName, true)
     nonAdminToken = "Bearer " + generateAccessToken(nonAdminName, false)
 })
@@ -31,7 +35,7 @@ afterAll(() => {
 
 describe("Add collection", () => {
     test.concurrent("should add collection", async () => {
-        const res = await request(server).post("/collections/" + adminName).set('Authorization', adminToken).send({ quantity: 1 })
+        const res = await request(server).post("/collections/" + adminName + "/" + origin1).set('Authorization', adminToken).send({ quantity: 1 })
         expect(res.status).toBe(201)
         const c = await getCollections()
         for (const coll of c) {
@@ -41,7 +45,7 @@ describe("Add collection", () => {
         }
     })
     test.concurrent("should add collection to other user if admin", async () => {
-        const res = await request(server).post("/collections/" + nonAdminName).set('Authorization', adminToken).send({ quantity: 1 })
+        const res = await request(server).post("/collections/" + nonAdminName + "/" + origin1).set('Authorization', adminToken).send({ quantity: 1 })
         expect(res.status).toBe(201)
         const c = await getCollections()
         for (const coll of c) {
@@ -51,7 +55,7 @@ describe("Add collection", () => {
         }
     })
     test.concurrent("should not add collection to other user if not admin", async () => {
-        const res = await request(server).post("/collections/" + adminName).set('Authorization', nonAdminToken).send({ quantity: 1 })
+        const res = await request(server).post("/collections/" + adminName + "/" + origin1).set('Authorization', nonAdminToken).send({ quantity: 1 })
         expect(res.status).toBe(403)
     })
 })
@@ -92,8 +96,8 @@ describe("Get collection", () => {
 
 describe("Delete collection", () => {
     test("should delete collection", async () => {
-        await addCollection(new Date(), 1, adminName)
-        await addCollection(new Date(), 2, adminName)
+        await addCollection(new Date(), 1, adminName, origin1)
+        await addCollection(new Date(), 2, adminName, origin1)
         const c = await getCollectionByUser(adminName)
         const id = c[0]._id
         const res = await request(server).delete("/collections/" + id).set('Authorization', adminToken)
@@ -102,8 +106,8 @@ describe("Delete collection", () => {
         expect(c2.length).toBe(c.length - 1)
     })
     test("should delete collection of other user if admin", async () => {
-        await addCollection(new Date(), 1, nonAdminName)
-        await addCollection(new Date(), 2, nonAdminName)
+        await addCollection(new Date(), 1, nonAdminName, origin1)
+        await addCollection(new Date(), 2, nonAdminName, origin1)
         const c = await getCollectionByUser(nonAdminName)
         const id = c[0]._id
         const res = await request(server).delete("/collections/" + id).set('Authorization', adminToken)

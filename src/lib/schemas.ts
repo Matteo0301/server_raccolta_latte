@@ -1,18 +1,24 @@
 import { model, Schema } from "mongoose";
 
 const UserSchema = new Schema({
-    username: String,
+    username: { type: String, index: true, unique: true },
     password: String,
     admin: Boolean
 })
 
+const OriginSchema = new Schema({
+    name: { type: String, index: true, unique: true },
+})
+
 const RaccoltaSchema = new Schema({
     date: Date,
+    origin: String,
     quantity: Number,
     user: String
 })
 
 const User = model('User', UserSchema, 'utenti')
 const Raccolta = model('Raccolta', RaccoltaSchema, 'raccolta')
+const Origins = model('Origin', OriginSchema, 'conferenti')
 
-export { User, Raccolta }
+export { User, Raccolta, Origins }
