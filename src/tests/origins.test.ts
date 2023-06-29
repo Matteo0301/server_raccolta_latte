@@ -94,22 +94,6 @@ describe("Get origins", () => {
         const res = await request(server).get("/origins/" + o).set('Authorization', adminToken).send()
         expect(res.status).toBe(200)
         expect(res.body.length).toBe(2)
-        expect(res.body).toMatchInlineSnapshot(`
-[
-  {
-    "date": "2023-06-29T15:43:17.574Z",
-    "origin": "byOrigin",
-    "quantity": 1,
-    "user": "admin",
-  },
-  {
-    "date": "2023-06-29T15:43:17.575Z",
-    "origin": "byOrigin",
-    "quantity": 1,
-    "user": "admin",
-  },
-]
-`)
     })
 })
 
