@@ -4,10 +4,22 @@ const UserSchema = new Schema({
     username: { type: String, index: true, unique: true },
     password: String,
     admin: Boolean
+}, {
+    toJSON: {
+        transform: function (doc, ret) {
+            delete ret._id;
+        }
+    }
 })
 
 const OriginSchema = new Schema({
     name: { type: String, index: true, unique: true },
+}, {
+    toJSON: {
+        transform: function (doc, ret) {
+            delete ret._id;
+        }
+    }
 })
 
 const RaccoltaSchema = new Schema({
@@ -15,6 +27,13 @@ const RaccoltaSchema = new Schema({
     origin: String,
     quantity: Number,
     user: String
+}, {
+    toJSON: {
+        transform: function (doc, ret) {
+            delete ret._id;
+            delete ret.__v;
+        }
+    }
 })
 
 const User = model('User', UserSchema, 'utenti')

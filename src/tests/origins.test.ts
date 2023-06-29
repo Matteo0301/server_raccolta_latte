@@ -1,6 +1,6 @@
 import { Server, get } from "http";
 import { app, startServer } from "../app";
-import { addCollection, addOrigin, addUser, clear, getCollectionByUser, getCollections, getOrigins } from "../lib/mongoose";
+import { addCollection, addOrigin, addUser, clear, getCollectionByUser, getCollections, getCollectionsByOrigin, getOrigins } from "../lib/mongoose";
 import { generateAccessToken } from "../lib/util/token";
 
 const request = require("supertest")
@@ -16,6 +16,7 @@ const adminName = "admin"
 const origin1 = "first"
 const origin2 = "second"
 const origin3 = "third"
+
 
 beforeAll(async () => {
     server = app.listen(port, async () => {
@@ -83,6 +84,32 @@ describe("Get origins", () => {
     test("should not get origins if not admin", async () => {
         const res = await request(server).get("/origins").set('Authorization', nonAdminToken).send()
         expect(res.status).toBe(403)
+    })
+
+    test("should get origins if not logged", async () => {
+        const o = "byOrigin"
+        addOrigin(o)
+        addCollection(new Date(), 1, adminName, o)
+        addCollection(new Date(), 1, adminName, o)
+        const res = await request(server).get("/origins/" + o).set('Authorization', adminToken).send()
+        expect(res.status).toBe(200)
+        expect(res.body.length).toBe(2)
+        expect(res.body).toMatchInlineSnapshot(`
+[
+  {
+    "date": "2023-06-29T15:43:17.574Z",
+    "origin": "byOrigin",
+    "quantity": 1,
+    "user": "admin",
+  },
+  {
+    "date": "2023-06-29T15:43:17.575Z",
+    "origin": "byOrigin",
+    "quantity": 1,
+    "user": "admin",
+  },
+]
+`)
     })
 })
 

@@ -125,5 +125,10 @@ async function addOrigin(name: string) {
     return false
 }
 
+async function getCollectionsByOrigin(origin: string) {
+    const raccolta = await Raccolta.find({ origin: origin }).exec()
+    return raccolta
+}
 
-export { connect, close, db, addUser, getUser, getUsers, updateUser, deleteUser, clear, User, generateHash, addCollection, getCollections, getCollectionByUser, deleteCollection, checkCollection, getOrigins, addOrigin, deleteOrigin }
+
+export { connect, close, db, addUser, getUser, getUsers, updateUser, deleteUser, clear, User, generateHash, addCollection, getCollections, getCollectionByUser, deleteCollection, checkCollection, getOrigins, addOrigin, deleteOrigin, getCollectionsByOrigin }

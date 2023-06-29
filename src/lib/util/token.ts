@@ -30,16 +30,13 @@ async function authenticateToken(req: Request, res: Response, next: NextFunction
         res.sendStatus(401)
         return;
     }
-    
+
     if (token == null) {
         Logger.info('Token is null')
         return res.sendStatus(401)
     }
 
     verify(token, secret, async (err: any, user: any) => {
-
-
-
         if (err) {
             Logger.error(err)
             Logger.debug('Authentication failed')
