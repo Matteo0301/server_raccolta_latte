@@ -57,7 +57,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.1.0"],\
             ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"],\
-            ["winston", "npm:3.9.0"]\
+            ["winston", "npm:3.10.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6737,7 +6737,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.1.0"],\
             ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"],\
-            ["winston", "npm:3.9.0"]\
+            ["winston", "npm:3.10.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -7547,10 +7547,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["winston", [\
-        ["npm:3.9.0", {\
-          "packageLocation": "./.yarn/cache/winston-npm-3.9.0-88b81bb8c3-410f82b7a5.zip/node_modules/winston/",\
+        ["npm:3.10.0", {\
+          "packageLocation": "./.yarn/cache/winston-npm-3.10.0-f2a209f843-47df036122.zip/node_modules/winston/",\
           "packageDependencies": [\
-            ["winston", "npm:3.9.0"],\
+            ["winston", "npm:3.10.0"],\
             ["@colors/colors", "npm:1.5.0"],\
             ["@dabh/diagnostics", "npm:2.0.3"],\
             ["async", "npm:3.2.4"],\
