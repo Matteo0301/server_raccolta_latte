@@ -14,7 +14,7 @@ let nonAdminToken = ""
 const nonAdminName = "notadmin"
 const adminName = "admin"
 const origin1 = "first"
-const origin2 = "second"
+const origin2 = "secondsecond"
 const origin3 = "third"
 
 

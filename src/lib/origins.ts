@@ -12,7 +12,6 @@ router.get('/', [
     checkAdmin,
     checkValidationErrors
 ], async (req: Request, res: Response) => {
-    console.log('hello :>> ');
     res.json(await getOrigins())
 })
 
