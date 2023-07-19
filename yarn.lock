@@ -1970,10 +1970,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.3.2":
+"@types/node@npm:*":
   version: 20.3.2
   resolution: "@types/node@npm:20.3.2"
   checksum: 5929ce2b9b12b1e2a2304a0921a953c72a81f5753ad39ac43b99ce6312fbb2b4fb5bc6b60d64a2550704e3223cd5de1299467d36085ac69888899db978f2653a
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^20.4.2":
+  version: 20.4.2
+  resolution: "@types/node@npm:20.4.2"
+  checksum: 99e544ea7560d51f01f95627fc40394c24a13da8f041121a0da13e4ef0a2aa332932eaf9a5e8d0e30d1c07106e96a183be392cbba62e8cf0bf6a085d5c0f4149
   languageName: node
   linkType: hard
 
@@ -5539,7 +5546,7 @@ __metadata:
     "@types/jest": ^29.5.2
     "@types/jsonwebtoken": ^9.0.2
     "@types/morgan": ^1.9.4
-    "@types/node": ^20.3.2
+    "@types/node": ^20.4.2
     "@types/supertest": ^2.0.12
     bcryptjs: ^2.4.3
     body-parser: ^1.20.2
