@@ -48,7 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["helmet", "npm:7.0.0"],\
             ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.6.1"],\
             ["jest-junit", "npm:16.0.0"],\
-            ["jsonwebtoken", "npm:9.0.0"],\
+            ["jsonwebtoken", "npm:9.0.1"],\
             ["mongodb", "virtual:c3d8cb2eacd37e53d0eb98012c9ae6218ec8c50e065104edbd074c11c527afeeabcffc49030f668e4e4d0e8ffd4fcb23baa0da7e6a0019b88728e504f366425b#npm:5.7.0"],\
             ["mongodb-memory-server", "npm:8.13.0"],\
             ["mongoose", "npm:7.4.0"],\
@@ -5560,10 +5560,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["jsonwebtoken", [\
-        ["npm:9.0.0", {\
-          "packageLocation": "./.yarn/cache/jsonwebtoken-npm-9.0.0-36fd1594c0-b9181cecf9.zip/node_modules/jsonwebtoken/",\
+        ["npm:9.0.1", {\
+          "packageLocation": "./.yarn/cache/jsonwebtoken-npm-9.0.1-30d1a69741-0eafe26889.zip/node_modules/jsonwebtoken/",\
           "packageDependencies": [\
-            ["jsonwebtoken", "npm:9.0.0"],\
+            ["jsonwebtoken", "npm:9.0.1"],\
             ["jws", "npm:3.2.2"],\
             ["lodash", "npm:4.17.21"],\
             ["ms", "npm:2.1.3"],\
@@ -6859,7 +6859,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["helmet", "npm:7.0.0"],\
             ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.6.1"],\
             ["jest-junit", "npm:16.0.0"],\
-            ["jsonwebtoken", "npm:9.0.0"],\
+            ["jsonwebtoken", "npm:9.0.1"],\
             ["mongodb", "virtual:c3d8cb2eacd37e53d0eb98012c9ae6218ec8c50e065104edbd074c11c527afeeabcffc49030f668e4e4d0e8ffd4fcb23baa0da7e6a0019b88728e504f366425b#npm:5.7.0"],\
             ["mongodb-memory-server", "npm:8.13.0"],\
             ["mongoose", "npm:7.4.0"],\
