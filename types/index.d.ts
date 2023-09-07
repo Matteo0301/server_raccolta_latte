@@ -5,6 +5,8 @@ declare global {
         interface Request {
             user: string;
             admin: boolean;
+            start: Date;
+            end: Date;
         }
     }
 }

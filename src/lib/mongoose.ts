@@ -74,13 +74,13 @@ async function addCollection(date: Date, quantity: number, user: string, origin:
     await Raccolta.create({ date: date, quantity: quantity, user: user, origin: origin })
 }
 
-async function getCollections() {
-    const raccolta = await Raccolta.find().exec()
+async function getCollections(start: Date, end: Date) {
+    const raccolta = await Raccolta.find({ date: { $gte: start, $lte: end } }).exec()
     return raccolta
 }
 
-async function getCollectionByUser(user: string) {
-    const raccolta = await Raccolta.find({ user: user }).exec()
+async function getCollectionByUser(user: string, start: Date, end: Date) {
+    const raccolta = await Raccolta.find({ user: user, date: { $gte: start, $lte: end } }).exec()
     return raccolta
 }
 

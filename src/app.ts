@@ -77,6 +77,7 @@ app.use('/origins', originsRouter)
 
 
 if (process.env.NODE_ENV === 'production') {
+    console.log('Hello');
     server = https.createServer(
         {
             key: fs.readFileSync('key.pem'),
@@ -86,6 +87,7 @@ if (process.env.NODE_ENV === 'production') {
     ).listen(port, async () => {
         initServer()
     });
+
 }
 
 export { app, initServer as startServer }

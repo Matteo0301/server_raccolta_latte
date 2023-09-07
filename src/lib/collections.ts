@@ -1,4 +1,4 @@
-import { Request, Response, Router } from "express"
+import { NextFunction, Request, Response, Router } from "express"
 import { authenticateToken } from "./util/token"
 import { checkAdmin, checkTokenMatchesUser, checkValidationErrors } from "./util/auth"
 import { addCollection, checkCollection, deleteCollection, getCollectionByUser, getCollections } from "./mongoose"
@@ -7,18 +7,41 @@ import { param } from "express-validator"
 
 const router = Router()
 
-router.get('/', [authenticateToken, checkAdmin], async (req: Request, res: Response) => {
-    const r = await getCollections()
+async function checkDates(req: Request, res: Response, next: NextFunction) {
+    //console.log('req.params :>> ', req.params);
+    req.start = new Date(req.params.startdate)
+    req.end = new Date(req.params.enddate)
+    if (isNaN(req.start.getTime()) || isNaN(req.end.getTime())) {
+        res.sendStatus(400)
+    } else if (req.start > req.end) {
+        res.sendStatus(400)
+    } else {
+        next()
+    }
+}
+
+router.get('/:startdate/:enddate', [
+    param('startdate').notEmpty().isString().isDate().escape(),
+    param('enddate').notEmpty().isString().isDate().escape(),
+    checkDates,
+    authenticateToken,
+    checkAdmin
+], async (req: Request, res: Response) => {
+    const r = await getCollections(req.start, req.end)
     res.json(r)
 })
 
-router.get('/:username', [
+router.get('/byuser/:username/:startdate/:enddate', [
     param('username').notEmpty().isString().isAlpha().escape(),
+    param('startdate').notEmpty().isString().isISO8601().isDate().escape(),
+    param('enddate').notEmpty().isString().isISO8601().isDate().escape(),
+    checkDates,
     authenticateToken,
     checkTokenMatchesUser,
-    checkValidationErrors
+    //checkValidationErrors
 ], async (req: Request, res: Response) => {
-    const r = await getCollectionByUser(req.params.username)
+
+    const r = await getCollectionByUser(req.params.username, req.start, req.end)
     res.json(r)
 })
 
