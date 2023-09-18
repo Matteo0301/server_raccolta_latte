@@ -36,7 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:29.5.4"],\
             ["@types/jsonwebtoken", "npm:9.0.2"],\
             ["@types/morgan", "npm:1.9.4"],\
-            ["@types/node", "npm:20.5.1"],\
+            ["@types/node", "npm:20.6.2"],\
             ["@types/supertest", "npm:2.0.12"],\
             ["bcryptjs", "npm:2.4.3"],\
             ["body-parser", "npm:1.20.2"],\
@@ -2635,10 +2635,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:20.5.1", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-20.5.1-d4e9ac5c26-3dbe611cd6.zip/node_modules/@types/node/",\
+        ["npm:20.6.2", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-20.6.2-bff5d8378f-96fe530387.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:20.5.1"]\
+            ["@types/node", "npm:20.6.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6963,7 +6963,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:29.5.4"],\
             ["@types/jsonwebtoken", "npm:9.0.2"],\
             ["@types/morgan", "npm:1.9.4"],\
-            ["@types/node", "npm:20.5.1"],\
+            ["@types/node", "npm:20.6.2"],\
             ["@types/supertest", "npm:2.0.12"],\
             ["bcryptjs", "npm:2.4.3"],\
             ["body-parser", "npm:1.20.2"],\
@@ -7537,7 +7537,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node12", "npm:1.0.11"],\
             ["@tsconfig/node14", "npm:1.0.3"],\
             ["@tsconfig/node16", "npm:1.0.4"],\
-            ["@types/node", "npm:20.5.1"],\
+            ["@types/node", "npm:20.6.2"],\
             ["@types/swc__core", null],\
             ["@types/swc__wasm", null],\
             ["@types/typescript", null],\
