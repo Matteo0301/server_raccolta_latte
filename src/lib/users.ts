@@ -3,7 +3,7 @@ import { authenticateUser, checkAdmin, checkValidationErrors } from "./util/auth
 import Logger from "./util/logger";
 import { authenticateToken, generateAccessToken } from "./util/token";
 import { addUser, deleteUser, getUser, getUsers, updateUser } from "./mongoose";
-import { check, param, body, header } from "express-validator"
+import { param, body, header } from "express-validator"
 
 const router = Router()
 
@@ -15,7 +15,7 @@ router.get('/auth/:username/:password', [
 ], (req: Request, res: Response) => {
     Logger.debug('Authentication')
     Logger.debug("username " + req.user + ', admin: ' + req.admin)
-    const token = { token: generateAccessToken(req.user, req.admin) }
+    const token = { token: generateAccessToken(req.user, req.admin), admin: req.admin }
     res.json(token)
 })
 
