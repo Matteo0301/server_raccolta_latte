@@ -1869,10 +1869,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/bcryptjs@npm:^2.4.2":
-  version: 2.4.2
-  resolution: "@types/bcryptjs@npm:2.4.2"
-  checksum: 220dade7b0312b41e23ccfb15f2ddde7804eb3c7ef41db41a6c49054be1e19a15eb3dd8c8ef196494f0866307cce22ad6f3f272941387124707d81dc66155bbc
+"@types/bcryptjs@npm:^2.4.4":
+  version: 2.4.4
+  resolution: "@types/bcryptjs@npm:2.4.4"
+  checksum: 7c8a50e0dec58bd391bf65b41c1422ac61c5f71d5adaa9a002c10368b64f4b1a9a0628f29b43dfd1fa0353b671b2cb1c11e27c5658877527ebad6d3c3f50e2b2
   languageName: node
   linkType: hard
 
@@ -5807,7 +5807,7 @@ __metadata:
   resolution: "server_raccolta_latte@workspace:."
   dependencies:
     "@types/bcrypt": ^5.0.0
-    "@types/bcryptjs": ^2.4.2
+    "@types/bcryptjs": ^2.4.4
     "@types/body-parser": ^1.19.2
     "@types/cors": ^2.8.14
     "@types/express": ^4.17.17

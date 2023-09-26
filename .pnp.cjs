@@ -29,7 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@types/bcrypt", "npm:5.0.0"],\
-            ["@types/bcryptjs", "npm:2.4.2"],\
+            ["@types/bcryptjs", "npm:2.4.4"],\
             ["@types/body-parser", "npm:1.19.2"],\
             ["@types/cors", "npm:2.8.14"],\
             ["@types/express", "npm:4.17.17"],\
@@ -2458,10 +2458,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/bcryptjs", [\
-        ["npm:2.4.2", {\
-          "packageLocation": "./.yarn/cache/@types-bcryptjs-npm-2.4.2-3a0c115732-220dade7b0.zip/node_modules/@types/bcryptjs/",\
+        ["npm:2.4.4", {\
+          "packageLocation": "./.yarn/cache/@types-bcryptjs-npm-2.4.4-154bbe2f16-7c8a50e0de.zip/node_modules/@types/bcryptjs/",\
           "packageDependencies": [\
-            ["@types/bcryptjs", "npm:2.4.2"]\
+            ["@types/bcryptjs", "npm:2.4.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7025,7 +7025,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["server_raccolta_latte", "workspace:."],\
             ["@types/bcrypt", "npm:5.0.0"],\
-            ["@types/bcryptjs", "npm:2.4.2"],\
+            ["@types/bcryptjs", "npm:2.4.4"],\
             ["@types/body-parser", "npm:1.19.2"],\
             ["@types/cors", "npm:2.8.14"],\
             ["@types/express", "npm:4.17.17"],\
