@@ -16,6 +16,8 @@ import collectionsRouter from './lib/collections'
 import originsRouter from './lib/origins'
 import mongoose from 'mongoose'
 import rateLimit from 'express-rate-limit'
+import { create } from 'domain'
+import { IncomingMessage, Server, ServerResponse, createServer } from 'http'
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
@@ -29,7 +31,7 @@ dotenv.config()
 const app: Express = express()
 const port = process.env.PORT || 3000
 
-let server: https.Server | null = null
+let server: Server | null = null
 
 const CONNECTION_STRING = process.env.CONNECTION_STRING || "mongodb://user:password@mongodb:27017/raccolta_latte?authSource=raccolta_latte"
 
@@ -46,6 +48,7 @@ async function initServer() {
 
 async function closeServer() {
     if (server) {
+        Logger.info('Closing server')
         server.close()
         await close()
         Logger.info('Process terminated successfully')
@@ -53,9 +56,9 @@ async function closeServer() {
     }
 }
 
-process.on('SIGTERM', closeServer)
+/* process.on('SIGTERM', closeServer)
 process.on('SIGINT', closeServer)
-process.on('uncaughtException', closeServer)
+process.on('uncaughtException', closeServer) */
 
 mongoose.connection.on('error', async () => {
     Logger.error('MongoDB connection error')
@@ -75,16 +78,19 @@ app.use('/users', usersRouter)
 app.use('/collections', collectionsRouter)
 app.use('/origins', originsRouter)
 
-
-if (process.env.NODE_ENV === 'production') {
-    console.log('Hello');
-    server = https.createServer(
+if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'development') {
+    /* server = https.createServer(
         {
             key: fs.readFileSync('key.pem'),
             cert: fs.readFileSync('cert.pem')
         },
         app
     ).listen(port, async () => {
+        console.log('Hello');
+        initServer()
+    }); */
+    server = createServer(app);
+    app.listen(port, async () => {
         initServer()
     });
 
