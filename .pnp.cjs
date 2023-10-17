@@ -30,7 +30,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@types/bcrypt", "npm:5.0.0"],\
             ["@types/bcryptjs", "npm:2.4.4"],\
-            ["@types/body-parser", "npm:1.19.2"],\
+            ["@types/body-parser", "npm:1.19.3"],\
             ["@types/cors", "npm:2.8.14"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.5"],\
@@ -2471,6 +2471,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.2-f845b7b538-e17840c7d7.zip/node_modules/@types/body-parser/",\
           "packageDependencies": [\
             ["@types/body-parser", "npm:1.19.2"],\
+            ["@types/connect", "npm:3.4.35"],\
+            ["@types/node", "npm:20.3.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.19.3", {\
+          "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.3-2449988991-932fa71437.zip/node_modules/@types/body-parser/",\
+          "packageDependencies": [\
+            ["@types/body-parser", "npm:1.19.3"],\
             ["@types/connect", "npm:3.4.35"],\
             ["@types/node", "npm:20.3.2"]\
           ],\
@@ -7042,7 +7051,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["server_raccolta_latte", "workspace:."],\
             ["@types/bcrypt", "npm:5.0.0"],\
             ["@types/bcryptjs", "npm:2.4.4"],\
-            ["@types/body-parser", "npm:1.19.2"],\
+            ["@types/body-parser", "npm:1.19.3"],\
             ["@types/cors", "npm:2.8.14"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.5"],\
