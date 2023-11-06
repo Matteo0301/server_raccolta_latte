@@ -2019,12 +2019,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/morgan@npm:^1.9.5":
-  version: 1.9.5
-  resolution: "@types/morgan@npm:1.9.5"
+"@types/morgan@npm:^1.9.8":
+  version: 1.9.8
+  resolution: "@types/morgan@npm:1.9.8"
   dependencies:
     "@types/node": "*"
-  checksum: f98deb4c7f2ad6049ad34ed7b0f0d427546bdf2358011070af9d597de1b0a03b38cc10cfe65ef2e7673e569c384303d949e76df701acefe288d547f614142973
+  checksum: ce088ea27be590db6620ebc55864a72f577ff7a1bf01b7557ba070680c44be536e3fe7704493781e6d8b3af9363acfc9e3c0f917ae437631133ee4b49cd4ac0a
   languageName: node
   linkType: hard
 
@@ -5841,7 +5841,7 @@ __metadata:
     "@types/express": ^4.17.17
     "@types/jest": ^29.5.5
     "@types/jsonwebtoken": ^9.0.2
-    "@types/morgan": ^1.9.5
+    "@types/morgan": ^1.9.8
     "@types/node": ^20.8.6
     "@types/supertest": ^2.0.13
     bcryptjs: ^2.4.3
