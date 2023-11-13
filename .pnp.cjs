@@ -34,7 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/cors", "npm:2.8.14"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.5"],\
-            ["@types/jsonwebtoken", "npm:9.0.2"],\
+            ["@types/jsonwebtoken", "npm:9.0.5"],\
             ["@types/morgan", "npm:1.9.5"],\
             ["@types/node", "npm:20.8.6"],\
             ["@types/supertest", "npm:2.0.13"],\
@@ -2601,10 +2601,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/jsonwebtoken", [\
-        ["npm:9.0.2", {\
-          "packageLocation": "./.yarn/cache/@types-jsonwebtoken-npm-9.0.2-7af15f7b9b-3bb8d40e78.zip/node_modules/@types/jsonwebtoken/",\
+        ["npm:9.0.5", {\
+          "packageLocation": "./.yarn/cache/@types-jsonwebtoken-npm-9.0.5-523ec98552-07ab6fee60.zip/node_modules/@types/jsonwebtoken/",\
           "packageDependencies": [\
-            ["@types/jsonwebtoken", "npm:9.0.2"],\
+            ["@types/jsonwebtoken", "npm:9.0.5"],\
             ["@types/node", "npm:20.3.2"]\
           ],\
           "linkType": "HARD"\
@@ -7055,7 +7055,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/cors", "npm:2.8.14"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.5"],\
-            ["@types/jsonwebtoken", "npm:9.0.2"],\
+            ["@types/jsonwebtoken", "npm:9.0.5"],\
             ["@types/morgan", "npm:1.9.5"],\
             ["@types/node", "npm:20.8.6"],\
             ["@types/supertest", "npm:2.0.13"],\
