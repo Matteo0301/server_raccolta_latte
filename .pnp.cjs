@@ -31,7 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/bcrypt", "npm:5.0.0"],\
             ["@types/bcryptjs", "npm:2.4.4"],\
             ["@types/body-parser", "npm:1.19.3"],\
-            ["@types/cors", "npm:2.8.14"],\
+            ["@types/cors", "npm:2.8.16"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.5"],\
             ["@types/jsonwebtoken", "npm:9.0.5"],\
@@ -1499,10 +1499,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/cors", [\
-        ["npm:2.8.14", {\
-          "packageLocation": "./.yarn/cache/@types-cors-npm-2.8.14-28a22a5678-119b8ea576.zip/node_modules/@types/cors/",\
+        ["npm:2.8.16", {\
+          "packageLocation": "./.yarn/cache/@types-cors-npm-2.8.16-33908604b3-0c760aa826.zip/node_modules/@types/cors/",\
           "packageDependencies": [\
-            ["@types/cors", "npm:2.8.14"],\
+            ["@types/cors", "npm:2.8.16"],\
             ["@types/node", "npm:20.3.2"]\
           ],\
           "linkType": "HARD"\
@@ -5959,7 +5959,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/bcrypt", "npm:5.0.0"],\
             ["@types/bcryptjs", "npm:2.4.4"],\
             ["@types/body-parser", "npm:1.19.3"],\
-            ["@types/cors", "npm:2.8.14"],\
+            ["@types/cors", "npm:2.8.16"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.5"],\
             ["@types/jsonwebtoken", "npm:9.0.5"],\
