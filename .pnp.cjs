@@ -35,7 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.5"],\
             ["@types/jsonwebtoken", "npm:9.0.5"],\
-            ["@types/morgan", "npm:1.9.5"],\
+            ["@types/morgan", "npm:1.9.9"],\
             ["@types/node", "npm:20.8.6"],\
             ["@types/supertest", "npm:2.0.13"],\
             ["bcryptjs", "npm:2.4.3"],\
@@ -1620,10 +1620,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/morgan", [\
-        ["npm:1.9.5", {\
-          "packageLocation": "./.yarn/cache/@types-morgan-npm-1.9.5-5648e31803-f98deb4c7f.zip/node_modules/@types/morgan/",\
+        ["npm:1.9.9", {\
+          "packageLocation": "./.yarn/cache/@types-morgan-npm-1.9.9-6cc99aae91-54bcb432f6.zip/node_modules/@types/morgan/",\
           "packageDependencies": [\
-            ["@types/morgan", "npm:1.9.5"],\
+            ["@types/morgan", "npm:1.9.9"],\
             ["@types/node", "npm:20.3.2"]\
           ],\
           "linkType": "HARD"\
@@ -5963,7 +5963,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.5"],\
             ["@types/jsonwebtoken", "npm:9.0.5"],\
-            ["@types/morgan", "npm:1.9.5"],\
+            ["@types/morgan", "npm:1.9.9"],\
             ["@types/node", "npm:20.8.6"],\
             ["@types/supertest", "npm:2.0.13"],\
             ["bcryptjs", "npm:2.4.3"],\
