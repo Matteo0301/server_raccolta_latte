@@ -1068,12 +1068,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsonwebtoken@npm:^9.0.2":
-  version: 9.0.2
-  resolution: "@types/jsonwebtoken@npm:9.0.2"
+"@types/jsonwebtoken@npm:^9.0.5":
+  version: 9.0.5
+  resolution: "@types/jsonwebtoken@npm:9.0.5"
   dependencies:
     "@types/node": "*"
-  checksum: 3bb8d40e78d7eb53e427db6e9f0f22e0890cfee80965dcf741d08341814913afb211306de6e9847c6d241cc8e36f8a59090cbfdcc510ab7c81af9d650c5afe0e
+  checksum: 07ab6fee602e5bd3fb5c6dfe4ec400769dc20f1d7fce901feecb4c3af5f5f08323b03ea55de3e49b1aa41e171a59008f6f4318738a735588c5268a63eba25337
   languageName: node
   linkType: hard
 
@@ -4828,7 +4828,7 @@ __metadata:
     "@types/cors": ^2.8.14
     "@types/express": ^4.17.17
     "@types/jest": ^29.5.5
-    "@types/jsonwebtoken": ^9.0.2
+    "@types/jsonwebtoken": ^9.0.5
     "@types/morgan": ^1.9.5
     "@types/node": ^20.8.6
     "@types/supertest": ^2.0.13
