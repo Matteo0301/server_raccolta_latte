@@ -33,7 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/body-parser", "npm:1.19.3"],\
             ["@types/cors", "npm:2.8.16"],\
             ["@types/express", "npm:4.17.17"],\
-            ["@types/jest", "npm:29.5.5"],\
+            ["@types/jest", "npm:29.5.8"],\
             ["@types/jsonwebtoken", "npm:9.0.5"],\
             ["@types/morgan", "npm:1.9.9"],\
             ["@types/node", "npm:20.8.6"],\
@@ -1663,10 +1663,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/jest", [\
-        ["npm:29.5.5", {\
-          "packageLocation": "./.yarn/cache/@types-jest-npm-29.5.5-cc0df7a171-56e55cde99.zip/node_modules/@types/jest/",\
+        ["npm:29.5.8", {\
+          "packageLocation": "./.yarn/cache/@types-jest-npm-29.5.8-2a56a49621-ca8438a5b4.zip/node_modules/@types/jest/",\
           "packageDependencies": [\
-            ["@types/jest", "npm:29.5.5"],\
+            ["@types/jest", "npm:29.5.8"],\
             ["expect", "npm:29.5.0"],\
             ["pretty-format", "npm:29.5.0"]\
           ],\
@@ -6041,7 +6041,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/body-parser", "npm:1.19.3"],\
             ["@types/cors", "npm:2.8.16"],\
             ["@types/express", "npm:4.17.17"],\
-            ["@types/jest", "npm:29.5.5"],\
+            ["@types/jest", "npm:29.5.8"],\
             ["@types/jsonwebtoken", "npm:9.0.5"],\
             ["@types/morgan", "npm:1.9.9"],\
             ["@types/node", "npm:20.8.6"],\
@@ -6566,7 +6566,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/babel-jest", null],\
             ["@types/babel__core", null],\
             ["@types/esbuild", null],\
-            ["@types/jest", "npm:29.5.5"],\
+            ["@types/jest", "npm:29.5.8"],\
             ["@types/jest__types", null],\
             ["@types/typescript", null],\
             ["babel-jest", null],\
