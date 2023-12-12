@@ -32,7 +32,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/bcryptjs", "npm:2.4.4"],\
             ["@types/body-parser", "npm:1.19.3"],\
             ["@types/cors", "npm:2.8.16"],\
-            ["@types/express", "npm:4.17.17"],\
+            ["@types/express", "npm:4.17.21"],\
             ["@types/jest", "npm:29.5.11"],\
             ["@types/jsonwebtoken", "npm:9.0.5"],\
             ["@types/morgan", "npm:1.9.9"],\
@@ -1589,10 +1589,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/express", [\
-        ["npm:4.17.17", {\
-          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.17-46fe8173db-0196dacc27.zip/node_modules/@types/express/",\
+        ["npm:4.17.21", {\
+          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.21-be92a0245e-fb23829863.zip/node_modules/@types/express/",\
           "packageDependencies": [\
-            ["@types/express", "npm:4.17.17"],\
+            ["@types/express", "npm:4.17.21"],\
             ["@types/body-parser", "npm:1.19.2"],\
             ["@types/express-serve-static-core", "npm:4.17.35"],\
             ["@types/qs", "npm:6.9.7"],\
@@ -3257,7 +3257,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/express-rate-limit-virtual-be6f4e3199/0/cache/express-rate-limit-npm-7.1.5-8509748a64-bdf6ddf4f8.zip/node_modules/express-rate-limit/",\
           "packageDependencies": [\
             ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.1.5"],\
-            ["@types/express", "npm:4.17.17"],\
+            ["@types/express", "npm:4.17.21"],\
             ["express", "npm:4.18.2"]\
           ],\
           "packagePeers": [\
@@ -6064,7 +6064,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/bcryptjs", "npm:2.4.4"],\
             ["@types/body-parser", "npm:1.19.3"],\
             ["@types/cors", "npm:2.8.16"],\
-            ["@types/express", "npm:4.17.17"],\
+            ["@types/express", "npm:4.17.21"],\
             ["@types/jest", "npm:29.5.11"],\
             ["@types/jsonwebtoken", "npm:9.0.5"],\
             ["@types/morgan", "npm:1.9.9"],\
