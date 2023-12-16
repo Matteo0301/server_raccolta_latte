@@ -1,7 +1,7 @@
 import { set, connect as db_connect } from "mongoose"
 import Logger from "./util/logger"
 import bcrypt from 'bcryptjs'
-import { User, Raccolta, Origins } from "./schemas"
+import { User, Collection, Origins } from "./schemas"
 
 let db: any
 
@@ -67,25 +67,25 @@ async function deleteUser(username: string) {
     await User.deleteOne({ username: { $eq: username } })
 }
 
-async function addCollection(date: Date, quantity: number, user: string, origin: string) {
+async function addCollection(date: Date, quantity: number, quantity2: number, user: string, origin: string) {
     if (date == null) {
         date = new Date()
     }
-    await Raccolta.create({ date: date, quantity: quantity, user: user, origin: origin })
+    await Collection.create({ date: date, quantity: quantity, user: user, origin: origin, quantity2: quantity2 })
 }
 
 async function getCollections(start: Date, end: Date) {
-    const raccolta = await Raccolta.find({ date: { $gte: start, $lte: end } }).exec()
+    const raccolta = await Collection.find({ date: { $gte: start, $lte: end } }).exec()
     return raccolta
 }
 
 async function getCollectionByUser(user: string, start: Date, end: Date) {
-    const raccolta = await Raccolta.find({ user: user, date: { $gte: start, $lte: end } }).exec()
+    const raccolta = await Collection.find({ user: user, date: { $gte: start, $lte: end } }).exec()
     return raccolta
 }
 
 async function checkCollection(id: String) {
-    const r = await Raccolta.find({ _id: id }).exec()
+    const r = await Collection.find({ _id: id }).exec()
     if (r.length > 0) {
         return true
     }
@@ -93,7 +93,7 @@ async function checkCollection(id: String) {
 }
 
 async function deleteCollection(id: string) {
-    await Raccolta.deleteOne({ _id: id }).exec()
+    await Collection.deleteOne({ _id: id }).exec()
 }
 
 async function getOrigins() {
@@ -126,7 +126,7 @@ async function addOrigin(name: string) {
 }
 
 async function getCollectionsByOrigin(origin: string) {
-    const raccolta = await Raccolta.find({ origin: origin }).exec()
+    const raccolta = await Collection.find({ origin: origin }).exec()
     return raccolta
 }
 

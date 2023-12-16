@@ -22,10 +22,11 @@ const OriginSchema = new Schema({
     }
 })
 
-const RaccoltaSchema = new Schema({
+const CollectionSchema = new Schema({
     date: Date,
     origin: String,
     quantity: Number,
+    quantity2: Number,
     user: String
 }, {
     toJSON: {
@@ -37,7 +38,7 @@ const RaccoltaSchema = new Schema({
 })
 
 const User = model('User', UserSchema, 'utenti')
-const Raccolta = model('Raccolta', RaccoltaSchema, 'raccolta')
+const Collection = model('Raccolta', CollectionSchema, 'raccolta')
 const Origins = model('Origin', OriginSchema, 'conferenti')
 
-export { User, Raccolta, Origins }
+export { User, Collection, Origins }

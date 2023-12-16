@@ -1,4 +1,0 @@
-GET https://localhost:3000/origins HTTP/1.1
-authentication: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiYWRtaW4iOnRydWUsImlhdCI6MTY4ODA0ODY2MSwiZXhwIjoxNjg4MTM1MDYxfQ.yhRhkwifMqGf9oABP6xyyo_1Nb7nk-hn4UiQIwkH8W8
-
-###
