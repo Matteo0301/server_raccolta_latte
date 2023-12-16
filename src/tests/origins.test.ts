@@ -89,8 +89,8 @@ describe("Get origins", () => {
     test("should get origins if not logged", async () => {
         const o = "byOrigin"
         addOrigin(o)
-        addCollection(new Date(), 1, adminName, o)
-        addCollection(new Date(), 1, adminName, o)
+        addCollection(new Date(), 2, 1, adminName, o)
+        addCollection(new Date(), 3, 2, adminName, o)
         const res = await request(server).get("/origins/" + o).set('Authorization', adminToken).send()
         expect(res.status).toBe(200)
         expect(res.body.length).toBe(2)
