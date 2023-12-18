@@ -1255,12 +1255,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/supertest@npm:^2.0.13":
-  version: 2.0.13
-  resolution: "@types/supertest@npm:2.0.13"
+"@types/supertest@npm:^2.0.16":
+  version: 2.0.16
+  resolution: "@types/supertest@npm:2.0.16"
   dependencies:
     "@types/superagent": "*"
-  checksum: fe66be8e16626f254dc9d9691706942689f47a84edf7d3baaeadd6d4d576dbf915ee70cebdd7034015e83fa91fcd2dcff1cd0252514e4c510619817a183b5b4f
+  checksum: 2fc998ea698e0467cdbe3bea0ebce2027ea3a45a13e51a6cecb0435f44b486faecf99c34d8702d2d7fe033e6e09fdd2b374af52ecc8d0c69a1deec66b8c0dd52
   languageName: node
   linkType: hard
 
@@ -4944,7 +4944,7 @@ __metadata:
     "@types/jsonwebtoken": ^9.0.5
     "@types/morgan": ^1.9.9
     "@types/node": ^20.9.2
-    "@types/supertest": ^2.0.13
+    "@types/supertest": ^2.0.16
     bcryptjs: ^2.4.3
     body-parser: ^1.20.2
     cors: ^2.8.5
