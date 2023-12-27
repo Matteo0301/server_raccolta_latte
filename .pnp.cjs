@@ -37,7 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jsonwebtoken", "npm:9.0.5"],\
             ["@types/morgan", "npm:1.9.9"],\
             ["@types/node", "npm:20.9.2"],\
-            ["@types/supertest", "npm:2.0.13"],\
+            ["@types/supertest", "npm:6.0.1"],\
             ["bcryptjs", "npm:2.4.3"],\
             ["body-parser", "npm:1.20.2"],\
             ["cors", "npm:2.8.5"],\
@@ -1570,10 +1570,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/cookiejar", [\
-        ["npm:2.1.2", {\
-          "packageLocation": "./.yarn/cache/@types-cookiejar-npm-2.1.2-2588120a7c-f6e1903454.zip/node_modules/@types/cookiejar/",\
+        ["npm:2.1.5", {\
+          "packageLocation": "./.yarn/cache/@types-cookiejar-npm-2.1.5-f36531e52d-04d5990e87.zip/node_modules/@types/cookiejar/",\
           "packageDependencies": [\
-            ["@types/cookiejar", "npm:2.1.2"]\
+            ["@types/cookiejar", "npm:2.1.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1683,6 +1683,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/methods", [\
+        ["npm:1.1.4", {\
+          "packageLocation": "./.yarn/cache/@types-methods-npm-1.1.4-8565dc8af4-ad2a717848.zip/node_modules/@types/methods/",\
+          "packageDependencies": [\
+            ["@types/methods", "npm:1.1.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/mime", [\
         ["npm:1.3.2", {\
           "packageLocation": "./.yarn/cache/@types-mime-npm-1.3.2-ea71878ab3-0493368244.zip/node_modules/@types/mime/",\
@@ -1777,22 +1786,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/superagent", [\
-        ["npm:4.1.18", {\
-          "packageLocation": "./.yarn/cache/@types-superagent-npm-4.1.18-9a0c411a15-4e50cb41e6.zip/node_modules/@types/superagent/",\
+        ["npm:8.1.1", {\
+          "packageLocation": "./.yarn/cache/@types-superagent-npm-8.1.1-01b4c4057b-02b987833c.zip/node_modules/@types/superagent/",\
           "packageDependencies": [\
-            ["@types/superagent", "npm:4.1.18"],\
-            ["@types/cookiejar", "npm:2.1.2"],\
+            ["@types/superagent", "npm:8.1.1"],\
+            ["@types/cookiejar", "npm:2.1.5"],\
+            ["@types/methods", "npm:1.1.4"],\
             ["@types/node", "npm:20.3.2"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@types/supertest", [\
-        ["npm:2.0.13", {\
-          "packageLocation": "./.yarn/cache/@types-supertest-npm-2.0.13-89a2ee4b22-fe66be8e16.zip/node_modules/@types/supertest/",\
+        ["npm:6.0.1", {\
+          "packageLocation": "./.yarn/cache/@types-supertest-npm-6.0.1-7f6a68c63e-26e849e9b1.zip/node_modules/@types/supertest/",\
           "packageDependencies": [\
-            ["@types/supertest", "npm:2.0.13"],\
-            ["@types/superagent", "npm:4.1.18"]\
+            ["@types/supertest", "npm:6.0.1"],\
+            ["@types/methods", "npm:1.1.4"],\
+            ["@types/superagent", "npm:8.1.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6109,7 +6120,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jsonwebtoken", "npm:9.0.5"],\
             ["@types/morgan", "npm:1.9.9"],\
             ["@types/node", "npm:20.9.2"],\
-            ["@types/supertest", "npm:2.0.13"],\
+            ["@types/supertest", "npm:6.0.1"],\
             ["bcryptjs", "npm:2.4.3"],\
             ["body-parser", "npm:1.20.2"],\
             ["cors", "npm:2.8.5"],\
