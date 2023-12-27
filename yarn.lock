@@ -4150,9 +4150,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongodb-memory-server-core@npm:9.0.1":
-  version: 9.0.1
-  resolution: "mongodb-memory-server-core@npm:9.0.1"
+"mongodb-memory-server-core@npm:9.1.3":
+  version: 9.1.3
+  resolution: "mongodb-memory-server-core@npm:9.1.3"
   dependencies:
     async-mutex: ^0.4.0
     camelcase: ^6.3.0
@@ -4160,27 +4160,27 @@ __metadata:
     find-cache-dir: ^3.3.2
     follow-redirects: ^1.15.3
     https-proxy-agent: ^7.0.2
-    mongodb: ^5.9.0
+    mongodb: ^5.9.1
     new-find-package-json: ^2.0.0
     semver: ^7.5.4
     tar-stream: ^3.0.0
     tslib: ^2.6.2
     yauzl: ^2.10.0
-  checksum: 41ed9b1c6c3d56e637594e250ccd151cdf2b958b77551e9e8616f39f1d4ceb22376def390f3bbedff5417b3b448ec235a108e9022da1ab88458719baaf11d8c6
+  checksum: d917608d3f237c758cd06966d89d8bf4b7e876c17f275d4ca09d40081e1a0d88ba948eb9c929768810ced97a9fea7aeaadfc175eb24b95fdf347c5f513e110b8
   languageName: node
   linkType: hard
 
-"mongodb-memory-server@npm:^9.0.1":
-  version: 9.0.1
-  resolution: "mongodb-memory-server@npm:9.0.1"
+"mongodb-memory-server@npm:^9.1.3":
+  version: 9.1.3
+  resolution: "mongodb-memory-server@npm:9.1.3"
   dependencies:
-    mongodb-memory-server-core: 9.0.1
+    mongodb-memory-server-core: 9.1.3
     tslib: ^2.6.2
-  checksum: 0f54d26edde117a6e87423461445be094a6af6e7d87d3bf2c98607683c41bed4f2e5a0175dfa8ffd9b6d0bf6fcea11bf3a18aaf66f5ccc619a0a6a4417ebdfce
+  checksum: 7992135b25e93f8152a333efd322f003aca6be0adff5f880a94cc2c448b6b71f0804fed580828787c03fa576e4024abec41988fd869bd010a26d9f34771b4f84
   languageName: node
   linkType: hard
 
-"mongodb@npm:5.9.0, mongodb@npm:^5.9.0":
+"mongodb@npm:5.9.0":
   version: 5.9.0
   resolution: "mongodb@npm:5.9.0"
   dependencies:
@@ -4209,6 +4209,38 @@ __metadata:
     snappy:
       optional: true
   checksum: 5fb828d6503b7291c0bcc984ed35bdd0e2f166cd9d637a5ff9e8c2e497ef6260eea5a3f700f2850200cd8108057c858f96e37394ed2953aff3b85fe760bbd777
+  languageName: node
+  linkType: hard
+
+"mongodb@npm:^5.9.1":
+  version: 5.9.2
+  resolution: "mongodb@npm:5.9.2"
+  dependencies:
+    "@mongodb-js/saslprep": ^1.1.0
+    bson: ^5.5.0
+    mongodb-connection-string-url: ^2.6.0
+    socks: ^2.7.1
+  peerDependencies:
+    "@aws-sdk/credential-providers": ^3.188.0
+    "@mongodb-js/zstd": ^1.0.0
+    kerberos: ^1.0.0 || ^2.0.0
+    mongodb-client-encryption: ">=2.3.0 <3"
+    snappy: ^7.2.2
+  dependenciesMeta:
+    "@mongodb-js/saslprep":
+      optional: true
+  peerDependenciesMeta:
+    "@aws-sdk/credential-providers":
+      optional: true
+    "@mongodb-js/zstd":
+      optional: true
+    kerberos:
+      optional: true
+    mongodb-client-encryption:
+      optional: true
+    snappy:
+      optional: true
+  checksum: fad5621f4a9764d71c48f2955be57925e506b14a4a63c5b9209ff733a58b2524cf9c87f216f2f02de092fab20eaa033ff5ade45c5cfa7f1c8c6bce114cb22e3f
   languageName: node
   linkType: hard
 
@@ -4957,7 +4989,7 @@ __metadata:
     jest-junit: ^16.0.0
     jsonwebtoken: ^9.0.2
     mongodb: ^6.3.0
-    mongodb-memory-server: ^9.0.1
+    mongodb-memory-server: ^9.1.3
     mongoose: ^7.6.2
     morgan: ^1.10.0
     supertest: ^6.3.3
