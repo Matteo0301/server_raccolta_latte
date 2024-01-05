@@ -9,7 +9,6 @@ const router = Router()
 
 router.get('/', [
     authenticateToken,
-    checkAdmin,
     checkValidationErrors
 ], async (req: Request, res: Response) => {
     res.json(await getOrigins())

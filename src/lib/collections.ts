@@ -64,6 +64,7 @@ router.delete('/:id', [
 router.post('/:username/:origin', [
     param('username').notEmpty().isString().isAlpha().escape(),
     param('origin').notEmpty().isString().isAlpha().escape(),
+    body('date').isString().isISO8601().escape(),
     body('quantity').notEmpty().isNumeric().escape(),
     body('quantity2').notEmpty().isNumeric().escape(),
     authenticateToken,
@@ -78,9 +79,10 @@ router.post('/:username/:origin', [
         res.status(400).send()
         return
     }
-    const date = new Date()
+    let date = new Date()
+    if (req.admin && req.body.date)
+        date = new Date(req.body.date)
     await addCollection(date, quantity, quantity2, user, origin)
     res.status(201).send()
 })
-
 export default router
