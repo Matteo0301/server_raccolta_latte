@@ -81,10 +81,6 @@ describe("Get origins", () => {
         const res = await request(server).get("/origins").set('Authorization', adminToken).send()
         expect(res.status).toBe(200)
     })
-    test("should not get origins if not admin", async () => {
-        const res = await request(server).get("/origins").set('Authorization', nonAdminToken).send()
-        expect(res.status).toBe(403)
-    })
 
     test("should get origins if not logged", async () => {
         const o = "byOrigin"

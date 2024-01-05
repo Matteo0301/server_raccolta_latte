@@ -35,7 +35,7 @@ afterAll(() => {
 describe("Add collection", () => {
     const now = new Date()
     test.concurrent("should add collection", async () => {
-        const res = await request(server).post("/collections/" + adminName + "/" + origin1).set('Authorization', adminToken).send({ quantity: 2, quantity2: 1 })
+        const res = await request(server).post("/collections/" + adminName + "/" + origin1).set('Authorization', adminToken).send({ quantity: 2, quantity2: 1, date: now.toISOString() })
         expect(res.status).toBe(201)
         const c = await getCollections(now, new Date())
         for (const coll of c) {
@@ -62,7 +62,7 @@ describe("Add collection", () => {
     })
 
     test.concurrent("should add collection to other user if admin", async () => {
-        const res = await request(server).post("/collections/" + nonAdminName + "/" + origin1).set('Authorization', adminToken).send({ quantity: 2, quantity2: 1 })
+        const res = await request(server).post("/collections/" + nonAdminName + "/" + origin1).set('Authorization', adminToken).send({ quantity: 2, quantity2: 1, date: now.toISOString() })
         expect(res.status).toBe(201)
         const c = await getCollections(now, new Date())
         for (const coll of c) {
