@@ -36,7 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:29.5.11"],\
             ["@types/jsonwebtoken", "npm:9.0.5"],\
             ["@types/morgan", "npm:1.9.9"],\
-            ["@types/node", "npm:20.9.2"],\
+            ["@types/node", "npm:20.10.7"],\
             ["@types/supertest", "npm:6.0.1"],\
             ["bcryptjs", "npm:2.4.3"],\
             ["body-parser", "npm:1.20.2"],\
@@ -1726,18 +1726,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/node", [\
+        ["npm:20.10.7", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-20.10.7-2d1f5de3e9-86f4f96f51.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:20.10.7"],\
+            ["undici-types", "npm:5.26.5"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:20.3.2", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-20.3.2-e93bcb71b8-5929ce2b9b.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:20.3.2"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:20.9.2", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-20.9.2-ada70863a8-5bbb8fb224.zip/node_modules/@types/node/",\
-          "packageDependencies": [\
-            ["@types/node", "npm:20.9.2"],\
-            ["undici-types", "npm:5.26.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6126,7 +6126,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:29.5.11"],\
             ["@types/jsonwebtoken", "npm:9.0.5"],\
             ["@types/morgan", "npm:1.9.9"],\
-            ["@types/node", "npm:20.9.2"],\
+            ["@types/node", "npm:20.10.7"],\
             ["@types/supertest", "npm:6.0.1"],\
             ["bcryptjs", "npm:2.4.3"],\
             ["body-parser", "npm:1.20.2"],\
@@ -6708,7 +6708,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node12", "npm:1.0.11"],\
             ["@tsconfig/node14", "npm:1.0.3"],\
             ["@tsconfig/node16", "npm:1.0.4"],\
-            ["@types/node", "npm:20.9.2"],\
+            ["@types/node", "npm:20.10.7"],\
             ["@types/swc__core", null],\
             ["@types/swc__wasm", null],\
             ["@types/typescript", null],\
