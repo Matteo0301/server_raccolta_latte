@@ -26,7 +26,7 @@ beforeAll(async () => {
     await clear()
     addUser(adminName, "admin", true)
     addUser(nonAdminName, "psw", false)
-    addOrigin(origin1)
+    addOrigin(origin1, 0, 0)
     adminToken = "Bearer " + generateAccessToken(adminName, true)
     nonAdminToken = "Bearer " + generateAccessToken(nonAdminName, false)
 })
@@ -36,21 +36,21 @@ afterAll(() => {
 
 describe("Add origin", () => {
     test.concurrent("should add origin if admin", async () => {
-        const res = await request(server).post("/origins/" + origin2).set('Authorization', adminToken).send()
+        const res = await request(server).post("/origins/" + origin2 + "/0/0").set('Authorization', adminToken).send()
         expect(res.status).toBe(201)
         const o = await getOrigins()
         const r = o.map((o: any) => o.name);
         expect(r).toContain(origin2)
     })
     test.concurrent("should not add origin if not admin", async () => {
-        const res = await request(server).post("/origins/" + origin3).set('Authorization', nonAdminToken).send()
+        const res = await request(server).post("/origins/" + origin3 + "/0/0").set('Authorization', nonAdminToken).send()
         expect(res.status).toBe(403)
         const o = await getOrigins()
         const r = o.map((o: any) => o.name);
         expect(r).not.toContain(origin3)
     })
     test.concurrent("should not add origin if already present", async () => {
-        const res = await request(server).post("/origins/" + origin1).set('Authorization', adminToken).send()
+        const res = await request(server).post("/origins/" + origin1 + "/0/0").set('Authorization', adminToken).send()
         expect(res.status).toBe(409)
     })
 })
@@ -84,7 +84,7 @@ describe("Get origins", () => {
 
     test("should get origins if not logged", async () => {
         const o = "byOrigin"
-        addOrigin(o)
+        addOrigin(o, 0, 0)
         addCollection(new Date(), 2, 1, adminName, o)
         addCollection(new Date(), 3, 2, adminName, o)
         const res = await request(server).get("/origins/" + o).set('Authorization', adminToken).send()

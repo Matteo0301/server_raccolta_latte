@@ -8,7 +8,6 @@ import { body, param } from "express-validator"
 const router = Router()
 
 async function checkDates(req: Request, res: Response, next: NextFunction) {
-    //console.log('req.params :>> ', req.params);
     req.start = new Date(req.params.startdate)
     req.end = new Date(req.params.enddate)
     if (isNaN(req.start.getTime()) || isNaN(req.end.getTime())) {
@@ -33,8 +32,8 @@ router.get('/:startdate/:enddate', [
 
 router.get('/byuser/:username/:startdate/:enddate', [
     param('username').notEmpty().isString().isAlpha().escape(),
-    param('startdate').notEmpty().isString().isISO8601().isDate().escape(),
-    param('enddate').notEmpty().isString().isISO8601().isDate().escape(),
+    param('startdate').isString().isISO8601().isDate().escape(),
+    param('enddate').isString().isISO8601().isDate().escape(),
     checkDates,
     authenticateToken,
     checkTokenMatchesUser,

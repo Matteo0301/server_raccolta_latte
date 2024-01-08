@@ -117,9 +117,9 @@ async function deleteOrigin(name: string) {
     return false
 }
 
-async function addOrigin(name: string) {
+async function addOrigin(name: string, lat: number, lng: number) {
     if (!await checkOrigin(name)) {
-        await Origins.create({ name: name })
+        await Origins.create({ name: name, lat: lat, lng: lng })
         return true
     }
     return false

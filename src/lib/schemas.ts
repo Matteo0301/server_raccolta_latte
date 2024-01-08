@@ -14,6 +14,8 @@ const UserSchema = new Schema({
 
 const OriginSchema = new Schema({
     name: { type: String, index: true, unique: true },
+    lat: Number,
+    lng: Number,
 }, {
     toJSON: {
         transform: function (doc, ret) {
