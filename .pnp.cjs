@@ -29,9 +29,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@types/bcrypt", "npm:5.0.0"],\
-            ["@types/bcryptjs", "npm:2.4.4"],\
+            ["@types/bcryptjs", "npm:2.4.6"],\
             ["@types/body-parser", "npm:1.19.3"],\
-            ["@types/cors", "npm:2.8.16"],\
+            ["@types/cors", "npm:2.8.17"],\
             ["@types/express", "npm:4.17.21"],\
             ["@types/jest", "npm:29.5.11"],\
             ["@types/jsonwebtoken", "npm:9.0.5"],\
@@ -57,7 +57,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.1.1"],\
             ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"],\
-            ["winston", "npm:3.10.0"]\
+            ["winston", "npm:3.11.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -932,6 +932,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@colors/colors", "npm:1.5.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:1.6.0", {\
+          "packageLocation": "./.yarn/cache/@colors-colors-npm-1.6.0-47f686c4e2-aa209963e0.zip/node_modules/@colors/colors/",\
+          "packageDependencies": [\
+            ["@colors/colors", "npm:1.6.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@cspotcode/source-map-support", [\
@@ -1531,10 +1538,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/bcryptjs", [\
-        ["npm:2.4.4", {\
-          "packageLocation": "./.yarn/cache/@types-bcryptjs-npm-2.4.4-154bbe2f16-7c8a50e0de.zip/node_modules/@types/bcryptjs/",\
+        ["npm:2.4.6", {\
+          "packageLocation": "./.yarn/cache/@types-bcryptjs-npm-2.4.6-50588b8234-25ae1fd1e8.zip/node_modules/@types/bcryptjs/",\
           "packageDependencies": [\
-            ["@types/bcryptjs", "npm:2.4.4"]\
+            ["@types/bcryptjs", "npm:2.4.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1579,10 +1586,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/cors", [\
-        ["npm:2.8.16", {\
-          "packageLocation": "./.yarn/cache/@types-cors-npm-2.8.16-33908604b3-0c760aa826.zip/node_modules/@types/cors/",\
+        ["npm:2.8.17", {\
+          "packageLocation": "./.yarn/cache/@types-cors-npm-2.8.17-2556d16051-469bd85e29.zip/node_modules/@types/cors/",\
           "packageDependencies": [\
-            ["@types/cors", "npm:2.8.16"],\
+            ["@types/cors", "npm:2.8.17"],\
             ["@types/node", "npm:20.3.2"]\
           ],\
           "linkType": "HARD"\
@@ -6112,9 +6119,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["server_raccolta_latte", "workspace:."],\
             ["@types/bcrypt", "npm:5.0.0"],\
-            ["@types/bcryptjs", "npm:2.4.4"],\
+            ["@types/bcryptjs", "npm:2.4.6"],\
             ["@types/body-parser", "npm:1.19.3"],\
-            ["@types/cors", "npm:2.8.16"],\
+            ["@types/cors", "npm:2.8.17"],\
             ["@types/express", "npm:4.17.21"],\
             ["@types/jest", "npm:29.5.11"],\
             ["@types/jsonwebtoken", "npm:9.0.5"],\
@@ -6140,7 +6147,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.1.1"],\
             ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"],\
-            ["winston", "npm:3.10.0"]\
+            ["winston", "npm:3.11.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6962,11 +6969,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["winston", [\
-        ["npm:3.10.0", {\
-          "packageLocation": "./.yarn/cache/winston-npm-3.10.0-f2a209f843-47df036122.zip/node_modules/winston/",\
+        ["npm:3.11.0", {\
+          "packageLocation": "./.yarn/cache/winston-npm-3.11.0-de94361df0-ca4454070f.zip/node_modules/winston/",\
           "packageDependencies": [\
-            ["winston", "npm:3.10.0"],\
-            ["@colors/colors", "npm:1.5.0"],\
+            ["winston", "npm:3.11.0"],\
+            ["@colors/colors", "npm:1.6.0"],\
             ["@dabh/diagnostics", "npm:2.0.3"],\
             ["async", "npm:3.2.4"],\
             ["is-stream", "npm:2.0.1"],\
