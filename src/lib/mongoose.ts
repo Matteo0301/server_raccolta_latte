@@ -75,12 +75,12 @@ async function addCollection(date: Date, quantity: number, quantity2: number, us
 }
 
 async function getCollections(start: Date, end: Date) {
-    const raccolta = await Collection.find({ date: { $gte: start, $lte: end } }).exec()
+    const raccolta = await Collection.find({ date: { $gte: start, $lte: end } }).sort("date").exec()
     return raccolta
 }
 
 async function getCollectionByUser(user: string, start: Date, end: Date) {
-    const raccolta = await Collection.find({ user: user, date: { $gte: start, $lte: end } }).exec()
+    const raccolta = await Collection.find({ user: user, date: { $gte: start, $lte: end } }).sort("date").exec()
     return raccolta
 }
 
@@ -126,7 +126,7 @@ async function addOrigin(name: string, lat: number, lng: number) {
 }
 
 async function getCollectionsByOrigin(origin: string) {
-    const raccolta = await Collection.find({ origin: origin }).exec()
+    const raccolta = await Collection.find({ origin: origin }).sort("date").exec()
     return raccolta
 }
 
