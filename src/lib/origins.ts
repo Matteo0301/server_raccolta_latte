@@ -10,8 +10,7 @@ const router = Router()
 
 router.get('/', [
     authenticateToken,
-    checkValidationErrors,
-    morganMiddleware
+    checkValidationErrors
 ], async (req: Request, res: Response) => {
     res.json(await getOrigins())
 })
@@ -20,8 +19,7 @@ router.get('/:origin', [
     param('origin').notEmpty().isString().isAlpha().escape(),
     authenticateToken,
     checkAdmin,
-    checkValidationErrors,
-    morganMiddleware
+    checkValidationErrors
 ], async (req: Request, res: Response) => {
     res.json(await getCollectionsByOrigin(req.params.origin))
 })
@@ -31,8 +29,7 @@ router.delete('/:origin', [
     param('origin').notEmpty().isString().isAlpha().escape(),
     authenticateToken,
     checkAdmin,
-    checkValidationErrors,
-    morganMiddleware
+    checkValidationErrors
 ], async (req: Request, res: Response) => {
     if (await deleteOrigin(req.params.origin))
         res.sendStatus(201)
@@ -46,8 +43,7 @@ router.post('/:origin/:lat/:lng', [
     param('lng').notEmpty().isNumeric(),
     authenticateToken,
     checkAdmin,
-    checkValidationErrors,
-    morganMiddleware
+    checkValidationErrors
 ], async (req: Request, res: Response) => {
     if (await addOrigin(req.params.origin, parseFloat(req.params.lat), parseFloat(req.params.lng)))
         res.sendStatus(201)

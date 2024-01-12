@@ -57,7 +57,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.1.1"],\
             ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"],\
-            ["winston", "npm:3.11.0"]\
+            ["winston", "npm:3.11.0"],\
+            ["winston-daily-rotate-file", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:4.7.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -3352,6 +3353,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["file-stream-rotator", [\
+        ["npm:0.6.1", {\
+          "packageLocation": "./.yarn/cache/file-stream-rotator-npm-0.6.1-eab45fb13d-ebdf6a9e7c.zip/node_modules/file-stream-rotator/",\
+          "packageDependencies": [\
+            ["file-stream-rotator", "npm:0.6.1"],\
+            ["moment", "npm:2.30.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["fill-range", [\
         ["npm:7.0.1", {\
           "packageLocation": "./.yarn/cache/fill-range-npm-7.0.1-b8b1817caa-cc283f4e65.zip/node_modules/fill-range/",\
@@ -5183,6 +5194,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["moment", [\
+        ["npm:2.30.1", {\
+          "packageLocation": "./.yarn/cache/moment-npm-2.30.1-1c51a5c631-859236bab1.zip/node_modules/moment/",\
+          "packageDependencies": [\
+            ["moment", "npm:2.30.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["mongodb", [\
         ["npm:5.9.0", {\
           "packageLocation": "./.yarn/cache/mongodb-npm-5.9.0-e0f7c8bf46-5fb828d650.zip/node_modules/mongodb/",\
@@ -5549,6 +5569,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/object-assign-npm-4.1.1-1004ad6dec-fcc6e4ea8c.zip/node_modules/object-assign/",\
           "packageDependencies": [\
             ["object-assign", "npm:4.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["object-hash", [\
+        ["npm:2.2.0", {\
+          "packageLocation": "./.yarn/cache/object-hash-npm-2.2.0-d97a921cc1-55ba841e3a.zip/node_modules/object-hash/",\
+          "packageDependencies": [\
+            ["object-hash", "npm:2.2.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6147,7 +6176,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.1.1"],\
             ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"],\
-            ["winston", "npm:3.11.0"]\
+            ["winston", "npm:3.11.0"],\
+            ["winston-daily-rotate-file", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:4.7.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6988,11 +7018,47 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["winston-daily-rotate-file", [\
+        ["npm:4.7.1", {\
+          "packageLocation": "./.yarn/cache/winston-daily-rotate-file-npm-4.7.1-8acf5cd720-227daea41f.zip/node_modules/winston-daily-rotate-file/",\
+          "packageDependencies": [\
+            ["winston-daily-rotate-file", "npm:4.7.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:4.7.1", {\
+          "packageLocation": "./.yarn/__virtual__/winston-daily-rotate-file-virtual-69d58a78f1/0/cache/winston-daily-rotate-file-npm-4.7.1-8acf5cd720-227daea41f.zip/node_modules/winston-daily-rotate-file/",\
+          "packageDependencies": [\
+            ["winston-daily-rotate-file", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:4.7.1"],\
+            ["@types/winston", null],\
+            ["file-stream-rotator", "npm:0.6.1"],\
+            ["object-hash", "npm:2.2.0"],\
+            ["triple-beam", "npm:1.3.0"],\
+            ["winston", "npm:3.11.0"],\
+            ["winston-transport", "npm:4.6.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/winston",\
+            "winston"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["winston-transport", [\
         ["npm:4.5.0", {\
           "packageLocation": "./.yarn/cache/winston-transport-npm-4.5.0-e10bfb2169-a56e5678a8.zip/node_modules/winston-transport/",\
           "packageDependencies": [\
             ["winston-transport", "npm:4.5.0"],\
+            ["logform", "npm:2.5.1"],\
+            ["readable-stream", "npm:3.6.2"],\
+            ["triple-beam", "npm:1.3.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.6.0", {\
+          "packageLocation": "./.yarn/cache/winston-transport-npm-4.6.0-3daa3f7cda-19f06ebdbb.zip/node_modules/winston-transport/",\
+          "packageDependencies": [\
+            ["winston-transport", "npm:4.6.0"],\
             ["logform", "npm:2.5.1"],\
             ["readable-stream", "npm:3.6.2"],\
             ["triple-beam", "npm:1.3.0"]\

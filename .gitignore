@@ -1,6 +1,7 @@
 .yarn/*
 coverage/*
 logs/*
+errors/*
 bin/*
 coverage/*
 !.yarn/patches

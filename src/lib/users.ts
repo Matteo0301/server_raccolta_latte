@@ -12,8 +12,7 @@ router.get('/auth/:username/:password', [
     param('username').notEmpty().isString().isAlpha().escape(),
     param('password').notEmpty().isString(),
     checkValidationErrors,
-    authenticateUser,
-    morganMiddleware
+    authenticateUser
 ], (req: Request, res: Response) => {
     Logger.debug('Authentication')
     Logger.debug("username " + req.user + ', admin: ' + req.admin)
@@ -28,8 +27,7 @@ router.put('/', [
     header('authorization').notEmpty().isString(),
     checkValidationErrors,
     authenticateToken,
-    checkAdmin,
-    morganMiddleware
+    checkAdmin
 ], async (req: Request, res: Response) => {
     if (req.body.username === null || req.body.password === null || req.body.admin === null) {
         res.sendStatus(400)
@@ -47,8 +45,7 @@ router.put('/', [
 
 router.get('/', [
     authenticateToken,
-    checkAdmin,
-    morganMiddleware
+    checkAdmin
 ], async (req: Request, res: Response) => {
     const users = await getUsers()
     const r = { users: users }
@@ -60,8 +57,7 @@ router.patch('/:username', [
     header('authorization').notEmpty().isString(),
     checkValidationErrors,
     authenticateToken,
-    checkAdmin,
-    morganMiddleware
+    checkAdmin
 ], async (req: Request, res: Response) => {
     if (!req.body.password && !req.body.admin) {
         res.sendStatus(400)
@@ -87,8 +83,7 @@ router.delete('/:username', [
     header('authorization').notEmpty().isString(),
     checkValidationErrors,
     authenticateToken,
-    checkAdmin,
-    morganMiddleware
+    checkAdmin
 ], async (req: Request, res: Response) => {
     const user = await getUser(req.params.username)
 
