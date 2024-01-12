@@ -5,7 +5,7 @@ import cors from 'cors'
 import Helmet from "helmet"
 import https from 'https'
 import fs from 'fs'
-import morganMiddleware from './lib/util/morganMiddleware'
+import { morganMiddleware, warningsMiddleWare } from './lib/util/morganMiddleware'
 import Logger from './lib/util/logger'
 import './lib/util/token'
 import { setSecret } from './lib/util/token'
@@ -71,6 +71,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(Helmet())
 app.use(morganMiddleware)
+app.use(warningsMiddleWare)
 // Apply the rate limiting middleware to all requests
 app.use(limiter)
 

@@ -3,6 +3,7 @@ import { authenticateToken } from "./util/token"
 import { checkAdmin, checkTokenMatchesUser, checkValidationErrors } from "./util/auth"
 import { addCollection, checkCollection, deleteCollection, getCollectionByUser, getCollections } from "./mongoose"
 import { body, param } from "express-validator"
+import {morganMiddleware} from "./util/morganMiddleware"
 
 
 const router = Router()
@@ -24,7 +25,8 @@ router.get('/:startdate/:enddate', [
     param('enddate').notEmpty().isString().isDate().escape(),
     checkDates,
     authenticateToken,
-    checkAdmin
+    checkAdmin,
+    morganMiddleware
 ], async (req: Request, res: Response) => {
     const r = await getCollections(req.start, req.end)
     res.json(r)
@@ -37,6 +39,7 @@ router.get('/byuser/:username/:startdate/:enddate', [
     checkDates,
     authenticateToken,
     checkTokenMatchesUser,
+    morganMiddleware
     //checkValidationErrors
 ], async (req: Request, res: Response) => {
 
@@ -49,7 +52,8 @@ router.delete('/:id', [
     param('id').notEmpty().isString().isAlphanumeric().escape(),
     authenticateToken,
     checkAdmin,
-    checkValidationErrors
+    checkValidationErrors,
+    morganMiddleware
 ], async (req: Request, res: Response) => {
     const id = req.params.id
     if (!await checkCollection(id)) {
@@ -68,7 +72,8 @@ router.post('/:username/:origin', [
     body('quantity2').notEmpty().isNumeric().escape(),
     authenticateToken,
     checkTokenMatchesUser,
-    checkValidationErrors
+    checkValidationErrors,
+    morganMiddleware
 ], async (req: Request, res: Response) => {
     const user = req.params.username
     const quantity = req.body.quantity

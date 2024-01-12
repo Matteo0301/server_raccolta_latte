@@ -22,7 +22,7 @@ async function authenticateUser(req: Request, res: Response, next: NextFunction)
             res.sendStatus(401)
         }
     } else {
-        Logger.debug('Login failed: ' + request_user + ' is not in the database')
+        Logger.warn('Login failed: ' + request_user + ' is not in the database')
         res.sendStatus(401)
     }
 }

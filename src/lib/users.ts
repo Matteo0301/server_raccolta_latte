@@ -4,6 +4,7 @@ import Logger from "./util/logger";
 import { authenticateToken, generateAccessToken } from "./util/token";
 import { addUser, deleteUser, getUser, getUsers, updateUser } from "./mongoose";
 import { param, body, header } from "express-validator"
+import { morganMiddleware } from "./util/morganMiddleware";
 
 const router = Router()
 
@@ -11,7 +12,8 @@ router.get('/auth/:username/:password', [
     param('username').notEmpty().isString().isAlpha().escape(),
     param('password').notEmpty().isString(),
     checkValidationErrors,
-    authenticateUser
+    authenticateUser,
+    morganMiddleware
 ], (req: Request, res: Response) => {
     Logger.debug('Authentication')
     Logger.debug("username " + req.user + ', admin: ' + req.admin)
@@ -26,7 +28,8 @@ router.put('/', [
     header('authorization').notEmpty().isString(),
     checkValidationErrors,
     authenticateToken,
-    checkAdmin
+    checkAdmin,
+    morganMiddleware
 ], async (req: Request, res: Response) => {
     if (req.body.username === null || req.body.password === null || req.body.admin === null) {
         res.sendStatus(400)
@@ -44,7 +47,8 @@ router.put('/', [
 
 router.get('/', [
     authenticateToken,
-    checkAdmin
+    checkAdmin,
+    morganMiddleware
 ], async (req: Request, res: Response) => {
     const users = await getUsers()
     const r = { users: users }
@@ -56,7 +60,8 @@ router.patch('/:username', [
     header('authorization').notEmpty().isString(),
     checkValidationErrors,
     authenticateToken,
-    checkAdmin
+    checkAdmin,
+    morganMiddleware
 ], async (req: Request, res: Response) => {
     if (!req.body.password && !req.body.admin) {
         res.sendStatus(400)
@@ -82,7 +87,8 @@ router.delete('/:username', [
     header('authorization').notEmpty().isString(),
     checkValidationErrors,
     authenticateToken,
-    checkAdmin
+    checkAdmin,
+    morganMiddleware
 ], async (req: Request, res: Response) => {
     const user = await getUser(req.params.username)
 
