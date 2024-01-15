@@ -4166,9 +4166,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongodb-memory-server-core@npm:9.1.3":
-  version: 9.1.3
-  resolution: "mongodb-memory-server-core@npm:9.1.3"
+"mongodb-memory-server-core@npm:9.1.5":
+  version: 9.1.5
+  resolution: "mongodb-memory-server-core@npm:9.1.5"
   dependencies:
     async-mutex: ^0.4.0
     camelcase: ^6.3.0
@@ -4182,17 +4182,17 @@ __metadata:
     tar-stream: ^3.0.0
     tslib: ^2.6.2
     yauzl: ^2.10.0
-  checksum: d917608d3f237c758cd06966d89d8bf4b7e876c17f275d4ca09d40081e1a0d88ba948eb9c929768810ced97a9fea7aeaadfc175eb24b95fdf347c5f513e110b8
+  checksum: 30ea64f36201fdda3b6f516f6fa63fb7d6d58135e4bcdf3c93b65399272007cb5db363b430bcdfc4c10172d727ba5543d9e94490af1587fe6ebe12ccf5c6e09d
   languageName: node
   linkType: hard
 
-"mongodb-memory-server@npm:^9.1.3":
-  version: 9.1.3
-  resolution: "mongodb-memory-server@npm:9.1.3"
+"mongodb-memory-server@npm:^9.1.5":
+  version: 9.1.5
+  resolution: "mongodb-memory-server@npm:9.1.5"
   dependencies:
-    mongodb-memory-server-core: 9.1.3
+    mongodb-memory-server-core: 9.1.5
     tslib: ^2.6.2
-  checksum: 7992135b25e93f8152a333efd322f003aca6be0adff5f880a94cc2c448b6b71f0804fed580828787c03fa576e4024abec41988fd869bd010a26d9f34771b4f84
+  checksum: 4388d750fab5f69172d268c942226e7629f5b9a308b5159980e0ebb652b06c01688d756065e7b5a3db8370581f0e4e9a920c893c3c249caa7204c81d8c21cbc6
   languageName: node
   linkType: hard
 
@@ -5005,7 +5005,7 @@ __metadata:
     jest-junit: ^16.0.0
     jsonwebtoken: ^9.0.2
     mongodb: ^6.3.0
-    mongodb-memory-server: ^9.1.3
+    mongodb-memory-server: ^9.1.5
     mongoose: ^7.6.2
     morgan: ^1.10.0
     supertest: ^6.3.3
