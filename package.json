@@ -2,7 +2,7 @@
   "name": "server_raccolta_latte",
   "version": "1.0.0",
   "description": "Server per raccolta dati del latte",
-  "packageManager": "yarn@3.6.0",
+  "packageManager": "yarn@4.0.2",
   "scripts": {
     "build": "tsc",
     "start": "node ./bin/app.js",

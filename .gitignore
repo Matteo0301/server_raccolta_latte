@@ -16,3 +16,7 @@ coverage/*
 #.pnp.*
 junit.xml
 *.pem
+*crt
+*pem
+*key
+public-flutter/*

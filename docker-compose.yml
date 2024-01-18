@@ -8,6 +8,9 @@ services:
       dockerfile: ./Dockerfile
     environment:
       NODE_ENV: production
+    volumes:
+      - ./cert.crt:/cert.crt:ro
+      - ./key.key:/key.key:ro
     ports:
       - 3000:3000
     depends_on:

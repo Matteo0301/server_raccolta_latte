@@ -18,6 +18,7 @@ import mongoose from 'mongoose'
 import rateLimit from 'express-rate-limit'
 import { create } from 'domain'
 import { IncomingMessage, Server, ServerResponse, createServer } from 'http'
+import path from 'path'
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
@@ -75,25 +76,26 @@ app.use(warningsMiddleWare)
 // Apply the rate limiting middleware to all requests
 app.use(limiter)
 
+app.use(express.static(path.join(__dirname, 'public-flutter')))
+
 app.use('/users', usersRouter)
 app.use('/collections', collectionsRouter)
 app.use('/origins', originsRouter)
 
 if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'development') {
-    /* server = https.createServer(
+    server = https.createServer(
         {
-            key: fs.readFileSync('key.pem'),
-            cert: fs.readFileSync('cert.pem')
+            key: fs.readFileSync('certs/key.key'),
+            cert: fs.readFileSync('certs/cert.crt')
         },
         app
     ).listen(port, async () => {
-        console.log('Hello');
-        initServer()
-    }); */
-    server = createServer(app);
-    app.listen(port, async () => {
         initServer()
     });
+    /* server = createServer(app);
+    app.listen(port, async () => {
+        initServer()
+    }); */
 
 }
 
