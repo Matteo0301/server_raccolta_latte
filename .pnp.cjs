@@ -34,7 +34,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:29.5.11"],\
           ["@types/jsonwebtoken", "npm:9.0.5"],\
           ["@types/morgan", "npm:1.9.9"],\
-          ["@types/node", "npm:20.9.2"],\
+          ["@types/node", "npm:20.11.16"],\
           ["@types/supertest", "npm:6.0.1"],\
           ["bcryptjs", "npm:2.4.3"],\
           ["body-parser", "npm:1.20.2"],\
@@ -1725,18 +1725,18 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/node", [\
+      ["npm:20.11.16", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-20.11.16-d9bc65d4bc-751f50ec5c.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:20.11.16"],\
+          ["undici-types", "npm:5.26.5"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:20.3.2", {\
         "packageLocation": "./.yarn/cache/@types-node-npm-20.3.2-e93bcb71b8-e40a7dbfa0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
           ["@types/node", "npm:20.3.2"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:20.9.2", {\
-        "packageLocation": "./.yarn/cache/@types-node-npm-20.9.2-ada70863a8-8bab2870bf.zip/node_modules/@types/node/",\
-        "packageDependencies": [\
-          ["@types/node", "npm:20.9.2"],\
-          ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6153,7 +6153,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:29.5.11"],\
           ["@types/jsonwebtoken", "npm:9.0.5"],\
           ["@types/morgan", "npm:1.9.9"],\
-          ["@types/node", "npm:20.9.2"],\
+          ["@types/node", "npm:20.11.16"],\
           ["@types/supertest", "npm:6.0.1"],\
           ["bcryptjs", "npm:2.4.3"],\
           ["body-parser", "npm:1.20.2"],\
@@ -6736,7 +6736,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:20.9.2"],\
+          ["@types/node", "npm:20.11.16"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
