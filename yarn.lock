@@ -1208,12 +1208,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.9.2":
-  version: 20.9.2
-  resolution: "@types/node@npm:20.9.2"
+"@types/node@npm:^20.11.19":
+  version: 20.11.19
+  resolution: "@types/node@npm:20.11.19"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 8bab2870bfc02efc988c53dfb0149634f8feb824132cc7f20b36f3d55d89ef893e3a43d545524a5cb3a284f4ce68ae4181d75a4a39cee6b79c586d719e6b7461
+  checksum: c7f4705d6c84aa21679ad180c33c13ca9567f650e66e14bcee77c7c43d14619c7cd3b4d7b2458947143030b7b1930180efa6d12d999b45366abff9fed7a17472
   languageName: node
   linkType: hard
 
@@ -5014,7 +5014,7 @@ __metadata:
     "@types/jest": "npm:^29.5.11"
     "@types/jsonwebtoken": "npm:^9.0.5"
     "@types/morgan": "npm:^1.9.9"
-    "@types/node": "npm:^20.9.2"
+    "@types/node": "npm:^20.11.19"
     "@types/supertest": "npm:^6.0.1"
     bcryptjs: "npm:^2.4.3"
     body-parser: "npm:^1.20.2"
