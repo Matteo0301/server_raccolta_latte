@@ -2,10 +2,7 @@ version: '3.4'
 
 services:
   serverraccoltalatte:
-    image: serverraccoltalatte
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+    image: "ghcr.io/matteo0301/server_raccolta_latte:main"
     environment:
       NODE_ENV: production
     volumes:
