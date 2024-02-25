@@ -28,7 +28,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/bcrypt", "npm:5.0.0"],\
           ["@types/bcryptjs", "npm:2.4.6"],\
-          ["@types/body-parser", "npm:1.19.3"],\
+          ["@types/body-parser", "npm:1.19.5"],\
           ["@types/cors", "npm:2.8.17"],\
           ["@types/express", "npm:4.17.21"],\
           ["@types/jest", "npm:29.5.11"],\
@@ -1555,10 +1555,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:1.19.3", {\
-        "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.3-2449988991-932fa71437.zip/node_modules/@types/body-parser/",\
+      ["npm:1.19.5", {\
+        "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.5-97fb106976-1e251118c4.zip/node_modules/@types/body-parser/",\
         "packageDependencies": [\
-          ["@types/body-parser", "npm:1.19.3"],\
+          ["@types/body-parser", "npm:1.19.5"],\
           ["@types/connect", "npm:3.4.35"],\
           ["@types/node", "npm:20.3.2"]\
         ],\
@@ -6147,7 +6147,7 @@ const RAW_RUNTIME_STATE =
           ["server_raccolta_latte", "workspace:."],\
           ["@types/bcrypt", "npm:5.0.0"],\
           ["@types/bcryptjs", "npm:2.4.6"],\
-          ["@types/body-parser", "npm:1.19.3"],\
+          ["@types/body-parser", "npm:1.19.5"],\
           ["@types/cors", "npm:2.8.17"],\
           ["@types/express", "npm:4.17.21"],\
           ["@types/jest", "npm:29.5.11"],\
