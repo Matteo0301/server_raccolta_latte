@@ -76,26 +76,34 @@ app.use(warningsMiddleWare)
 // Apply the rate limiting middleware to all requests
 app.use(limiter)
 
-app.use(express.static(path.join(__dirname, 'public-flutter')))
+app.use(function (req, res, next) {
+    res.setHeader("Content-Security-Policy", "default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;");
+    return next();
+});
+
 
 app.use('/users', usersRouter)
 app.use('/collections', collectionsRouter)
 app.use('/origins', originsRouter)
+app.use(express.static(path.join(__dirname, '../public-flutter')))
+app.get('*', (_, res) => {
+    res.sendFile(path.resolve(__dirname, '../public-flutter/index.html'));
+});
 
 if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'development') {
-    server = https.createServer(
+    /* server = https.createServer(
         {
-            key: fs.readFileSync('certs/key.key'),
-            cert: fs.readFileSync('certs/cert.crt')
+            key: fs.readFileSync('/key.key'),
+            cert: fs.readFileSync('/cert.crt')
         },
         app
     ).listen(port, async () => {
         initServer()
-    });
-    /* server = createServer(app);
+    }); */
+    server = createServer(app);
     app.listen(port, async () => {
         initServer()
-    }); */
+    });
 
 }
 

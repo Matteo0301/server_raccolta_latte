@@ -9,8 +9,8 @@ services:
     environment:
       NODE_ENV: production
     volumes:
-      - ./cert.crt:/cert.crt:ro
-      - ./key.key:/key.key:ro
+      - /var/log/matteo2001:/tmp/logs
+      - /home/matteo2001/flutter:/usr/src/app/public-flutter
     ports:
       - 3000:3000
     depends_on:

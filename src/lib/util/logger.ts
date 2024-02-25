@@ -33,14 +33,16 @@ const format = winston.format.combine(
     ),
 )
 
+const logDir = '/tmp/logs'
+
 const transports = [
     new winston.transports.Console(),
     new winston.transports.File({
-        filename: 'errors/error.log',
+        filename: logDir + 'errors/error.log',
         level: 'error',
     }),
     new DailyRotateFile({
-        filename: 'logs/%DATE%.log',
+        filename: logDir + 'logs/%DATE%.log',
         zippedArchive: true,
         maxSize: '20m',
         maxFiles: '100d',
