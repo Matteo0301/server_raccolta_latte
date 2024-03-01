@@ -35,7 +35,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jsonwebtoken", "npm:9.0.5"],\
           ["@types/morgan", "npm:1.9.9"],\
           ["@types/node", "npm:20.11.22"],\
-          ["@types/supertest", "npm:6.0.1"],\
+          ["@types/supertest", "npm:6.0.2"],\
           ["bcryptjs", "npm:2.4.3"],\
           ["body-parser", "npm:1.20.2"],\
           ["cors", "npm:2.8.5"],\
@@ -51,7 +51,7 @@ const RAW_RUNTIME_STATE =
           ["mongodb-memory-server", "npm:9.1.6"],\
           ["mongoose", "npm:7.6.2"],\
           ["morgan", "npm:1.10.0"],\
-          ["supertest", "npm:6.3.3"],\
+          ["supertest", "npm:6.3.4"],\
           ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.1.2"],\
           ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.1"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
@@ -1804,10 +1804,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/supertest", [\
-      ["npm:6.0.1", {\
-        "packageLocation": "./.yarn/cache/@types-supertest-npm-6.0.1-7f6a68c63e-3d854d9c90.zip/node_modules/@types/supertest/",\
+      ["npm:6.0.2", {\
+        "packageLocation": "./.yarn/cache/@types-supertest-npm-6.0.2-1f239669e4-4b67fb2d1b.zip/node_modules/@types/supertest/",\
         "packageDependencies": [\
-          ["@types/supertest", "npm:6.0.1"],\
+          ["@types/supertest", "npm:6.0.2"],\
           ["@types/methods", "npm:1.1.4"],\
           ["@types/superagent", "npm:8.1.1"]\
         ],\
@@ -6154,7 +6154,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jsonwebtoken", "npm:9.0.5"],\
           ["@types/morgan", "npm:1.9.9"],\
           ["@types/node", "npm:20.11.22"],\
-          ["@types/supertest", "npm:6.0.1"],\
+          ["@types/supertest", "npm:6.0.2"],\
           ["bcryptjs", "npm:2.4.3"],\
           ["body-parser", "npm:1.20.2"],\
           ["cors", "npm:2.8.5"],\
@@ -6170,7 +6170,7 @@ const RAW_RUNTIME_STATE =
           ["mongodb-memory-server", "npm:9.1.6"],\
           ["mongoose", "npm:7.6.2"],\
           ["morgan", "npm:1.10.0"],\
-          ["supertest", "npm:6.3.3"],\
+          ["supertest", "npm:6.3.4"],\
           ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.1.2"],\
           ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.1"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
@@ -6491,10 +6491,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["superagent", [\
-      ["npm:8.0.9", {\
-        "packageLocation": "./.yarn/cache/superagent-npm-8.0.9-da05128b97-e5127a1de1.zip/node_modules/superagent/",\
+      ["npm:8.1.2", {\
+        "packageLocation": "./.yarn/cache/superagent-npm-8.1.2-44190e1fe9-33d0072e05.zip/node_modules/superagent/",\
         "packageDependencies": [\
-          ["superagent", "npm:8.0.9"],\
+          ["superagent", "npm:8.1.2"],\
           ["component-emitter", "npm:1.3.0"],\
           ["cookiejar", "npm:2.1.4"],\
           ["debug", "virtual:4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1#npm:4.3.4"],\
@@ -6510,12 +6510,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["supertest", [\
-      ["npm:6.3.3", {\
-        "packageLocation": "./.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-7a7da05bf0.zip/node_modules/supertest/",\
+      ["npm:6.3.4", {\
+        "packageLocation": "./.yarn/cache/supertest-npm-6.3.4-ddb2a7be36-93015318f5.zip/node_modules/supertest/",\
         "packageDependencies": [\
-          ["supertest", "npm:6.3.3"],\
+          ["supertest", "npm:6.3.4"],\
           ["methods", "npm:1.1.2"],\
-          ["superagent", "npm:8.0.9"]\
+          ["superagent", "npm:8.1.2"]\
         ],\
         "linkType": "HARD"\
       }]\
