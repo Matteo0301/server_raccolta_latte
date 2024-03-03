@@ -20,13 +20,19 @@ import { create } from 'domain'
 import { IncomingMessage, Server, ServerResponse, createServer } from 'http'
 import path from 'path'
 
+
+
+
+dotenv.config()
+
+const max_requests = process.env.MAX_REQUESTS || '10000'
+const max_requests_window = process.env.MAX_REQUESTS_WINDOW || '600000'
 const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
+    windowMs: parseInt(max_requests_window), // 15 minutes
+    max: parseInt(max_requests), // Limit each IP to 100 requests per `window` (here, per 15 minutes)
     standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
     legacyHeaders: false, // Disable the `X-RateLimit-*` headers
 })
-dotenv.config()
 
 
 const app: Express = express()

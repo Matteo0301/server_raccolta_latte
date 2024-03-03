@@ -2,12 +2,17 @@ version: '3.4'
 
 services:
   serverraccoltalatte:
-    image: "ghcr.io/matteo0301/server_raccolta_latte:main"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # image: "ghcr.io/matteo0301/server_raccolta_latte:main"
     environment:
       NODE_ENV: production
     volumes:
-      - /var/log/matteo2001:/tmp/logs
+      - /var/log/matteo2001/errors:/usr/src/app/errors
+      - /var/log/matteo2001/logs:/usr/src/app/logs
       - /home/matteo2001/flutter:/usr/src/app/public-flutter
+      - /home/matteo2001/.env:/usr/src/app/.env
     ports:
       - 3000:3000
     depends_on:

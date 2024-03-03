@@ -33,8 +33,7 @@ const format = winston.format.combine(
     ),
 )
 
-const logDir = '/tmp/logs'
-
+const logDir = './'
 const transports = [
     new winston.transports.Console(),
     new winston.transports.File({
