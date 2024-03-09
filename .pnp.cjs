@@ -26,7 +26,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@types/bcrypt", "npm:5.0.0"],\
+          ["@types/bcrypt", "npm:5.0.2"],\
           ["@types/bcryptjs", "npm:2.4.6"],\
           ["@types/body-parser", "npm:1.19.5"],\
           ["@types/cors", "npm:2.8.17"],\
@@ -1527,10 +1527,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/bcrypt", [\
-      ["npm:5.0.0", {\
-        "packageLocation": "./.yarn/cache/@types-bcrypt-npm-5.0.0-c074c165c2-257d71d410.zip/node_modules/@types/bcrypt/",\
+      ["npm:5.0.2", {\
+        "packageLocation": "./.yarn/cache/@types-bcrypt-npm-5.0.2-ba2b0badad-b1f97532ff.zip/node_modules/@types/bcrypt/",\
         "packageDependencies": [\
-          ["@types/bcrypt", "npm:5.0.0"],\
+          ["@types/bcrypt", "npm:5.0.2"],\
           ["@types/node", "npm:20.3.2"]\
         ],\
         "linkType": "HARD"\
@@ -6145,7 +6145,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["server_raccolta_latte", "workspace:."],\
-          ["@types/bcrypt", "npm:5.0.0"],\
+          ["@types/bcrypt", "npm:5.0.2"],\
           ["@types/bcryptjs", "npm:2.4.6"],\
           ["@types/body-parser", "npm:1.19.5"],\
           ["@types/cors", "npm:2.8.17"],\
