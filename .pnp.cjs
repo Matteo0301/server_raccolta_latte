@@ -32,7 +32,7 @@ const RAW_RUNTIME_STATE =
           ["@types/cors", "npm:2.8.17"],\
           ["@types/express", "npm:4.17.21"],\
           ["@types/jest", "npm:29.5.12"],\
-          ["@types/jsonwebtoken", "npm:9.0.5"],\
+          ["@types/jsonwebtoken", "npm:9.0.6"],\
           ["@types/morgan", "npm:1.9.9"],\
           ["@types/node", "npm:20.11.22"],\
           ["@types/supertest", "npm:6.0.2"],\
@@ -1680,10 +1680,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/jsonwebtoken", [\
-      ["npm:9.0.5", {\
-        "packageLocation": "./.yarn/cache/@types-jsonwebtoken-npm-9.0.5-523ec98552-4849312946.zip/node_modules/@types/jsonwebtoken/",\
+      ["npm:9.0.6", {\
+        "packageLocation": "./.yarn/cache/@types-jsonwebtoken-npm-9.0.6-fd96c11a58-1f2145222f.zip/node_modules/@types/jsonwebtoken/",\
         "packageDependencies": [\
-          ["@types/jsonwebtoken", "npm:9.0.5"],\
+          ["@types/jsonwebtoken", "npm:9.0.6"],\
           ["@types/node", "npm:20.3.2"]\
         ],\
         "linkType": "HARD"\
@@ -6151,7 +6151,7 @@ const RAW_RUNTIME_STATE =
           ["@types/cors", "npm:2.8.17"],\
           ["@types/express", "npm:4.17.21"],\
           ["@types/jest", "npm:29.5.12"],\
-          ["@types/jsonwebtoken", "npm:9.0.5"],\
+          ["@types/jsonwebtoken", "npm:9.0.6"],\
           ["@types/morgan", "npm:1.9.9"],\
           ["@types/node", "npm:20.11.22"],\
           ["@types/supertest", "npm:6.0.2"],\
