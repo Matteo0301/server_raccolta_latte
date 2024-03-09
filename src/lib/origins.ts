@@ -26,7 +26,7 @@ router.get('/:origin', [
 
 
 router.delete('/:origin', [
-    param('origin').notEmpty().isString().isAlpha().escape(),
+    param('origin').notEmpty().isString().escape(),
     authenticateToken,
     checkAdmin,
     checkValidationErrors
@@ -38,7 +38,7 @@ router.delete('/:origin', [
 })
 
 router.post('/:origin/:lat/:lng', [
-    param('origin').notEmpty().isString().isAlpha().escape(),
+    param('origin').notEmpty().isString().escape(),
     param('lat').notEmpty().isNumeric(),
     param('lng').notEmpty().isNumeric(),
     authenticateToken,

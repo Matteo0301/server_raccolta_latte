@@ -16,6 +16,7 @@ const adminName = "admin"
 const origin1 = "first"
 const origin2 = "secondsecond"
 const origin3 = "third"
+const originSpecial = "origin special 1"
 
 
 beforeAll(async () => {
@@ -41,6 +42,13 @@ describe("Add origin", () => {
         const o = await getOrigins()
         const r = o.map((o: any) => o.name);
         expect(r).toContain(origin2)
+    })
+    test.concurrent("should add origin with spaces and numbers", async () => {
+        const res = await request(server).post("/origins/" + originSpecial + "/0/0").set('Authorization', adminToken).send()
+        expect(res.status).toBe(201)
+        const o = await getOrigins()
+        const r = o.map((o: any) => o.name);
+        expect(r).toContain(originSpecial)
     })
     test.concurrent("should not add origin if not admin", async () => {
         const res = await request(server).post("/origins/" + origin3 + "/0/0").set('Authorization', nonAdminToken).send()
@@ -70,6 +78,15 @@ describe("Delete origin", () => {
         const r = o.map((o: any) => o.name);
         expect(r).not.toContain(origin1)
     })
+
+    test.concurrent("should delete origin wit spaces and numbers", async () => {
+        const res = await request(server).delete("/origins/" + originSpecial).set('Authorization', adminToken).send()
+        expect(res.status).toBe(201)
+        const o = await getOrigins()
+        const r = o.map((o: any) => o.name);
+        expect(r).not.toContain(originSpecial)
+    })
+
     test.concurrent("should not delete origin if not present", async () => {
         const res = await request(server).delete("/origins/" + origin3).set('Authorization', adminToken).send()
         expect(res.status).toBe(409)

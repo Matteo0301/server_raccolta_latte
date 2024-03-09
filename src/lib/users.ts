@@ -9,7 +9,7 @@ import { morganMiddleware } from "./util/morganMiddleware";
 const router = Router()
 
 router.get('/auth/:username/:password', [
-    param('username').notEmpty().isString().isAlpha().escape(),
+    param('username').notEmpty().isString().escape(),
     param('password').notEmpty().isString(),
     checkValidationErrors,
     authenticateUser
@@ -21,7 +21,7 @@ router.get('/auth/:username/:password', [
 })
 
 router.put('/', [
-    body('username').notEmpty().isString().isAlpha().escape(),
+    body('username').notEmpty().isString().escape(),
     body('password').notEmpty().isString(),
     body('admin').notEmpty().isBoolean(),
     header('authorization').notEmpty().isString(),
@@ -38,7 +38,7 @@ router.put('/', [
     const admin = req.body.admin
     Logger.debug('Adding user ' + username + ' with password ' + password + ' and admin ' + admin)
     if (await addUser(username, password, admin))
-        res.status(201).send('/users/' + username)
+        res.status(201).send()
     else
         res.status(409).send()
 })
@@ -53,7 +53,7 @@ router.get('/', [
 })
 
 router.patch('/:username', [
-    param('username').notEmpty().isString().isAlpha().escape(),
+    param('username').notEmpty().isString().escape(),
     header('authorization').notEmpty().isString(),
     checkValidationErrors,
     authenticateToken,
@@ -79,7 +79,7 @@ router.patch('/:username', [
 })
 
 router.delete('/:username', [
-    param('username').notEmpty().isString().isAlpha().escape(),
+    param('username').notEmpty().isString().escape(),
     header('authorization').notEmpty().isString(),
     checkValidationErrors,
     authenticateToken,

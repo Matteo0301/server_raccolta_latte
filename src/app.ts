@@ -97,19 +97,19 @@ app.get('*', (_, res) => {
 });
 
 if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'development') {
-    /* server = https.createServer(
+    server = https.createServer(
         {
-            key: fs.readFileSync('/key.key'),
-            cert: fs.readFileSync('/cert.crt')
+            key: fs.readFileSync('key.pem'),
+            cert: fs.readFileSync('cert.pem')
         },
         app
     ).listen(port, async () => {
         initServer()
-    }); */
-    server = createServer(app);
+    });
+    /* server = createServer(app);
     app.listen(port, async () => {
         initServer()
-    });
+    }); */
 
 }
 
