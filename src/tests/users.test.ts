@@ -50,6 +50,14 @@ describe("Authentication", () => {
         expect(res.body).toHaveProperty("token")
         expect(res.body.token).not.toBeNull()
     })
+
+    test.concurrent("should login user with spaces and numbers", async () => {
+        await addUser("user 1", "pass", false)
+        const res = await request(server).get("/users/auth/user 1/pass")
+        expect(res.status).toBe(200)
+        expect(res.body).toHaveProperty("token")
+        expect(res.body.token).not.toBeNull()
+    })
 })
 
 
@@ -57,11 +65,21 @@ describe("Add user", () => {
     test.concurrent("should add user", async () => {
         const res = await request(server).put("/users").set('Authorization', token).send({ username: "newUser", password: "pass", admin: false })
         expect(res.status).toBe(201)
-        expect(res.text).toBe("/users/newUser")
         const u = await getUser("newUser")
         expect(u).not.toBeNull()
         if (u != null) {
             expect(u.username).toBe("newUser")
+            expect(compareSync("pass", u.password as string)).toBeTruthy()
+            expect(u.admin).toBeFalsy()
+        }
+    })
+    test.concurrent("should add user with spaces and numbers", async () => {
+        const res = await request(server).put("/users").set('Authorization', token).send({ username: "newUser 1", password: "pass", admin: false })
+        expect(res.status).toBe(201)
+        const u = await getUser("newUser 1")
+        expect(u).not.toBeNull()
+        if (u != null) {
+            expect(u.username).toBe("newUser 1")
             expect(compareSync("pass", u.password as string)).toBeTruthy()
             expect(u.admin).toBeFalsy()
         }
@@ -86,6 +104,19 @@ describe("Update user", () => {
         }
     })
 
+    test.concurrent("should update user with spaces and numbers", async () => {
+        const username = "user 3"
+        addUser(username, "pass", false)
+        const res = await request(server).patch("/users/" + username).set('Authorization', token).send({ password: "newPass", admin: true })
+        expect(res.status).toBe(204)
+        const user = await getUser(username)
+        expect(user).not.toBeNull()
+        if (user != null) {
+            expect(user.admin).toBe(true)
+            expect(compareSync("newPass", user.password as string)).toBeTruthy()
+        }
+    })
+
     test.concurrent("should not update user with no password or admin", async () => {
         addUser("wrongRequest", "pass", false)
         const res = await request(server).patch("/users/wrongRequest").set('Authorization', token).send()
@@ -104,6 +135,15 @@ describe("Delete user", () => {
         const res = await request(server).delete("/users/toBeDeleted").set('Authorization', token)
         expect(res.status).toBe(204)
         const user = await getUser("toBeDeleted")
+        expect(user).toBeNull()
+    })
+
+    test.concurrent("should delete user with spaces and numbers", async () => {
+        const username = "toBeDeleted 2"
+        addUser(username, "pass", false)
+        const res = await request(server).delete("/users/" + username).set('Authorization', token)
+        expect(res.status).toBe(204)
+        const user = await getUser(username)
         expect(user).toBeNull()
     })
 
