@@ -43,7 +43,7 @@ const RAW_RUNTIME_STATE =
           ["express", "npm:4.18.3"],\
           ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.1.5"],\
           ["express-validator", "npm:7.0.1"],\
-          ["helmet", "npm:7.0.0"],\
+          ["helmet", "npm:7.1.0"],\
           ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.7.0"],\
           ["jest-junit", "npm:16.0.0"],\
           ["jsonwebtoken", "npm:9.0.2"],\
@@ -3687,10 +3687,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["helmet", [\
-      ["npm:7.0.0", {\
-        "packageLocation": "./.yarn/cache/helmet-npm-7.0.0-13c1e96edf-f2511fd428.zip/node_modules/helmet/",\
+      ["npm:7.1.0", {\
+        "packageLocation": "./.yarn/cache/helmet-npm-7.1.0-0f9f70fa93-aa13b0907d.zip/node_modules/helmet/",\
         "packageDependencies": [\
-          ["helmet", "npm:7.0.0"]\
+          ["helmet", "npm:7.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6132,7 +6132,7 @@ const RAW_RUNTIME_STATE =
           ["express", "npm:4.18.3"],\
           ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.1.5"],\
           ["express-validator", "npm:7.0.1"],\
-          ["helmet", "npm:7.0.0"],\
+          ["helmet", "npm:7.1.0"],\
           ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.7.0"],\
           ["jest-junit", "npm:16.0.0"],\
           ["jsonwebtoken", "npm:9.0.2"],\
