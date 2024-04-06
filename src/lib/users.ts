@@ -59,7 +59,7 @@ router.patch('/:username', [
     authenticateToken,
     checkAdmin
 ], async (req: Request, res: Response) => {
-    if (!req.body.password && !req.body.admin) {
+    if (!req.body.password && !req.body.admin && !req.body.username) {
         res.sendStatus(400)
         return
     }
@@ -73,8 +73,9 @@ router.patch('/:username', [
 
     const password = (req.body.password !== null) ? req.body.password : user.password
     const admin = (req.body.admin !== null) ? req.body.admin : user.admin
-    Logger.debug('Updating user ' + req.params.username + ' with password ' + password + ' and admin ' + admin)
-    await updateUser(req.params.username, password, admin)
+    const newName = (req.body.password !== null) ? req.body.username : user.username
+    Logger.debug('Updating user ' + req.params.username + ' with new name ' + newName + ' password ' + password + ' and admin ' + admin)
+    await updateUser(req.params.username, newName, password, admin)
     res.status(204).send()
 })
 

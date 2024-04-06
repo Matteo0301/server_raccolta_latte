@@ -24,8 +24,8 @@ describe("Users", () => {
     })
 
     test("Update users", async () => {
-        await updateUser("test", "test", true)
-        let users = await getUser("test")
+        await updateUser("test", "test 2", "test", true)
+        let users = await getUser("test 2")
         expect(users).not.toBeNull()
         if (users)
             expect(users.admin).toBeTruthy()

@@ -117,6 +117,20 @@ describe("Update user", () => {
         }
     })
 
+    test.concurrent("should update username", async () => {
+        const username = "user 5"
+        const newName = "newName"
+        addUser(username, "pass", false)
+        const res = await request(server).patch("/users/" + username).set('Authorization', token).send({ username: newName, password: "newPass", admin: true })
+        expect(res.status).toBe(204)
+        const user = await getUser(newName)
+        expect(user).not.toBeNull()
+        if (user != null) {
+            expect(user.admin).toBe(true)
+            expect(compareSync("newPass", user.password as string)).toBeTruthy()
+        }
+    })
+
     test.concurrent("should not update user with no password or admin", async () => {
         addUser("wrongRequest", "pass", false)
         const res = await request(server).patch("/users/wrongRequest").set('Authorization', token).send()
