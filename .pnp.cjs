@@ -34,7 +34,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:29.5.12"],\
           ["@types/jsonwebtoken", "npm:9.0.6"],\
           ["@types/morgan", "npm:1.9.9"],\
-          ["@types/node", "npm:20.11.22"],\
+          ["@types/node", "npm:20.12.5"],\
           ["@types/supertest", "npm:6.0.2"],\
           ["bcryptjs", "npm:2.4.3"],\
           ["body-parser", "npm:1.20.2"],\
@@ -1725,10 +1725,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/node", [\
-      ["npm:20.11.22", {\
-        "packageLocation": "./.yarn/cache/@types-node-npm-20.11.22-9da21a332b-855058a432.zip/node_modules/@types/node/",\
+      ["npm:20.12.5", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-20.12.5-4856f14d45-7b647ea667.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:20.11.22"],\
+          ["@types/node", "npm:20.12.5"],\
           ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
@@ -6123,7 +6123,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:29.5.12"],\
           ["@types/jsonwebtoken", "npm:9.0.6"],\
           ["@types/morgan", "npm:1.9.9"],\
-          ["@types/node", "npm:20.11.22"],\
+          ["@types/node", "npm:20.12.5"],\
           ["@types/supertest", "npm:6.0.2"],\
           ["bcryptjs", "npm:2.4.3"],\
           ["body-parser", "npm:1.20.2"],\
@@ -6713,7 +6713,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:20.11.22"],\
+          ["@types/node", "npm:20.12.5"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
