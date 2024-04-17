@@ -3409,17 +3409,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["follow-redirects", [\
-      ["npm:1.15.5", {\
-        "packageLocation": "./.yarn/cache/follow-redirects-npm-1.15.5-9d14db76ca-d467f13c1c.zip/node_modules/follow-redirects/",\
+      ["npm:1.15.6", {\
+        "packageLocation": "./.yarn/cache/follow-redirects-npm-1.15.6-50635fe51d-70c7612c4c.zip/node_modules/follow-redirects/",\
         "packageDependencies": [\
-          ["follow-redirects", "npm:1.15.5"]\
+          ["follow-redirects", "npm:1.15.6"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:18d327a5d8a96420bc26b77de97e0fbd14dfd04717048eddf72472e24a35dabb8d845185c2b3c39649c255521e066296f84a8e7423c1cda88036e1a1b8f5c377#npm:1.15.5", {\
-        "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-c4b0edc011/0/cache/follow-redirects-npm-1.15.5-9d14db76ca-d467f13c1c.zip/node_modules/follow-redirects/",\
+      ["virtual:18d327a5d8a96420bc26b77de97e0fbd14dfd04717048eddf72472e24a35dabb8d845185c2b3c39649c255521e066296f84a8e7423c1cda88036e1a1b8f5c377#npm:1.15.6", {\
+        "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-1654fdbf6d/0/cache/follow-redirects-npm-1.15.6-50635fe51d-70c7612c4c.zip/node_modules/follow-redirects/",\
         "packageDependencies": [\
-          ["follow-redirects", "virtual:18d327a5d8a96420bc26b77de97e0fbd14dfd04717048eddf72472e24a35dabb8d845185c2b3c39649c255521e066296f84a8e7423c1cda88036e1a1b8f5c377#npm:1.15.5"],\
+          ["follow-redirects", "virtual:18d327a5d8a96420bc26b77de97e0fbd14dfd04717048eddf72472e24a35dabb8d845185c2b3c39649c255521e066296f84a8e7423c1cda88036e1a1b8f5c377#npm:1.15.6"],\
           ["@types/debug", null],\
           ["debug", "virtual:4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1#npm:4.3.4"]\
         ],\
@@ -5359,7 +5359,7 @@ const RAW_RUNTIME_STATE =
           ["camelcase", "npm:6.3.0"],\
           ["debug", "virtual:4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1#npm:4.3.4"],\
           ["find-cache-dir", "npm:3.3.2"],\
-          ["follow-redirects", "virtual:18d327a5d8a96420bc26b77de97e0fbd14dfd04717048eddf72472e24a35dabb8d845185c2b3c39649c255521e066296f84a8e7423c1cda88036e1a1b8f5c377#npm:1.15.5"],\
+          ["follow-redirects", "virtual:18d327a5d8a96420bc26b77de97e0fbd14dfd04717048eddf72472e24a35dabb8d845185c2b3c39649c255521e066296f84a8e7423c1cda88036e1a1b8f5c377#npm:1.15.6"],\
           ["https-proxy-agent", "npm:7.0.2"],\
           ["mongodb", "virtual:18d327a5d8a96420bc26b77de97e0fbd14dfd04717048eddf72472e24a35dabb8d845185c2b3c39649c255521e066296f84a8e7423c1cda88036e1a1b8f5c377#npm:5.9.2"],\
           ["new-find-package-json", "npm:2.0.0"],\
