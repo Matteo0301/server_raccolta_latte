@@ -39,7 +39,7 @@ const RAW_RUNTIME_STATE =
           ["bcryptjs", "npm:2.4.3"],\
           ["body-parser", "npm:1.20.2"],\
           ["cors", "npm:2.8.5"],\
-          ["dotenv", "npm:16.3.1"],\
+          ["dotenv", "npm:16.4.5"],\
           ["express", "npm:4.19.2"],\
           ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.2.0"],\
           ["express-validator", "npm:7.0.1"],\
@@ -2971,10 +2971,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["dotenv", [\
-      ["npm:16.3.1", {\
-        "packageLocation": "./.yarn/cache/dotenv-npm-16.3.1-e6d380a398-dbb778237e.zip/node_modules/dotenv/",\
+      ["npm:16.4.5", {\
+        "packageLocation": "./.yarn/cache/dotenv-npm-16.4.5-bcb20eb95d-55a3134601.zip/node_modules/dotenv/",\
         "packageDependencies": [\
-          ["dotenv", "npm:16.3.1"]\
+          ["dotenv", "npm:16.4.5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6136,7 +6136,7 @@ const RAW_RUNTIME_STATE =
           ["bcryptjs", "npm:2.4.3"],\
           ["body-parser", "npm:1.20.2"],\
           ["cors", "npm:2.8.5"],\
-          ["dotenv", "npm:16.3.1"],\
+          ["dotenv", "npm:16.4.5"],\
           ["express", "npm:4.19.2"],\
           ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.2.0"],\
           ["express-validator", "npm:7.0.1"],\
