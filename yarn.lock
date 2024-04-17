@@ -2593,7 +2593,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.15.3":
+"follow-redirects@npm:^1.15.6":
   version: 1.15.6
   resolution: "follow-redirects@npm:1.15.6"
   peerDependenciesMeta:
@@ -4171,15 +4171,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongodb-memory-server-core@npm:9.1.6":
-  version: 9.1.6
-  resolution: "mongodb-memory-server-core@npm:9.1.6"
+"mongodb-memory-server-core@npm:9.1.8":
+  version: 9.1.8
+  resolution: "mongodb-memory-server-core@npm:9.1.8"
   dependencies:
     async-mutex: "npm:^0.4.0"
     camelcase: "npm:^6.3.0"
     debug: "npm:^4.3.4"
     find-cache-dir: "npm:^3.3.2"
-    follow-redirects: "npm:^1.15.3"
+    follow-redirects: "npm:^1.15.6"
     https-proxy-agent: "npm:^7.0.2"
     mongodb: "npm:^5.9.1"
     new-find-package-json: "npm:^2.0.0"
@@ -4187,17 +4187,17 @@ __metadata:
     tar-stream: "npm:^3.0.0"
     tslib: "npm:^2.6.2"
     yauzl: "npm:^2.10.0"
-  checksum: 10/264b3dca8677afad498847170b411ffcb2fa3ffd5f9b6d202a04644854d0c392b07cbc951bdffa021fcc9e7a11faac49076819c7ff725da0db740d48034680e7
+  checksum: 10/09920ead5a24236c4c5b4658a7657e24510948b5d1a7b3b0add2bef7e7c39a31edac18a6d529fa19f5d227d5c5b3e0af82f45ebf53bf620959b43ed9854e9627
   languageName: node
   linkType: hard
 
-"mongodb-memory-server@npm:^9.1.6":
-  version: 9.1.6
-  resolution: "mongodb-memory-server@npm:9.1.6"
+"mongodb-memory-server@npm:^9.1.8":
+  version: 9.1.8
+  resolution: "mongodb-memory-server@npm:9.1.8"
   dependencies:
-    mongodb-memory-server-core: "npm:9.1.6"
+    mongodb-memory-server-core: "npm:9.1.8"
     tslib: "npm:^2.6.2"
-  checksum: 10/cd671420ad4ce731c357d5117ad44b9e777de21c34ffd757265acedadf6e1a56a49c43bd647d3147aa3346007fccded0220d1a5d7eed7d7dee0b8752a11d2278
+  checksum: 10/9f8f0e1e80fbac0a8bbce4deef9d661325867db3092d7d659ec926042c0a530204670bb9663b43ba699dd0f6186cafa08b06eab86d12c87079a3c9301a6300d7
   languageName: node
   linkType: hard
 
@@ -5005,7 +5005,7 @@ __metadata:
     jest-junit: "npm:^16.0.0"
     jsonwebtoken: "npm:^9.0.2"
     mongodb: "npm:^6.5.0"
-    mongodb-memory-server: "npm:^9.1.6"
+    mongodb-memory-server: "npm:^9.1.8"
     mongoose: "npm:^7.6.2"
     morgan: "npm:^1.10.0"
     supertest: "npm:^6.3.4"
