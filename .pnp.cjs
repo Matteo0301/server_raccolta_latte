@@ -53,7 +53,7 @@ const RAW_RUNTIME_STATE =
           ["morgan", "npm:1.10.0"],\
           ["supertest", "npm:6.3.4"],\
           ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.1.2"],\
-          ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.1"],\
+          ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"],\
           ["winston", "npm:3.13.0"],\
           ["winston-daily-rotate-file", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:5.0.0"]\
@@ -6148,7 +6148,7 @@ const RAW_RUNTIME_STATE =
           ["morgan", "npm:1.10.0"],\
           ["supertest", "npm:6.3.4"],\
           ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.1.2"],\
-          ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.1"],\
+          ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"],\
           ["winston", "npm:3.13.0"],\
           ["winston-daily-rotate-file", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:5.0.0"]\
@@ -6701,17 +6701,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["ts-node", [\
-      ["npm:10.9.1", {\
-        "packageLocation": "./.yarn/cache/ts-node-npm-10.9.1-6c268be7f4-bee56d4dc9.zip/node_modules/ts-node/",\
+      ["npm:10.9.2", {\
+        "packageLocation": "./.yarn/cache/ts-node-npm-10.9.2-3f3890b9ac-a91a15b3c9.zip/node_modules/ts-node/",\
         "packageDependencies": [\
-          ["ts-node", "npm:10.9.1"]\
+          ["ts-node", "npm:10.9.2"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.1", {\
-        "packageLocation": "./.yarn/__virtual__/ts-node-virtual-eb1985adeb/0/cache/ts-node-npm-10.9.1-6c268be7f4-bee56d4dc9.zip/node_modules/ts-node/",\
+      ["virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.2", {\
+        "packageLocation": "./.yarn/__virtual__/ts-node-virtual-ee452c4e6f/0/cache/ts-node-npm-10.9.2-3f3890b9ac-a91a15b3c9.zip/node_modules/ts-node/",\
         "packageDependencies": [\
-          ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.1"],\
+          ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.2"],\
           ["@cspotcode/source-map-support", "npm:0.8.1"],\
           ["@swc/core", null],\
           ["@swc/wasm", null],\
