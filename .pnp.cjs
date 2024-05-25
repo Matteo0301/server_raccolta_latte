@@ -51,7 +51,7 @@ const RAW_RUNTIME_STATE =
           ["mongodb-memory-server", "npm:9.2.0"],\
           ["mongoose", "npm:7.6.2"],\
           ["morgan", "npm:1.10.0"],\
-          ["supertest", "npm:6.3.4"],\
+          ["supertest", "npm:7.0.0"],\
           ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.1.2"],\
           ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"],\
@@ -3444,14 +3444,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["formidable", [\
-      ["npm:2.1.2", {\
-        "packageLocation": "./.yarn/cache/formidable-npm-2.1.2-40ba18d67f-d385180e04.zip/node_modules/formidable/",\
+      ["npm:3.5.1", {\
+        "packageLocation": "./.yarn/cache/formidable-npm-3.5.1-257e5eab8a-c9a7bbbd4c.zip/node_modules/formidable/",\
         "packageDependencies": [\
-          ["formidable", "npm:2.1.2"],\
+          ["formidable", "npm:3.5.1"],\
           ["dezalgo", "npm:1.0.4"],\
           ["hexoid", "npm:1.0.0"],\
-          ["once", "npm:1.4.0"],\
-          ["qs", "npm:6.11.2"]\
+          ["once", "npm:1.4.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6146,7 +6145,7 @@ const RAW_RUNTIME_STATE =
           ["mongodb-memory-server", "npm:9.2.0"],\
           ["mongoose", "npm:7.6.2"],\
           ["morgan", "npm:1.10.0"],\
-          ["supertest", "npm:6.3.4"],\
+          ["supertest", "npm:7.0.0"],\
           ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.1.2"],\
           ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"],\
@@ -6467,31 +6466,30 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["superagent", [\
-      ["npm:8.1.2", {\
-        "packageLocation": "./.yarn/cache/superagent-npm-8.1.2-44190e1fe9-33d0072e05.zip/node_modules/superagent/",\
+      ["npm:9.0.2", {\
+        "packageLocation": "./.yarn/cache/superagent-npm-9.0.2-9e8cceb765-d3c0c9051c.zip/node_modules/superagent/",\
         "packageDependencies": [\
-          ["superagent", "npm:8.1.2"],\
+          ["superagent", "npm:9.0.2"],\
           ["component-emitter", "npm:1.3.0"],\
           ["cookiejar", "npm:2.1.4"],\
           ["debug", "virtual:4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1#npm:4.3.4"],\
           ["fast-safe-stringify", "npm:2.1.1"],\
           ["form-data", "npm:4.0.0"],\
-          ["formidable", "npm:2.1.2"],\
+          ["formidable", "npm:3.5.1"],\
           ["methods", "npm:1.1.2"],\
           ["mime", "npm:2.6.0"],\
-          ["qs", "npm:6.11.2"],\
-          ["semver", "npm:7.5.3"]\
+          ["qs", "npm:6.11.2"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["supertest", [\
-      ["npm:6.3.4", {\
-        "packageLocation": "./.yarn/cache/supertest-npm-6.3.4-ddb2a7be36-93015318f5.zip/node_modules/supertest/",\
+      ["npm:7.0.0", {\
+        "packageLocation": "./.yarn/cache/supertest-npm-7.0.0-8060c32e4d-73bf2a37e1.zip/node_modules/supertest/",\
         "packageDependencies": [\
-          ["supertest", "npm:6.3.4"],\
+          ["supertest", "npm:7.0.0"],\
           ["methods", "npm:1.1.2"],\
-          ["superagent", "npm:8.1.2"]\
+          ["superagent", "npm:9.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
