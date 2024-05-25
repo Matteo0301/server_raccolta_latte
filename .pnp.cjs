@@ -42,7 +42,7 @@ const RAW_RUNTIME_STATE =
           ["dotenv", "npm:16.4.5"],\
           ["express", "npm:4.19.2"],\
           ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.2.0"],\
-          ["express-validator", "npm:7.0.1"],\
+          ["express-validator", "npm:7.1.0"],\
           ["helmet", "npm:7.1.0"],\
           ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.7.0"],\
           ["jest-junit", "npm:16.0.0"],\
@@ -3274,12 +3274,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["express-validator", [\
-      ["npm:7.0.1", {\
-        "packageLocation": "./.yarn/cache/express-validator-npm-7.0.1-cd576fda4a-c655915619.zip/node_modules/express-validator/",\
+      ["npm:7.1.0", {\
+        "packageLocation": "./.yarn/cache/express-validator-npm-7.1.0-14e2ff4ce9-3760661060.zip/node_modules/express-validator/",\
         "packageDependencies": [\
-          ["express-validator", "npm:7.0.1"],\
+          ["express-validator", "npm:7.1.0"],\
           ["lodash", "npm:4.17.21"],\
-          ["validator", "npm:13.9.0"]\
+          ["validator", "npm:13.12.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6136,7 +6136,7 @@ const RAW_RUNTIME_STATE =
           ["dotenv", "npm:16.4.5"],\
           ["express", "npm:4.19.2"],\
           ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.2.0"],\
-          ["express-validator", "npm:7.0.1"],\
+          ["express-validator", "npm:7.1.0"],\
           ["helmet", "npm:7.1.0"],\
           ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.7.0"],\
           ["jest-junit", "npm:16.0.0"],\
@@ -6901,10 +6901,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["validator", [\
-      ["npm:13.9.0", {\
-        "packageLocation": "./.yarn/cache/validator-npm-13.9.0-54b07e9e81-14f77ff495.zip/node_modules/validator/",\
+      ["npm:13.12.0", {\
+        "packageLocation": "./.yarn/cache/validator-npm-13.12.0-6c8a423cbf-db6eb0725e.zip/node_modules/validator/",\
         "packageDependencies": [\
-          ["validator", "npm:13.9.0"]\
+          ["validator", "npm:13.12.0"]\
         ],\
         "linkType": "HARD"\
       }]\

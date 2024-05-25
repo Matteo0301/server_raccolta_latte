@@ -2437,13 +2437,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-validator@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "express-validator@npm:7.0.1"
+"express-validator@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "express-validator@npm:7.1.0"
   dependencies:
     lodash: "npm:^4.17.21"
-    validator: "npm:^13.9.0"
-  checksum: 10/c65591561903ad7b370fdf61a789620b50f5b0d912872cfc07d71ecd654bc077b4918a4a5e9c3777c6d48bbcc702f114ab23c9dfc145a4a79e5245854cada532
+    validator: "npm:~13.12.0"
+  checksum: 10/376066106037c0c26e63b9235a5519889a07d198670e6070db87844c082e3003cec492b84c23331d0efd5245449517c4a5ec0c05c0938bba0f0e6f7071dbee9e
   languageName: node
   linkType: hard
 
@@ -5000,7 +5000,7 @@ __metadata:
     dotenv: "npm:^16.4.5"
     express: "npm:^4.19.2"
     express-rate-limit: "npm:^7.2.0"
-    express-validator: "npm:^7.0.1"
+    express-validator: "npm:^7.1.0"
     helmet: "npm:^7.1.0"
     jest: "npm:^29.7.0"
     jest-junit: "npm:^16.0.0"
@@ -5661,10 +5661,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"validator@npm:^13.9.0":
-  version: 13.9.0
-  resolution: "validator@npm:13.9.0"
-  checksum: 10/14f77ff495c5016459fd87b8bf5209871ed2716feb981252e1e9cb5ff44d2c5d97c57d19d9de32fbac90b660a11042015ae44d05e1b9259f8d7b315e5e9a59a9
+"validator@npm:~13.12.0":
+  version: 13.12.0
+  resolution: "validator@npm:13.12.0"
+  checksum: 10/db6eb0725e2b67d60d30073ae8573982713b5903195d031dc3c7db7e82df8b74e8c13baef8e2106d146d979599fd61a06cde1fec5c148e4abd53d52817ff0fd9
   languageName: node
   linkType: hard
 
