@@ -5010,7 +5010,7 @@ __metadata:
     mongoose: "npm:^7.6.2"
     morgan: "npm:^1.10.0"
     supertest: "npm:^7.0.0"
-    ts-jest: "npm:^29.1.4"
+    ts-jest: "npm:^29.2.0"
     ts-node: "npm:^10.9.2"
     typescript: "npm:5.4.5"
     winston: "npm:^3.13.0"
@@ -5452,9 +5452,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:^29.1.4":
-  version: 29.1.4
-  resolution: "ts-jest@npm:29.1.4"
+"ts-jest@npm:^29.2.0":
+  version: 29.2.0
+  resolution: "ts-jest@npm:29.2.0"
   dependencies:
     bs-logger: "npm:0.x"
     fast-json-stable-stringify: "npm:2.x"
@@ -5484,7 +5484,7 @@ __metadata:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: 10/3103c0e2f9937ae6bb51918105883565bb2d11cae1121ae20aedd1c4374f843341463a4a1986e02a958d119be0d3a9b996d761bc4aac85152a29385e609fed3c
+  checksum: 10/a94725c313f7e019281835e32c9b2791d3f5fb9a4e6a19e6c51cbf8939cd17a0426e667c19849fed608149d1ec5198da9fd55fefe74c6ed4cff2172442b8288c
   languageName: node
   linkType: hard
 
