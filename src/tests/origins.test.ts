@@ -1,6 +1,6 @@
 import { Server, get } from "http";
 import { app, startServer } from "../app";
-import { addCollection, addOrigin, addUser, clear, getCollectionByUser, getCollections, getCollectionsByOrigin, getOrigins } from "../lib/mongoose";
+import { addCollection, addOrigin, addUser, clear, getCollectionByUser, getCollections, getCollectionsByOrigin, getOrigin, getOrigins } from "../lib/mongoose";
 import { generateAccessToken } from "../lib/util/token";
 
 const request = require("supertest")
@@ -16,6 +16,7 @@ const adminName = "admin"
 const origin1 = "first"
 const origin2 = "secondsecond"
 const origin3 = "third"
+const originSpecial = "origin special 1"
 
 
 beforeAll(async () => {
@@ -41,6 +42,13 @@ describe("Add origin", () => {
         const o = await getOrigins()
         const r = o.map((o: any) => o.name);
         expect(r).toContain(origin2)
+    })
+    test.concurrent("should add origin with spaces and numbers", async () => {
+        const res = await request(server).post("/origins/" + originSpecial + "/0/0").set('Authorization', adminToken).send()
+        expect(res.status).toBe(201)
+        const o = await getOrigins()
+        const r = o.map((o: any) => o.name);
+        expect(r).toContain(originSpecial)
     })
     test.concurrent("should not add origin if not admin", async () => {
         const res = await request(server).post("/origins/" + origin3 + "/0/0").set('Authorization', nonAdminToken).send()
@@ -70,6 +78,15 @@ describe("Delete origin", () => {
         const r = o.map((o: any) => o.name);
         expect(r).not.toContain(origin1)
     })
+
+    test.concurrent("should delete origin wit spaces and numbers", async () => {
+        const res = await request(server).delete("/origins/" + originSpecial).set('Authorization', adminToken).send()
+        expect(res.status).toBe(201)
+        const o = await getOrigins()
+        const r = o.map((o: any) => o.name);
+        expect(r).not.toContain(originSpecial)
+    })
+
     test.concurrent("should not delete origin if not present", async () => {
         const res = await request(server).delete("/origins/" + origin3).set('Authorization', adminToken).send()
         expect(res.status).toBe(409)
@@ -90,6 +107,25 @@ describe("Get origins", () => {
         const res = await request(server).get("/origins/" + o).set('Authorization', adminToken).send()
         expect(res.status).toBe(200)
         expect(res.body.length).toBe(2)
+    })
+})
+
+describe("Update origins", () => {
+    test.concurrent("should update origin", async () => {
+
+        const name = "toChange"
+        const newName = "changed 1"
+        const newLat = 1
+        const newLng = 1
+        addOrigin(name, 0, 0)
+        const res = await request(server).patch("/origins/" + name).set('Authorization', adminToken).send({ name: newName, lat: newLat, lng: newLng })
+        expect(res.status).toBe(204)
+        const o = await getOrigin(newName)
+        expect(o).not.toBeNull()
+        if (o != null) {
+            expect(o.lng).toBe(newLng)
+            expect(o.lat).toBe(newLat)
+        }
     })
 })
 

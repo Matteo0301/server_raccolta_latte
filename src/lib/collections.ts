@@ -32,7 +32,7 @@ router.get('/:startdate/:enddate', [
 })
 
 router.get('/byuser/:username/:startdate/:enddate', [
-    param('username').notEmpty().isString().isAlpha().escape(),
+    param('username').notEmpty().isString().escape(),
     param('startdate').isString().isISO8601().isDate().escape(),
     param('enddate').isString().isISO8601().isDate().escape(),
     checkDates,
@@ -62,8 +62,8 @@ router.delete('/:id', [
 })
 
 router.post('/:username/:origin', [
-    param('username').notEmpty().isString().isAlpha().escape(),
-    param('origin').notEmpty().isString().isAlpha().escape(),
+    param('username').notEmpty().isString().escape(),
+    param('origin').notEmpty().isString().escape(),
     body('date').isString().isISO8601().escape(),
     body('quantity').notEmpty().isNumeric().escape(),
     body('quantity2').notEmpty().isNumeric().escape(),

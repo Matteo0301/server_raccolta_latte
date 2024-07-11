@@ -9,10 +9,10 @@ services:
     environment:
       NODE_ENV: production
     volumes:
-      - /var/log/matteo2001/errors:/usr/src/app/errors
-      - /var/log/matteo2001/logs:/usr/src/app/logs
-      - /home/matteo2001/flutter/web:/usr/src/app/public-flutter
-      - /home/matteo2001/.env:/usr/src/app/.env
+      # - /var/log/matteo/errors:/usr/src/app/errors
+      # - /var/log/matteo/logs:/usr/src/app/logs
+      - /home/matteo/flutter/web:/usr/src/app/public-flutter
+      - /home/matteo/.env:/usr/src/app/.env
     ports:
       - 443:443
     depends_on:

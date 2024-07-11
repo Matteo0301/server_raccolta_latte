@@ -9,7 +9,7 @@ import { morganMiddleware } from "./util/morganMiddleware";
 const router = Router()
 
 router.get('/auth/:username/:password', [
-    param('username').notEmpty().isString().isAlpha().escape(),
+    param('username').notEmpty().isString().escape(),
     param('password').notEmpty().isString(),
     checkValidationErrors,
     authenticateUser
@@ -21,7 +21,7 @@ router.get('/auth/:username/:password', [
 })
 
 router.put('/', [
-    body('username').notEmpty().isString().isAlpha().escape(),
+    body('username').notEmpty().isString().escape(),
     body('password').notEmpty().isString(),
     body('admin').notEmpty().isBoolean(),
     header('authorization').notEmpty().isString(),
@@ -38,7 +38,7 @@ router.put('/', [
     const admin = req.body.admin
     Logger.debug('Adding user ' + username + ' with password ' + password + ' and admin ' + admin)
     if (await addUser(username, password, admin))
-        res.status(201).send('/users/' + username)
+        res.status(201).send()
     else
         res.status(409).send()
 })
@@ -53,13 +53,13 @@ router.get('/', [
 })
 
 router.patch('/:username', [
-    param('username').notEmpty().isString().isAlpha().escape(),
+    param('username').notEmpty().isString().escape(),
     header('authorization').notEmpty().isString(),
     checkValidationErrors,
     authenticateToken,
     checkAdmin
 ], async (req: Request, res: Response) => {
-    if (!req.body.password && !req.body.admin) {
+    if (!req.body.password && !req.body.admin && !req.body.username) {
         res.sendStatus(400)
         return
     }
@@ -73,13 +73,14 @@ router.patch('/:username', [
 
     const password = (req.body.password !== null) ? req.body.password : user.password
     const admin = (req.body.admin !== null) ? req.body.admin : user.admin
-    Logger.debug('Updating user ' + req.params.username + ' with password ' + password + ' and admin ' + admin)
-    await updateUser(req.params.username, password, admin)
+    const newName = (req.body.password !== null) ? req.body.username : user.username
+    Logger.debug('Updating user ' + req.params.username + ' with new name ' + newName + ' password ' + password + ' and admin ' + admin)
+    await updateUser(req.params.username, newName, password, admin)
     res.status(204).send()
 })
 
 router.delete('/:username', [
-    param('username').notEmpty().isString().isAlpha().escape(),
+    param('username').notEmpty().isString().escape(),
     header('authorization').notEmpty().isString(),
     checkValidationErrors,
     authenticateToken,

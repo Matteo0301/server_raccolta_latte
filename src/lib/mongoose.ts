@@ -58,9 +58,9 @@ async function getUsers() {
     return users
 }
 
-async function updateUser(username: string, password: string, admin: boolean) {
+async function updateUser(username: string, newName: string, password: string, admin: boolean) {
     const hashedPassword = generateHash(password)
-    await User.updateOne({ username: { $eq: username } }, { $set: { password: hashedPassword, admin: admin } })
+    await User.updateOne({ username: { $eq: username } }, { $set: { username: newName, password: hashedPassword, admin: admin } })
 }
 
 async function deleteUser(username: string) {
@@ -109,6 +109,11 @@ async function checkOrigin(name: string) {
     return false
 }
 
+async function getOrigin(name: string) {
+    const origin = await Origins.findOne({ name: { $eq: name } }).exec()
+    return origin
+}
+
 async function deleteOrigin(name: string) {
     if (await checkOrigin(name)) {
         await Origins.deleteOne({ name: { $eq: name } }).exec()
@@ -125,10 +130,18 @@ async function addOrigin(name: string, lat: number, lng: number) {
     return false
 }
 
+async function updateOrigin(name: string, newName: string, lat: number, lng: number) {
+    if (await checkOrigin(name)) {
+        await Origins.updateOne({ name: { $eq: name } }, { name: newName, lat: lat, lng: lng })
+        return true
+    }
+    return false
+}
+
 async function getCollectionsByOrigin(origin: string) {
     const raccolta = await Collection.find({ origin: origin }).sort("date").exec()
     return raccolta
 }
 
 
-export { connect, close, db, addUser, getUser, getUsers, updateUser, deleteUser, clear, User, generateHash, addCollection, getCollections, getCollectionByUser, deleteCollection, checkCollection, getOrigins, addOrigin, deleteOrigin, getCollectionsByOrigin }
+export { connect, close, db, addUser, getUser, getUsers, updateUser, deleteUser, clear, User, generateHash, addCollection, getCollections, getCollectionByUser, deleteCollection, checkCollection, getOrigins, addOrigin, deleteOrigin, updateOrigin, getCollectionsByOrigin, checkOrigin, getOrigin }
