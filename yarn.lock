@@ -1842,7 +1842,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0":
+"chalk@npm:^4.0.0, chalk@npm:^4.0.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -2264,6 +2264,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ejs@npm:^3.0.0":
+  version: 3.1.10
+  resolution: "ejs@npm:3.1.10"
+  dependencies:
+    jake: "npm:^10.8.5"
+  bin:
+    ejs: bin/cli.js
+  checksum: 10/a9cb7d7cd13b7b1cd0be5c4788e44dd10d92f7285d2f65b942f33e127230c054f99a42db4d99f766d8dbc6c57e94799593ee66a14efd7c8dd70c4812bf6aa384
+  languageName: node
+  linkType: hard
+
 "electron-to-chromium@npm:^1.4.431":
   version: 1.4.442
   resolution: "electron-to-chromium@npm:1.4.442"
@@ -2541,6 +2552,15 @@ __metadata:
   dependencies:
     moment: "npm:^2.29.1"
   checksum: 10/8014bad7aca807b7437b8696c58142ea939d6a50473eff9df36dcbcf66899a78130f762494c0500baa4b0687f33c1a714d1dd191446a7781868a68fc5024dac5
+  languageName: node
+  linkType: hard
+
+"filelist@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "filelist@npm:1.0.4"
+  dependencies:
+    minimatch: "npm:^5.0.1"
+  checksum: 10/4b436fa944b1508b95cffdfc8176ae6947b92825483639ef1b9a89b27d82f3f8aa22b21eed471993f92709b431670d4e015b39c087d435a61e1bb04564cf51de
   languageName: node
   linkType: hard
 
@@ -3149,6 +3169,20 @@ __metadata:
     "@pkgjs/parseargs":
       optional: true
   checksum: 10/69da974c05e5623743694484a9441f7dfa6b340daa20522fd9466edc132608012d5194f44167c706f62d1f87af96daf1e2b8cc62960153beea468cfaf99ed980
+  languageName: node
+  linkType: hard
+
+"jake@npm:^10.8.5":
+  version: 10.9.1
+  resolution: "jake@npm:10.9.1"
+  dependencies:
+    async: "npm:^3.2.3"
+    chalk: "npm:^4.0.2"
+    filelist: "npm:^1.0.4"
+    minimatch: "npm:^3.1.2"
+  bin:
+    jake: bin/cli.js
+  checksum: 10/82603513de5a61bc12360d2b8ba2be9f6bb52495b73f4d1b541cdfef9e43314b132ca10e73d2b41e3c1ea16bf79ec30a64afc9b9e2d2c72a4d4575a8db61cbc8
   languageName: node
   linkType: hard
 
@@ -4035,12 +4069,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^3.0.4, minimatch@npm:^3.1.1":
+"minimatch@npm:^3.0.4, minimatch@npm:^3.1.1, minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
   dependencies:
     brace-expansion: "npm:^1.1.7"
   checksum: 10/e0b25b04cd4ec6732830344e5739b13f8690f8a012d73445a4a19fbc623f5dd481ef7a5827fde25954cd6026fede7574cc54dc4643c99d6c6b653d6203f94634
+  languageName: node
+  linkType: hard
+
+"minimatch@npm:^5.0.1":
+  version: 5.1.6
+  resolution: "minimatch@npm:5.1.6"
+  dependencies:
+    brace-expansion: "npm:^2.0.1"
+  checksum: 10/126b36485b821daf96d33b5c821dac600cc1ab36c87e7a532594f9b1652b1fa89a1eebcaad4dff17c764dce1a7ac1531327f190fed5f97d8f6e5f889c116c429
   languageName: node
   linkType: hard
 
@@ -4988,7 +5031,7 @@ __metadata:
     mongoose: "npm:^8.5.0"
     morgan: "npm:^1.10.0"
     supertest: "npm:^7.0.0"
-    ts-jest: "npm:^29.2.0"
+    ts-jest: "npm:^29.2.2"
     ts-node: "npm:^10.9.2"
     typescript: "npm:5.4.5"
     winston: "npm:^3.13.0"
@@ -5430,11 +5473,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:^29.2.0":
-  version: 29.2.0
-  resolution: "ts-jest@npm:29.2.0"
+"ts-jest@npm:^29.2.2":
+  version: 29.2.2
+  resolution: "ts-jest@npm:29.2.2"
   dependencies:
     bs-logger: "npm:0.x"
+    ejs: "npm:^3.0.0"
     fast-json-stable-stringify: "npm:2.x"
     jest-util: "npm:^29.0.0"
     json5: "npm:^2.2.3"
@@ -5462,7 +5506,7 @@ __metadata:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: 10/a94725c313f7e019281835e32c9b2791d3f5fb9a4e6a19e6c51cbf8939cd17a0426e667c19849fed608149d1ec5198da9fd55fefe74c6ed4cff2172442b8288c
+  checksum: 10/6523de2d78493a7901dfc37f2a491b259f5d30beac7a2179ddf8524da0c8e4a7f488aad2d22eca8d074bcc54d7b06a90153fdbf6e9c245f5fc1e484788f0c9d8
   languageName: node
   linkType: hard
 
