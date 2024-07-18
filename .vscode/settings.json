@@ -5,5 +5,10 @@
   },
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "jest.jestCommandLine": "yarn test"
+  "jest.jestCommandLine": "yarn test",
+  "cSpell.words": [
+    "byuser",
+    "enddate",
+    "startdate"
+  ]
 }

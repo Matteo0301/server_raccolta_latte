@@ -3,7 +3,7 @@ import Logger from "./util/logger"
 import bcrypt from 'bcryptjs'
 import { User, Collection, Origins } from "./schemas"
 import fs from 'fs';
-import file from "tmp"
+import { Response } from "express"
 const tmp = require('tmp');
 
 let db: any
@@ -166,4 +166,10 @@ async function addImage(b64: string, date: Date){
     })
 }
 
-export { connect, close, db, addUser, getUser, getUsers, updateUser, deleteUser, clear, User, generateHash, addCollection, getCollections, getCollectionByUser, deleteCollection, checkCollection, getOrigins, addOrigin, deleteOrigin, updateOrigin, getCollectionsByOrigin, checkOrigin, getOrigin, addImage }
+async function returnImage(res: Response<any, Record<string, any>>, filename: string) {
+    images.createReadStream({
+        filename: 'filename'
+    }).pipe(res);
+}
+
+export { connect, close, db, addUser, getUser, getUsers, updateUser, deleteUser, clear, User, generateHash, addCollection, getCollections, getCollectionByUser, deleteCollection, checkCollection, getOrigins, addOrigin, deleteOrigin, updateOrigin, getCollectionsByOrigin, checkOrigin, getOrigin, addImage, returnImage }
