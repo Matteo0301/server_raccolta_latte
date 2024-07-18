@@ -36,6 +36,7 @@ const RAW_RUNTIME_STATE =
           ["@types/morgan", "npm:1.9.9"],\
           ["@types/node", "npm:20.14.10"],\
           ["@types/supertest", "npm:6.0.2"],\
+          ["@types/tmp", "npm:0.2.6"],\
           ["bcryptjs", "npm:2.4.3"],\
           ["body-parser", "npm:1.20.2"],\
           ["cors", "npm:2.8.5"],\
@@ -52,6 +53,7 @@ const RAW_RUNTIME_STATE =
           ["mongoose", "npm:8.5.0"],\
           ["morgan", "npm:1.10.0"],\
           ["supertest", "npm:7.0.0"],\
+          ["tmp", "npm:0.2.3"],\
           ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.2.0"],\
           ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"],\
@@ -1818,6 +1820,15 @@ const RAW_RUNTIME_STATE =
           ["@types/supertest", "npm:6.0.2"],\
           ["@types/methods", "npm:1.1.4"],\
           ["@types/superagent", "npm:8.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/tmp", [\
+      ["npm:0.2.6", {\
+        "packageLocation": "./.yarn/cache/@types-tmp-npm-0.2.6-616955bb04-e14a094c10.zip/node_modules/@types/tmp/",\
+        "packageDependencies": [\
+          ["@types/tmp", "npm:0.2.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6110,6 +6121,7 @@ const RAW_RUNTIME_STATE =
           ["@types/morgan", "npm:1.9.9"],\
           ["@types/node", "npm:20.14.10"],\
           ["@types/supertest", "npm:6.0.2"],\
+          ["@types/tmp", "npm:0.2.6"],\
           ["bcryptjs", "npm:2.4.3"],\
           ["body-parser", "npm:1.20.2"],\
           ["cors", "npm:2.8.5"],\
@@ -6126,6 +6138,7 @@ const RAW_RUNTIME_STATE =
           ["mongoose", "npm:8.5.0"],\
           ["morgan", "npm:1.10.0"],\
           ["supertest", "npm:7.0.0"],\
+          ["tmp", "npm:0.2.3"],\
           ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.2.0"],\
           ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"],\
@@ -6553,6 +6566,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/text-hex-npm-1.0.0-22389e4d56-1138f68adc.zip/node_modules/text-hex/",\
         "packageDependencies": [\
           ["text-hex", "npm:1.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["tmp", [\
+      ["npm:0.2.3", {\
+        "packageLocation": "./.yarn/cache/tmp-npm-0.2.3-ac2a701365-7b13696787.zip/node_modules/tmp/",\
+        "packageDependencies": [\
+          ["tmp", "npm:0.2.3"]\
         ],\
         "linkType": "HARD"\
       }]\

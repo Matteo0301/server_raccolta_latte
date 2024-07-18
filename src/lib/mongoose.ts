@@ -1,14 +1,19 @@
-import { set, connect as db_connect, Types } from "mongoose"
+import { set, connect as db_connect, Types, mongo } from "mongoose"
 import Logger from "./util/logger"
 import bcrypt from 'bcryptjs'
 import { User, Collection, Origins } from "./schemas"
+import fs from 'fs';
+import file from "tmp"
+const tmp = require('tmp');
 
 let db: any
+let images: any
 
 async function connect(CONNECTION_STRING: string) {
     set("strictQuery", false)
     try {
         db = await db_connect(CONNECTION_STRING)
+        images = new mongo.GridFSBucket(db, { bucketName: 'images' })
     } catch (error) {
         Logger.error("Error connecting to MongoDB: " + error)
         process.exit(1)
@@ -145,5 +150,20 @@ async function getCollectionsByOrigin(origin: string) {
     return raccolta
 }
 
+async function addImage(b64: string, date: Date){
+    await tmp.file(function _tempFileCreated(err: any, path: any, fd: any, cleanupCallback: any) {
+        fs.writeFile(path, b64, { encoding: 'base64' }, function (err) {
+            if(!err){
+                fs.createReadStream(path).
+                    pipe(images.openUploadStream("raccolta_" + date.toISOString(), /* {
+                        chunkSizeBytes: 1048576,
+                        metadata: { field: 'myField', value: 'myValue' }
+                    } */))
+            }
+        });
 
-export { connect, close, db, addUser, getUser, getUsers, updateUser, deleteUser, clear, User, generateHash, addCollection, getCollections, getCollectionByUser, deleteCollection, checkCollection, getOrigins, addOrigin, deleteOrigin, updateOrigin, getCollectionsByOrigin, checkOrigin, getOrigin }
+        cleanupCallback()
+    })
+}
+
+export { connect, close, db, addUser, getUser, getUsers, updateUser, deleteUser, clear, User, generateHash, addCollection, getCollections, getCollectionByUser, deleteCollection, checkCollection, getOrigins, addOrigin, deleteOrigin, updateOrigin, getCollectionsByOrigin, checkOrigin, getOrigin, addImage }

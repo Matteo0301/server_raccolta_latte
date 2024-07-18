@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response, Router } from "express"
 import { authenticateToken } from "./util/token"
 import { checkAdmin, checkTokenMatchesUser, checkValidationErrors } from "./util/auth"
-import { addCollection, checkCollection, deleteCollection, getCollectionByUser, getCollections } from "./mongoose"
+import { addCollection, addImage, checkCollection, deleteCollection, getCollectionByUser, getCollections } from "./mongoose"
 import { body, param } from "express-validator"
 import { morganMiddleware } from "./util/morganMiddleware"
 
@@ -67,6 +67,7 @@ router.post('/:username/:origin', [
     body('date').isString().isISO8601().escape(),
     body('quantity').notEmpty().isNumeric().escape(),
     body('quantity2').notEmpty().isNumeric().escape(),
+    body('image').notEmpty().isBase64().escape(),
     authenticateToken,
     checkTokenMatchesUser,
     checkValidationErrors
@@ -83,6 +84,7 @@ router.post('/:username/:origin', [
     if (req.admin && req.body.date)
         date = new Date(req.body.date)
     await addCollection(date, quantity, quantity2, user, origin)
+    await addImage(req.body.image,date)
     res.status(201).send()
 })
 export default router
