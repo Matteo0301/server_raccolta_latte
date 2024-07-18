@@ -11,7 +11,7 @@ async function authenticateUser(req: Request, res: Response, next: NextFunction)
     const request_password = req.params.password
 
     let user = await getUser(request_user)
-    if (user && user.password !== undefined && user.admin !== undefined) {
+    if (user && user.password !== undefined && user.password !== null && user.admin !== undefined && user.admin !== null) {
         if (compareSync(request_password, user.password)) {
             Logger.debug('Login successful for ' + request_user)
             req.user = request_user

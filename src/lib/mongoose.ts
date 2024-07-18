@@ -1,4 +1,4 @@
-import { set, connect as db_connect } from "mongoose"
+import { set, connect as db_connect, Types } from "mongoose"
 import Logger from "./util/logger"
 import bcrypt from 'bcryptjs'
 import { User, Collection, Origins } from "./schemas"
@@ -84,7 +84,9 @@ async function getCollectionByUser(user: string, start: Date, end: Date) {
     return raccolta
 }
 
-async function checkCollection(id: String) {
+async function checkCollection(id: string) {
+    if (!Types.ObjectId.isValid(id))
+        return false
     const r = await Collection.find({ _id: id }).exec()
     if (r.length > 0) {
         return true
