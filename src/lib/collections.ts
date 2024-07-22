@@ -88,7 +88,7 @@ router.post('/:username/:origin', [
     res.status(201).send()
 })
 
-router.get('/images/:date',[
+router.get('/:date',[
     param('date').notEmpty().isString().isISO8601().escape(),
     authenticateToken,
     checkValidationErrors

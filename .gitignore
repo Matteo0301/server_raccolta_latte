@@ -22,3 +22,4 @@ junit.xml
 public-flutter
 .env*
 node_modules*
+images

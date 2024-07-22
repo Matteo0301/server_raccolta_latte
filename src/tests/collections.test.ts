@@ -1,6 +1,6 @@
 import { Server } from "http";
 import { app, startServer } from "../app";
-import { addCollection, addOrigin, addUser, clear, getCollectionByUser, getCollections } from "../lib/mongoose";
+import { addCollection, addImage, addOrigin, addUser, clear, getCollectionByUser, getCollections } from "../lib/mongoose";
 import { generateAccessToken } from "../lib/util/token";
 
 const request = require("supertest")
@@ -15,6 +15,7 @@ const nonAdminName = "notadmin"
 const adminName = "admin"
 const origin1 = "first"
 const origin2 = "second"
+const image = "SGVsbG8="
 
 beforeAll(async () => {
     server = app.listen(port, async () => {
@@ -35,7 +36,7 @@ afterAll(() => {
 describe("Add collection", () => {
     const now = new Date()
     test.concurrent("should add collection", async () => {
-        const res = await request(server).post("/collections/" + adminName + "/" + origin1).set('Authorization', adminToken).send({ quantity: 2, quantity2: 1, date: now.toISOString() })
+        const res = await request(server).post("/collections/" + adminName + "/" + origin1).set('Authorization', adminToken).send({ quantity: 2, quantity2: 1, date: now.toISOString(), image: image })
         expect(res.status).toBe(201)
         const c = await getCollections(now, new Date())
         for (const coll of c) {
@@ -62,7 +63,7 @@ describe("Add collection", () => {
     })
 
     test.concurrent("should add collection to other user if admin", async () => {
-        const res = await request(server).post("/collections/" + nonAdminName + "/" + origin1).set('Authorization', adminToken).send({ quantity: 2, quantity2: 1, date: now.toISOString() })
+        const res = await request(server).post("/collections/" + nonAdminName + "/" + origin1).set('Authorization', adminToken).send({ quantity: 2, quantity2: 1, date: now.toISOString(), image: image })
         expect(res.status).toBe(201)
         const c = await getCollections(now, new Date())
         for (const coll of c) {
@@ -110,6 +111,14 @@ describe("Get collection", () => {
         const res = await request(server).get("/collections/" + now.toISOString() + "/" + (new Date).toISOString()).set('Authorization', nonAdminToken)
         expect(res.status).toBe(403)
     })
+
+    test("should get image", async () => {
+        await addImage(image, now)
+        const res = await request(server).get("/collections/" + now.toISOString()).set('Authorization', nonAdminToken)
+        expect(res.status).toBe(200)
+        expect(res.body).toStrictEqual(Buffer.from(image,'base64'))
+    })
+
 })
 
 describe("Delete collection", () => {

@@ -1,6 +1,8 @@
 import winston from 'winston'
 import DailyRotateFile from 'winston-daily-rotate-file';
 
+const silent = (process.env.SILENT || "false").toLowerCase() === 'false'
+
 const levels = {
     error: 0,
     warn: 1,
@@ -35,7 +37,9 @@ const format = winston.format.combine(
 
 const logDir = './'
 const transports = [
-    new winston.transports.Console(),
+    new winston.transports.Console({
+        silent: silent
+    }),
     new winston.transports.File({
         filename: logDir + 'errors/error.log',
         level: 'error',

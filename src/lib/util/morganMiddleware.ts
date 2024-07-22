@@ -1,7 +1,6 @@
 import morgan, { StreamOptions } from "morgan";
 
 import Logger from "./logger";
-import { Http2ServerResponse } from "http2";
 // Override the stream method by telling
 // Morgan to use our custom logger instead of the console.log.
 const stream: StreamOptions = {
