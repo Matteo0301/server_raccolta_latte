@@ -4,9 +4,10 @@ import bcrypt from 'bcryptjs'
 import { User, Collection, Origins } from "./schemas"
 import fs from 'fs';
 import { Response } from "express"
+import path from "path";
         
 let db: any
-const dir = '/workspaces/server_raccolta_latte/images/';
+const dir = process.env.PWD + '/images/';
 const prefix = dir + 'raccolta_'
 
 async function connect(CONNECTION_STRING: string) {
