@@ -57,7 +57,7 @@ const RAW_RUNTIME_STATE =
           ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.2.0"],\
           ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"],\
-          ["winston", "npm:3.13.0"],\
+          ["winston", "npm:3.13.1"],\
           ["winston-daily-rotate-file", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:5.0.0"]\
         ],\
         "linkType": "SOFT"\
@@ -4900,6 +4900,19 @@ const RAW_RUNTIME_STATE =
           ["triple-beam", "npm:1.3.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.6.1", {\
+        "packageLocation": "./.yarn/cache/logform-npm-2.6.1-3d7ec22905-e67f414787.zip/node_modules/logform/",\
+        "packageDependencies": [\
+          ["logform", "npm:2.6.1"],\
+          ["@colors/colors", "npm:1.6.0"],\
+          ["@types/triple-beam", "npm:1.3.2"],\
+          ["fecha", "npm:4.2.3"],\
+          ["ms", "npm:2.1.3"],\
+          ["safe-stable-stringify", "npm:2.4.3"],\
+          ["triple-beam", "npm:1.3.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["lru-cache", [\
@@ -6142,7 +6155,7 @@ const RAW_RUNTIME_STATE =
           ["ts-jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.2.0"],\
           ["ts-node", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"],\
-          ["winston", "npm:3.13.0"],\
+          ["winston", "npm:3.13.1"],\
           ["winston-daily-rotate-file", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:5.0.0"]\
         ],\
         "linkType": "SOFT"\
@@ -6991,15 +7004,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["winston", [\
-      ["npm:3.13.0", {\
-        "packageLocation": "./.yarn/cache/winston-npm-3.13.0-5a89c5f1c1-4366755983.zip/node_modules/winston/",\
+      ["npm:3.13.1", {\
+        "packageLocation": "./.yarn/cache/winston-npm-3.13.1-d3d3332f9f-bc78202708.zip/node_modules/winston/",\
         "packageDependencies": [\
-          ["winston", "npm:3.13.0"],\
+          ["winston", "npm:3.13.1"],\
           ["@colors/colors", "npm:1.6.0"],\
           ["@dabh/diagnostics", "npm:2.0.3"],\
           ["async", "npm:3.2.4"],\
           ["is-stream", "npm:2.0.1"],\
-          ["logform", "npm:2.5.1"],\
+          ["logform", "npm:2.6.1"],\
           ["one-time", "npm:1.0.0"],\
           ["readable-stream", "npm:3.6.2"],\
           ["safe-stable-stringify", "npm:2.4.3"],\
@@ -7026,7 +7039,7 @@ const RAW_RUNTIME_STATE =
           ["file-stream-rotator", "npm:0.6.1"],\
           ["object-hash", "npm:3.0.0"],\
           ["triple-beam", "npm:1.4.1"],\
-          ["winston", "npm:3.13.0"],\
+          ["winston", "npm:3.13.1"],\
           ["winston-transport", "npm:4.7.0"]\
         ],\
         "packagePeers": [\
