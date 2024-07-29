@@ -5,7 +5,7 @@ import { User, Collection, Origins } from "./schemas"
 import fs from 'fs';
 import { Response } from "express"
 import path from "path";
-        
+
 let db: any
 const dir = process.env.PWD + '/images/';
 const prefix = dir + 'raccolta_'
@@ -103,7 +103,19 @@ async function checkCollection(id: string) {
 }
 
 async function deleteCollection(id: string) {
+    const collection = await Collection.findOne({ _id: id }).exec()
+    if (collection == null)
+        return false
+    const date = collection.date
+    if (date == null || date == undefined)
+        return false
     await Collection.deleteOne({ _id: id }).exec()
+    const error = await removeImage(date)
+    if (error == null) {
+        Logger.error(error)
+        return false
+    }
+    return true
 }
 
 async function getOrigins() {
@@ -153,12 +165,13 @@ async function getCollectionsByOrigin(origin: string) {
     return raccolta
 }
 
-async function addImage(b64: string, date: Date){
+async function addImage(b64: string, date: Date) {
     const path = prefix + date.toISOString()
     let error = null
     await fs.writeFile(path, b64, { encoding: 'base64' }, function (err) {
         if (err) {
             error = err
+            Logger.error(err)
         }
     })
     return error
@@ -166,6 +179,17 @@ async function addImage(b64: string, date: Date){
 
 async function returnImage(res: Response<any, Record<string, any>>, dateString: string) {
     res.sendFile(prefix + dateString)
+}
+
+async function removeImage(date: Date) {
+    const path = prefix + date.toISOString()
+    let error = null
+    await fs.unlink(path, function (err) {
+        if (err) {
+            error = err
+        }
+    })
+    return error
 }
 
 export { connect, close, db, addUser, getUser, getUsers, updateUser, deleteUser, clear, User, generateHash, addCollection, getCollections, getCollectionByUser, deleteCollection, checkCollection, getOrigins, addOrigin, deleteOrigin, updateOrigin, getCollectionsByOrigin, checkOrigin, getOrigin, addImage, returnImage }

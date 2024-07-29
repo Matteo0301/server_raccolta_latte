@@ -84,11 +84,11 @@ router.post('/:username/:origin', [
     if (req.admin && req.body.date)
         date = new Date(req.body.date)
     await addCollection(date, quantity, quantity2, user, origin)
-    await addImage(req.body.image,date)
+    await addImage(req.body.image, date)
     res.status(201).send()
 })
 
-router.get('/:date',[
+router.get('/:date', [
     param('date').notEmpty().isString().isISO8601().escape(),
     authenticateToken,
     checkValidationErrors
@@ -96,7 +96,7 @@ router.get('/:date',[
     async (req: Request, res: Response) => {
         returnImage(res, req.params.date)
     }
-    
+
 )
 
 export default router
