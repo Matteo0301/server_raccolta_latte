@@ -48,7 +48,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.7.0"],\
           ["jest-junit", "npm:16.0.0"],\
           ["jsonwebtoken", "npm:9.0.2"],\
-          ["mongodb", "virtual:9b03791b90ca7b7b9efa38b8518944ad502d44fbd5f52dfed5a448fef7fcbe7c5d15cb95e4fa196dfa8c917b71fe22a7686d40459af4451a4837ee2452608337#npm:6.7.0"],\
+          ["mongodb", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:6.8.0"],\
           ["mongodb-memory-server", "npm:9.4.0"],\
           ["mongoose", "npm:8.5.0"],\
           ["morgan", "npm:1.10.0"],\
@@ -5226,6 +5226,53 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:6.8.0", {\
+        "packageLocation": "./.yarn/cache/mongodb-npm-6.8.0-f82782f3b7-c9adf8b694.zip/node_modules/mongodb/",\
+        "packageDependencies": [\
+          ["mongodb", "npm:6.8.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:6.8.0", {\
+        "packageLocation": "./.yarn/__virtual__/mongodb-virtual-4316f97707/0/cache/mongodb-npm-6.8.0-f82782f3b7-c9adf8b694.zip/node_modules/mongodb/",\
+        "packageDependencies": [\
+          ["mongodb", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:6.8.0"],\
+          ["@aws-sdk/credential-providers", null],\
+          ["@mongodb-js/saslprep", "npm:1.1.5"],\
+          ["@mongodb-js/zstd", null],\
+          ["@types/aws-sdk__credential-providers", null],\
+          ["@types/gcp-metadata", null],\
+          ["@types/kerberos", null],\
+          ["@types/mongodb-client-encryption", null],\
+          ["@types/mongodb-js__zstd", null],\
+          ["@types/snappy", null],\
+          ["@types/socks", null],\
+          ["bson", "npm:6.7.0"],\
+          ["gcp-metadata", null],\
+          ["kerberos", null],\
+          ["mongodb-client-encryption", null],\
+          ["mongodb-connection-string-url", "npm:3.0.0"],\
+          ["snappy", null],\
+          ["socks", null]\
+        ],\
+        "packagePeers": [\
+          "@aws-sdk/credential-providers",\
+          "@mongodb-js/zstd",\
+          "@types/aws-sdk__credential-providers",\
+          "@types/gcp-metadata",\
+          "@types/kerberos",\
+          "@types/mongodb-client-encryption",\
+          "@types/mongodb-js__zstd",\
+          "@types/snappy",\
+          "@types/socks",\
+          "gcp-metadata",\
+          "kerberos",\
+          "mongodb-client-encryption",\
+          "snappy",\
+          "socks"\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["virtual:75d1d94e4253c236a8f537fe19bb2284ccefcadb9a534159728fa0bbea05a67bc6f59ad0365c7460249bfeda52f53ff0a4253b31ff3f645fa610d208096985d0#npm:5.9.2", {\
         "packageLocation": "./.yarn/__virtual__/mongodb-virtual-50aa5303ed/0/cache/mongodb-npm-5.9.2-3d4412f51b-f80ccd8a55.zip/node_modules/mongodb/",\
         "packageDependencies": [\
@@ -6133,7 +6180,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.7.0"],\
           ["jest-junit", "npm:16.0.0"],\
           ["jsonwebtoken", "npm:9.0.2"],\
-          ["mongodb", "virtual:9b03791b90ca7b7b9efa38b8518944ad502d44fbd5f52dfed5a448fef7fcbe7c5d15cb95e4fa196dfa8c917b71fe22a7686d40459af4451a4837ee2452608337#npm:6.7.0"],\
+          ["mongodb", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:6.8.0"],\
           ["mongodb-memory-server", "npm:9.4.0"],\
           ["mongoose", "npm:8.5.0"],\
           ["morgan", "npm:1.10.0"],\
