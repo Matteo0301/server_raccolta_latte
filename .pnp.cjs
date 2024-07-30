@@ -42,7 +42,7 @@ const RAW_RUNTIME_STATE =
           ["cors", "npm:2.8.5"],\
           ["dotenv", "npm:16.4.5"],\
           ["express", "npm:4.19.2"],\
-          ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.3.1"],\
+          ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.4.0"],\
           ["express-validator", "npm:7.1.0"],\
           ["helmet", "npm:7.1.0"],\
           ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.7.0"],\
@@ -50,7 +50,7 @@ const RAW_RUNTIME_STATE =
           ["jsonwebtoken", "npm:9.0.2"],\
           ["mongodb", "virtual:49d5995032c7a6f8b720a2bdd0e71fc07fa421a3a4184b178f46d3595851ff95a5bca0a1dc754a5468fec6f88d0427681bc1613559d3fcc36848224be6b32010#npm:6.8.0"],\
           ["mongodb-memory-server", "npm:10.0.0"],\
-          ["mongoose", "npm:8.5.0"],\
+          ["mongoose", "npm:8.5.1"],\
           ["morgan", "npm:1.10.0"],\
           ["supertest", "npm:7.0.0"],\
           ["tmp", "npm:0.2.3"],\
@@ -3270,17 +3270,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["express-rate-limit", [\
-      ["npm:7.3.1", {\
-        "packageLocation": "./.yarn/cache/express-rate-limit-npm-7.3.1-6e71ca4690-9d9c2ea59d.zip/node_modules/express-rate-limit/",\
+      ["npm:7.4.0", {\
+        "packageLocation": "./.yarn/cache/express-rate-limit-npm-7.4.0-6a8a12d654-33178c652b.zip/node_modules/express-rate-limit/",\
         "packageDependencies": [\
-          ["express-rate-limit", "npm:7.3.1"]\
+          ["express-rate-limit", "npm:7.4.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.3.1", {\
-        "packageLocation": "./.yarn/__virtual__/express-rate-limit-virtual-fc1e28267f/0/cache/express-rate-limit-npm-7.3.1-6e71ca4690-9d9c2ea59d.zip/node_modules/express-rate-limit/",\
+      ["virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.4.0", {\
+        "packageLocation": "./.yarn/__virtual__/express-rate-limit-virtual-9a17d405a1/0/cache/express-rate-limit-npm-7.4.0-6a8a12d654-33178c652b.zip/node_modules/express-rate-limit/",\
         "packageDependencies": [\
-          ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.3.1"],\
+          ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.4.0"],\
           ["@types/express", "npm:4.17.21"],\
           ["express", "npm:4.19.2"]\
         ],\
@@ -5296,10 +5296,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:9b03791b90ca7b7b9efa38b8518944ad502d44fbd5f52dfed5a448fef7fcbe7c5d15cb95e4fa196dfa8c917b71fe22a7686d40459af4451a4837ee2452608337#npm:6.7.0", {\
-        "packageLocation": "./.yarn/__virtual__/mongodb-virtual-65fa4874bf/0/cache/mongodb-npm-6.7.0-833b8aebb7-47695b6668.zip/node_modules/mongodb/",\
+      ["virtual:7e4fcab281910e59f5463131920a4bc555bf6558c6aaa0cce2cc729e9dc528732609e107fb0b7f731e5269cc11534bd31077b1307c9cedb9488298a278de64e1#npm:6.7.0", {\
+        "packageLocation": "./.yarn/__virtual__/mongodb-virtual-d95dc7ffa0/0/cache/mongodb-npm-6.7.0-833b8aebb7-47695b6668.zip/node_modules/mongodb/",\
         "packageDependencies": [\
-          ["mongodb", "virtual:9b03791b90ca7b7b9efa38b8518944ad502d44fbd5f52dfed5a448fef7fcbe7c5d15cb95e4fa196dfa8c917b71fe22a7686d40459af4451a4837ee2452608337#npm:6.7.0"],\
+          ["mongodb", "virtual:7e4fcab281910e59f5463131920a4bc555bf6558c6aaa0cce2cc729e9dc528732609e107fb0b7f731e5269cc11534bd31077b1307c9cedb9488298a278de64e1#npm:6.7.0"],\
           ["@aws-sdk/credential-providers", null],\
           ["@mongodb-js/saslprep", "npm:1.1.5"],\
           ["@mongodb-js/zstd", null],\
@@ -5381,13 +5381,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["mongoose", [\
-      ["npm:8.5.0", {\
-        "packageLocation": "./.yarn/cache/mongoose-npm-8.5.0-9b03791b90-8c515d0b92.zip/node_modules/mongoose/",\
+      ["npm:8.5.1", {\
+        "packageLocation": "./.yarn/cache/mongoose-npm-8.5.1-7e4fcab281-1015ba0d31.zip/node_modules/mongoose/",\
         "packageDependencies": [\
-          ["mongoose", "npm:8.5.0"],\
+          ["mongoose", "npm:8.5.1"],\
           ["bson", "npm:6.7.0"],\
           ["kareem", "npm:2.6.3"],\
-          ["mongodb", "virtual:9b03791b90ca7b7b9efa38b8518944ad502d44fbd5f52dfed5a448fef7fcbe7c5d15cb95e4fa196dfa8c917b71fe22a7686d40459af4451a4837ee2452608337#npm:6.7.0"],\
+          ["mongodb", "virtual:7e4fcab281910e59f5463131920a4bc555bf6558c6aaa0cce2cc729e9dc528732609e107fb0b7f731e5269cc11534bd31077b1307c9cedb9488298a278de64e1#npm:6.7.0"],\
           ["mpath", "npm:0.9.0"],\
           ["mquery", "npm:5.0.0"],\
           ["ms", "npm:2.1.3"],\
@@ -6148,7 +6148,7 @@ const RAW_RUNTIME_STATE =
           ["cors", "npm:2.8.5"],\
           ["dotenv", "npm:16.4.5"],\
           ["express", "npm:4.19.2"],\
-          ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.3.1"],\
+          ["express-rate-limit", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:7.4.0"],\
           ["express-validator", "npm:7.1.0"],\
           ["helmet", "npm:7.1.0"],\
           ["jest", "virtual:2c4609799e49a4566b230a3977d7e1240b24a4edaea450c89c42692100cb462389804188527e7f6095546b7570953077402757bb3da3d773fa3178b2c2adf263#npm:29.7.0"],\
@@ -6156,7 +6156,7 @@ const RAW_RUNTIME_STATE =
           ["jsonwebtoken", "npm:9.0.2"],\
           ["mongodb", "virtual:49d5995032c7a6f8b720a2bdd0e71fc07fa421a3a4184b178f46d3595851ff95a5bca0a1dc754a5468fec6f88d0427681bc1613559d3fcc36848224be6b32010#npm:6.8.0"],\
           ["mongodb-memory-server", "npm:10.0.0"],\
-          ["mongoose", "npm:8.5.0"],\
+          ["mongoose", "npm:8.5.1"],\
           ["morgan", "npm:1.10.0"],\
           ["supertest", "npm:7.0.0"],\
           ["tmp", "npm:0.2.3"],\
