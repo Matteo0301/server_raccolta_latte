@@ -74,7 +74,7 @@ router.patch('/:username', [
     const password = (req.body.password !== null) ? req.body.password : user.password
     const admin = (req.body.admin !== null) ? req.body.admin : user.admin
     const newName = (req.body.password !== null) ? req.body.username : user.username
-    Logger.debug('Updating user ' + req.params.username + ' with new name ' + newName + ' password ' + password + ' and admin ' + admin)
+    Logger.debug('Updating user ' + req.params.username + ' with new name ' + newName + ' and admin ' + admin)
     await updateUser(req.params.username, newName, password, admin)
     res.status(204).send()
 })
