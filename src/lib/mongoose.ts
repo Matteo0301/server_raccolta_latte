@@ -111,10 +111,9 @@ async function deleteCollection(id: string) {
         return false
     await Collection.deleteOne({ _id: id }).exec()
     const error = await removeImage(date)
-    if (error == null) {
+    if (error == null)
         Logger.error(error)
-        return false
-    }
+
     return true
 }
 
